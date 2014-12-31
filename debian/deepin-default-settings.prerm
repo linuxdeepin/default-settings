@@ -1,0 +1,18 @@
+#! /bin/sh
+set -e
+
+#DEBHELPER#
+
+case "$1" in
+    remove|deconfigure|failed-upgrade)
+	update-alternatives --remove deepin-default-background \
+	    /usr/share/backgrounds/desktop.jpg
+
+	update-alternatives --remove deepin-version \
+	    /usr/share/deepin-default-settings/desktop-version
+    if [ -f /etc/skel/.bashrc ];then
+        sed -i '/#\ Set\ LS_COLORS\ environment/,+5d' /etc/skel/.bashrc
+    fi
+	;;
+esac
+

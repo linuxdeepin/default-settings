@@ -1,0 +1,1674 @@
+deepin-default-settings (2014~12-34~trusty) trusty; urgency=medium
+
+  * add chrome default setting override. 
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Wed, 31 Dec 2014 09:10:23 +0800
+
+deepin-default-settings (2014~12-33~trusty) trusty; urgency=medium
+
+  * update dde-first-run.
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Tue, 30 Dec 2014 13:23:33 +0800
+
+deepin-default-settings (2014~12-32~trusty) trusty; urgency=medium
+
+  * fix dde-first-run scripts. 
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Tue, 30 Dec 2014 13:08:07 +0800
+
+deepin-default-settings (2014~12-31~trusty) trusty; urgency=medium
+
+  * fix get_xdg_user. 
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Tue, 30 Dec 2014 09:56:31 +0800
+
+deepin-default-settings (2014~12-30~trusty) trusty; urgency=medium
+
+  * generate m3u file in every locale. 
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Mon, 29 Dec 2014 20:58:35 +0800
+
+deepin-default-settings (2014~12-29~trusty) trusty; urgency=medium
+
+  * add xft file. 
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Mon, 29 Dec 2014 17:58:04 +0800
+
+deepin-default-settings (2014~12-28~trusty) trusty; urgency=medium
+
+  * add write m3u file. 
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Mon, 29 Dec 2014 17:55:30 +0800
+
+deepin-default-settings (2014~12-27~trusty) trusty; urgency=medium
+
+  * add sample music link. 
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Mon, 29 Dec 2014 12:32:24 +0800
+
+deepin-default-settings (2014~12-26~trusty) trusty; urgency=medium
+
+  * add doc links in dde-first-run. 
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Mon, 29 Dec 2014 11:57:16 +0800
+
+deepin-default-settings (2014~12-25~trusty) trusty; urgency=medium
+
+  * add create qq shortcut function. 
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Thu, 25 Dec 2014 10:27:55 +0800
+
+deepin-default-settings (2014~03-45~trusty) trusty; urgency=medium
+
+  * remove kill dde-desktop in dde-first-run.
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Fri, 19 Dec 2014 20:10:59 +0800
+
+deepin-default-settings (2014~03-44~trusty) trusty; urgency=medium
+
+  * change so.com to baidu.com. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 10 Dec 2014 14:26:39 +0800
+
+deepin-default-settings (2014~03-43~trusty) trusty; urgency=medium
+
+  * change homepage and show bookmark in all tabs. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 10 Dec 2014 10:01:39 +0800
+
+deepin-default-settings (2014~03-42~trusty) trusty; urgency=medium
+
+  * add newTxt.txt to templates dir. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 02 Dec 2014 09:33:51 +0800
+
+deepin-default-settings (2014~03-41~trusty) trusty; urgency=medium
+
+  * fix version to 2014.2. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 27 Nov 2014 11:04:11 +0800
+
+deepin-default-settings (2014~03-40~trusty) trusty; urgency=medium
+
+  * fix version to 2014.1 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 13 Nov 2014 09:56:02 +0800
+
+deepin-default-settings (2014~03-39~trusty) trusty; urgency=medium
+
+  * fix monospace font alias. 
+  * remove conflicts firefox file. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 12 Nov 2014 10:19:21 +0800
+
+deepin-default-settings (2014~03-38~trusty) trusty; urgency=medium
+
+  * add lauguage based select font family. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 12 Nov 2014 10:03:28 +0800
+
+deepin-default-settings (2014~03-37~trusty) trusty; urgency=medium
+
+  * remove alias font in deepin fonts config. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 07 Nov 2014 18:44:06 +0800
+
+deepin-default-settings (2014~03-36~trusty) trusty; urgency=medium
+
+  * add fonts-adobe-source-han-sans-otc config. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 31 Oct 2014 16:52:52 +0800
+
+deepin-default-settings (2014~03-35~trusty) trusty; urgency=medium
+
+  * update version. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 30 Oct 2014 12:47:43 +0800
+
+deepin-default-settings (2014~03-34~trusty) trusty; urgency=medium
+
+  * update. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 29 Oct 2014 21:28:59 +0800
+
+deepin-default-settings (2014~03-33~trusty) trusty; urgency=medium
+
+  * use default-background as alternatives. 
+  * add deepin-version file
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 29 Oct 2014 19:58:02 +0800
+
+deepin-default-settings (2014~03-32~trusty) trusty; urgency=low
+
+  * add dde-desktop restart  
+  * remove google-chrome extension.
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 20 Oct 2014 11:33:29 +0800
+
+deepin-default-settings (2014~03-31~trusty) trusty; urgency=low
+
+  * fix exit 1 error. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 17 Oct 2014 10:41:12 +0800
+
+deepin-default-settings (2014~03-30~trusty) trusty; urgency=low
+
+  * fix if error. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 14 Oct 2014 09:33:38 +0800
+
+deepin-default-settings (2014~03-29~trusty) trusty; urgency=low
+
+  * remove google-chrome*.list file. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 13 Oct 2014 15:57:17 +0800
+
+deepin-default-settings (2014~03-28~trusty) trusty; urgency=low
+
+  * add fcitx icons. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Sat, 11 Oct 2014 12:27:03 +0800
+
+deepin-default-settings (2014~03-27~trusty) trusty; urgency=low
+
+  * remove google chrome extensions. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Sat, 11 Oct 2014 10:04:51 +0800
+
+deepin-default-settings (2014~03-26~trusty) trusty; urgency=low
+
+  * fix default.list. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 12 Sep 2014 12:44:43 +0800
+
+deepin-default-settings (2014~03-25~trusty) trusty; urgency=low
+
+  * add conflicts. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 03 Sep 2014 20:17:34 +0800
+
+deepin-default-settings (2014~03-24~trusty) trusty; urgency=low
+
+  * split packages. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 03 Sep 2014 19:53:44 +0800
+
+deepin-default-settings (2014~03-23~trusty) trusty; urgency=low
+
+  * fix templates open error. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 26 Aug 2014 16:38:04 +0800
+
+deepin-default-settings (2014~03-22~trusty) trusty; urgency=low
+
+  * add /usr/share/cups/data/default-testpage.pdf triggers. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 11 Aug 2014 11:30:25 +0800
+
+deepin-default-settings (2014~03-21~trusty) trusty; urgency=low
+
+  * fix fontconfig config. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 18 Jul 2014 18:06:35 +0800
+
+deepin-default-settings (2014~03-20~trusty) trusty; urgency=medium
+
+  * fix hexchat title and server.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Mon, 30 Jun 2014 16:06:45 +0800
+
+deepin-default-settings (2014~03-19~trusty) trusty; urgency=medium
+
+  * add hexchat config to join #deepin channel by default.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Mon, 30 Jun 2014 11:35:55 +0800
+
+deepin-default-settings (2014~03-18~trusty) trusty; urgency=low
+
+  * add fontconfig tweaks. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 10 Jun 2014 14:38:11 +0800
+
+deepin-default-settings (2014~03-17~trusty) trusty; urgency=low
+
+  * fix google chrome default settings. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 14 May 2014 17:39:07 +0800
+
+deepin-default-settings (2014~03-16~trusty) trusty; urgency=low
+
+  * update chrome theme config. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 08 May 2014 17:44:15 +0800
+
+deepin-default-settings (2014~03-15~trusty) trusty; urgency=low
+
+  * add some files to Templates. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 28 Apr 2014 09:26:31 +0800
+
+deepin-default-settings (2014~03-14~trusty) trusty; urgency=low
+
+  * add java font setting. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 28 Apr 2014 08:55:24 +0800
+
+deepin-default-settings (2014~03-13~trusty) trusty; urgency=low
+
+  * remove skel dock.ini file.
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 14 Apr 2014 12:47:24 +0800
+
+deepin-default-settings (2014~03-12~trusty) trusty; urgency=low
+
+  * fix default search engine in zh_CN. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 11 Apr 2014 09:00:02 +0800
+
+deepin-default-settings (2014~03-11~trusty) trusty; urgency=low
+
+  * fix chrome settings. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 10 Apr 2014 16:27:28 +0800
+
+deepin-default-settings (2014~03-10~trusty) trusty; urgency=low
+
+  * new package. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 10 Apr 2014 14:06:22 +0800
+
+deepin-default-settings (2014~03-09~trusty) trusty; urgency=low
+
+  * fix goole default setting. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 10 Apr 2014 13:03:04 +0800
+
+deepin-default-settings (2014~03-08~trusty) trusty; urgency=low
+
+  * fix google default settings. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 10 Apr 2014 12:23:30 +0800
+
+deepin-default-settings (2014~03-07~trusty) trusty; urgency=low
+
+  * split deepin-default-gsettings package. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 27 Mar 2014 09:44:54 +0800
+
+deepin-default-settings (2014~03-06~trusty) trusty; urgency=low
+
+  * add binfmt.d file. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 25 Mar 2014 13:36:52 +0800
+
+deepin-default-settings (2014~03-05~trusty) trusty; urgency=low
+
+  * add Trolltech.conf to fix skype ugly gui. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 25 Mar 2014 12:33:00 +0800
+
+deepin-default-settings (2014~03-04~saucy) saucy; urgency=low
+
+  * Remove deepin-terminal on dock
+    file: etc/skel/.config/dock/apps.ini
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Tue, 04 Mar 2014 10:28:37 +0800
+
+deepin-default-settings (2013~12-1~saucy) saucy; urgency=low
+
+  * port to sacuy. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 09 Jan 2014 15:35:13 +0800
+
+deepin-default-settings (2013~12-1) raring; urgency=low
+
+  * set lscolor environment. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 09 Jan 2014 15:33:27 +0800
+
+deepin-default-settings (2013~9-1) raring; urgency=low
+
+  * rebuild 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 12 Dec 2013 16:53:05 +0800
+
+deepin-default-settings (2013~8-2) raring; urgency=low
+
+  * fix error 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 12 Dec 2013 16:40:18 +0800
+
+deepin-default-settings (2013~8-1) raring; urgency=low
+
+  * add /etc/sudoers.d/* file 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 12 Dec 2013 16:32:40 +0800
+
+deepin-default-settings (2013~7-1) raring; urgency=low
+
+  * change icon-theme deepin-blue to deepin 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 28 Oct 2013 17:25:02 +0800
+
+deepin-default-settings (2013~6-1) raring; urgency=low
+
+  * Add Template folder back 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 28 Oct 2013 09:43:49 +0800
+
+deepin-default-settings (2013~5-3) raring; urgency=low
+
+  * remove unused skel/Desktop and skel/Template dir 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 25 Oct 2013 14:37:47 +0800
+
+deepin-default-settings (2013~5-2) raring; urgency=low
+
+  * Deepin-Blue or Deepin-blue 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 25 Oct 2013 11:18:54 +0800
+
+deepin-default-settings (2013~5-1) raring; urgency=low
+
+  * change icon-theme to Deepin-Blue 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 25 Oct 2013 11:13:02 +0800
+
+deepin-default-settings (2013~4-1) raring; urgency=low
+
+  * change dock background color to 50 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 25 Oct 2013 09:47:53 +0800
+
+deepin-default-settings (2013~3-2) raring; urgency=low
+
+  * fix 2013~1-2 wrong settings 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 25 Oct 2013 09:42:11 +0800
+
+deepin-default-settings (2013~3-1) raring; urgency=low
+
+  * set dde show-dsc-icon to false 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 25 Oct 2013 09:17:18 +0800
+
+deepin-default-settings (2013~2-1) raring; urgency=low
+
+  * change dock app.ini file 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 25 Oct 2013 09:14:23 +0800
+
+deepin-default-settings (2013~1-2) raring; urgency=low
+
+  * remove /etc/skel/Desktop desktop files 
+  * change metacity theme opacity to 1.0
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 25 Oct 2013 09:08:39 +0800
+
+deepin-default-settings (2013~1-1) raring; urgency=low
+
+  * change version to 2013
+  * change default terminal from gnome-terminal to x-terminal-emulator
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 14 Oct 2013 09:50:52 +0800
+
+deepin-default-settings (12.12.14) raring; urgency=low
+
+  * fix ini file to text/plain 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 07 Aug 2013 14:31:27 +0800
+
+deepin-default-settings (12.12.13) raring; urgency=low
+
+  * add application/x-ms-dos-executable wine to default.list 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 31 Jul 2013 08:59:40 +0800
+
+deepin-default-settings (12.12.12) raring; urgency=low
+
+  * add dh_ubuntu_defaults 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 29 Jul 2013 08:52:53 +0800
+
+deepin-default-settings (12.12.11) raring; urgency=low
+
+  * remove dh_ubuntu_defaults 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 24 Jul 2013 12:05:26 +0800
+
+deepin-default-settings (12.12.10) raring; urgency=low
+
+  * add schemas of nautilus "sort-directories-first=true"
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Sat, 20 Jul 2013 11:54:43 +0800
+
+deepin-default-settings (12.12.09) raring; urgency=low
+
+  * fix chrome default config of wrong syntax
+    and some extra chars.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Tue, 18 Jun 2013 14:08:56 +0800
+
+deepin-default-settings (12.12.08) raring; urgency=low
+
+  * fix chrome font settings 
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Mon, 17 Jun 2013 09:25:43 +0800
+
+deepin-default-settings (12.12.07) raring; urgency=low
+
+  * add nautilus override
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Sat, 08 Jun 2013 09:52:40 +0800
+
+deepin-default-settings (12.12.06) raring; urgency=low
+
+  * add conflicts with chrome-default-settings.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 06 Jun 2013 09:27:37 +0800
+
+deepin-default-settings (12.12.05) raring; urgency=low
+
+  * add google-chrome default homepage
+    and disable first-run dialog.
+  * update script /usr/bin/dde-first-run
+    add new file in templates direcotry.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Wed, 05 Jun 2013 10:02:04 +0800
+
+deepin-default-settings (12.12.04) raring; urgency=low
+
+  * update script /usr/bin/dde-first-run
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Tue, 04 Jun 2013 16:55:06 +0800
+
+deepin-default-settings (12.12.03) raring; urgency=low
+
+  * fix synaptics.conf  
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Tue, 04 Jun 2013 09:15:03 +0800
+
+deepin-default-settings (12.12.02) raring; urgency=low
+
+  * add synaptics.conf to etc 
+  * remove some unused gsettings
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Wed, 29 May 2013 15:20:26 +0800
+
+deepin-default-settings (12.12.01) raring; urgency=low
+
+  * add some gsettings schemas 
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Wed, 29 May 2013 09:10:42 +0800
+
+deepin-default-settings (12.10.29) raring; urgency=low
+
+  * remove chrome setting to splited chrome-default-settings 
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Tue, 21 May 2013 09:32:38 +0800
+
+deepin-default-settings (12.10.28) raring; urgency=low
+
+  * replace chrome to firefox 
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Tue, 21 May 2013 09:09:43 +0800
+
+deepin-default-settings (12.10.27) raring; urgency=low
+
+  * change deepin-user-manual to user-manual 
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Mon, 20 May 2013 08:55:42 +0800
+
+deepin-default-settings (12.10.26) raring; urgency=low
+
+  * replace firefox to chrome 
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Fri, 17 May 2013 13:53:27 +0800
+
+deepin-default-settings (12.10.25) raring; urgency=low
+
+  * add google-chrome default fonts settings 
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Fri, 17 May 2013 09:28:13 +0800
+
+deepin-default-settings (12.10.24+nmu2) raring; urgency=low
+
+  * update gsettings-override
+  * remove gconf-override
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Wed, 15 May 2013 16:52:49 +0800
+
+deepin-default-settings (12.10.24+nmu1) raring; urgency=low
+
+  * Non-maintainer upload.
+  * Dummy update
+
+ -- Deepin Testing Packages <testing@linuxdeepin.com>  Mon, 15 Apr 2013 16:05:41 +0800
+
+deepin-default-settings (12.10.24) quantal; urgency=low
+
+  * move gsettings-override to gsettings-desktop-schemas.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 11 Apr 2013 17:13:45 +0800
+
+deepin-default-settings (12.10.23) quantal; urgency=low
+
+  * fix dde-first-run script
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 28 Mar 2013 09:56:07 +0800
+
+deepin-default-settings (12.10.22) quantal; urgency=low
+
+  * fix dde-first-run script
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 28 Mar 2013 09:51:34 +0800
+
+deepin-default-settings (12.10.21) quantal; urgency=low
+
+  * fix dde-first-run script
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 28 Mar 2013 09:42:53 +0800
+
+deepin-default-settings (12.10.20) quantal; urgency=low
+
+  * fix dde-first-run script
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Wed, 27 Mar 2013 13:36:36 +0800
+
+deepin-default-settings (12.10.19) quantal; urgency=low
+
+  * add dde-first-run desktop
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Wed, 27 Mar 2013 10:12:46 +0800
+
+deepin-default-settings (12.10.18) quantal; urgency=low
+
+  * change user-manual to realfile
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Tue, 26 Mar 2013 17:29:19 +0800
+
+deepin-default-settings (12.10.17) quantal; urgency=low
+
+  * change default gsetting and gconf cursor theme to DMZ-White
+  * remove postinst and prerm actions for PolarCursor-Green
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Fri, 22 Mar 2013 10:36:02 +0800
+
+deepin-default-settings (12.10.16) quantal; urgency=low
+
+  * change font size from 10 to 11 
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Fri, 22 Mar 2013 09:23:51 +0800
+
+deepin-default-settings (12.10.15) quantal; urgency=low
+
+  * add font-name to gsettings 
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 21 Mar 2013 13:58:36 +0800
+
+deepin-default-settings (12.10.14) quantal; urgency=low
+
+  * add user-manual on desktop
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Wed, 20 Mar 2013 16:20:17 +0800
+
+deepin-default-settings (12.10.13) quantal; urgency=low
+
+  * remove all keybindings
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Tue, 19 Mar 2013 15:12:13 +0800
+
+deepin-default-settings (12.10.12) quantal; urgency=low
+
+  * change default dock configuration
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Tue, 19 Mar 2013 13:50:05 +0800
+
+deepin-default-settings (12.10.11) quantal; urgency=low
+
+  * remove deepin-software-center.desktop in etc/skel/Desktop
+    as deepin-desktop-environment has already show it.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Mon, 04 Mar 2013 10:14:44 +0800
+
+deepin-default-settings (12.10.10) quantal; urgency=low
+
+  * remove deepin-user-guide
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Fri, 25 Jan 2013 17:55:46 +0800
+
+deepin-default-settings (12.10.9) quantal; urgency=low
+
+  * fix Yueqian Zhang changes
+
+ -- Li Longyu (Ai Kotoba) <leaeasy@gmail.com>  Fri, 25 Jan 2013 17:02:45 +0800
+
+deepin-default-settings (12.10.8) quantal; urgency=low
+
+  * change compiz color
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Fri, 25 Jan 2013 16:42:00 +0800
+
+deepin-default-settings (12.10.7) quantal; urgency=low
+
+  * remove temp applacations link
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 24 Jan 2013 12:26:48 +0800
+
+deepin-default-settings (12.10.6) quantal; urgency=low
+
+  * add default dock to skel/.config/dock
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 24 Jan 2013 11:22:00 +0800
+
+deepin-default-settings (12.10.5) quantal; urgency=low
+
+  * fix deepin shortcuts 
+
+ -- Li Longyu (Ai Kotoba) <leaeasy@gmail.com>  Tue, 22 Jan 2013 14:49:31 +0800
+
+deepin-default-settings (12.10.4) quantal; urgency=low
+
+  * add deepin new theme gsettings 
+
+ -- Li Longyu (Ai Kotoba) <leaeasy@gmail.com>  Tue, 15 Jan 2013 15:29:54 +0800
+
+deepin-default-settings (12.10.3) quantal; urgency=low
+
+  * add commands gsettings keys 
+
+ -- Li Longyu (Ai Kotoba) <leaeasy@gmail.com>  Fri, 04 Jan 2013 18:21:12 +0800
+
+deepin-default-settings (12.10.2) quantal; urgency=low
+
+  * fix deepin-software-center icon 
+
+ -- Li Longyu (Ai Kotoba) <leaeasy@gmail.com>  Fri, 28 Dec 2012 11:47:13 +0800
+
+deepin-default-settings (12.10.1) quantal; urgency=low
+
+  * remove deepin.session 
+
+ -- Li Longyu (Ai Kotoba) <leaeasy@gmail.com>  Tue, 25 Dec 2012 18:04:46 +0800
+
+deepin-default-settings (12.06.1-33) quantal; urgency=low
+
+  * add softlink to /usr/share/applications  on users desktop
+
+ -- Li Longyu (Ai Kotoba) <leaeasy@gmail.com>  Tue, 18 Dec 2012 09:42:00 +0800
+
+deepin-default-settings (12.06.1-32) quantal; urgency=low
+
+  * remove gtkrc file to deepin-artwork 
+
+ -- Li Longyu (Ai Kotoba) <leaeasy@gmail.com>  Fri, 30 Nov 2012 17:07:39 +0800
+
+deepin-default-settings (12.06.1-31) precise; urgency=low
+
+  * Add gtk-theme-name and gtk-icon-themename value deepin in
+    /etc/gtk-3.0/gtkrc
+
+ -- Li Longyu (Ai Kotoba) <leaeasy@gmail.com>  Thu, 26 Jul 2012 10:37:01 +0800
+
+deepin-default-settings (12.06.1-30) precise; urgency=low
+
+  * fix deepin-user-guide.desktop to 12.06 
+
+ -- Li Longyu <leaeasy@gmail.com>  Fri, 13 Jul 2012 02:31:12 +0800
+
+deepin-default-settings (12.06.1-29) precise; urgency=low
+
+  * Add deepin-media-player to dock bugs fix. 
+
+ -- Li Longyu <leaeasy@gmail.com>  Fri, 13 Jul 2012 02:19:04 +0800
+
+deepin-default-settings (12.06.1-28) precise; urgency=low
+
+  * Upstreamer Updates
+
+ -- Li Longyu <leaeasy@gmail.com>  Fri, 13 Jul 2012 00:30:49 +0800
+
+deepin-default-settings (12.06.1-27) precise; urgency=low
+
+  * Enable kimpanel extension.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 12 Jul 2012 21:36:35 +0800
+
+deepin-default-settings (12.06.1-26) precise; urgency=low
+
+  * Add deepin-media-player to dock. 
+
+ -- Li Longyu <leaeasy@gmail.com>  Thu, 12 Jul 2012 18:01:02 +0800
+
+deepin-default-settings (12.06.1-25) precise; urgency=low
+
+  * Add etc/skel/Desktop/deepin-user-guide.desktop
+  * Remove etc/skel/.shutter 
+
+ -- Li Longyu <leaeasy@gmail.com>  Thu, 12 Jul 2012 16:41:54 +0800
+
+deepin-default-settings (12.06.1-24) precise; urgency=low
+
+  * Enable panel-settings extension.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 05 Jul 2012 16:43:43 +0800
+
+deepin-default-settings (12.06.1-23) precise; urgency=low
+
+  * remove etc/skel/Desktop/deepin-user-guider.desktop.
+
+ -- Li Longyu <leaeasy@gmail.com>  Thu, 21 Jun 2012 17:02:56 +0800
+
+deepin-default-settings (12.06.1-22) precise; urgency=low
+
+  * change association deadbeaf to deepin-music-player
+  * change association gnome-mplayer to deepin-media-player
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 21 Jun 2012 15:37:59 +0800
+
+deepin-default-settings (12.06.1-21) precise; urgency=low
+  [Leaeasy]
+  * change newtab url to about:ntab
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 21 Jun 2012 11:59:38 +0800
+
+deepin-default-settings (12.06.1-20) precise; urgency=low
+
+  * 调整任务栏图标位置 
+
+ -- Li Longyu <leaeasy@gmail.com>  Wed, 20 Jun 2012 16:07:51 +0800
+
+deepin-default-settings (12.06.1-19) precise; urgency=low
+
+  * add /etc/skel/.mozilla/* files. 
+
+ -- Li Longyu <leaeasy@gmail.com>  Tue, 19 Jun 2012 13:09:29 +0800
+
+deepin-default-settings (12.06.1-18) precise; urgency=low
+
+  * fix bugs 
+
+ -- Li Longyu <leaeasy@gmail.com>  Tue, 19 Jun 2012 10:46:57 +0800
+
+deepin-default-settings (12.06.1-17) precise; urgency=low
+
+  * add deepin-software-center and deepin-user-guide show in desktop. 
+
+ -- Li Longyu <leaeasy@gmail.com>  Tue, 19 Jun 2012 10:43:48 +0800
+
+deepin-default-settings (12.06.1-16) precise; urgency=low
+
+  * arrange the task bar applications. 
+
+ -- Li Longyu <leaeasy@gmail.com>  Tue, 19 Jun 2012 10:22:16 +0800
+
+deepin-default-settings (12.06.1-15) precise; urgency=low
+
+  * Remove deadbeef from favorite apps.
+  * Add deepin-music-player and deepin-media-player to favorite apps.
+
+ -- Li Longyu <leaeasy@gmail.com>  Tue, 05 Jun 2012 20:11:20 +0800
+
+deepin-default-settings (12.06.1-13) precise; urgency=low
+
+  * change firefox about info.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Tue, 05 Jun 2012 09:39:11 +0800
+
+deepin-default-settings (12.06.1-12) precise; urgency=low
+
+  * fix typo.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 31 May 2012 10:51:38 +0800
+
+deepin-default-settings (12.06.1-11) precise; urgency=low
+
+  * show volumes on desktop.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Thu, 31 May 2012 10:26:43 +0800
+
+deepin-default-settings (12.06.1-10) precise; urgency=low
+
+  * gedit encoding auto-detected. 
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Wed, 30 May 2012 15:19:47 +0800
+
+deepin-default-settings (12.06.1-9) precise; urgency=low
+
+  * default enabled mediaplayer gnome-shell extension.
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Wed, 16 May 2012 11:48:00 +0800
+
+deepin-default-settings (12.06.1-8) precise; urgency=low
+
+  * change org.gnome.shell.button-layout from gconf to gsettings.
+
+ -- Li Longyu <leaeasy@gmail.com>  Mon, 14 May 2012 09:11:45 +0800
+
+deepin-default-settings (12.06.1-6) precise; urgency=low
+
+  * bind Ctrl-Alt-A to deepin-screenshot
+
+ -- Yueqian Zhang <zhangyueqian@linuxdeepin.com>  Fri, 11 May 2012 15:07:35 +0800
+
+deepin-default-settings (12.06.1-5) precise; urgency=low
+
+  * modified usr/lib/firefox/distribution/distribution.ini by rules. 
+
+ -- Li Longyu <leaeasy@gmail.com>  Fri, 11 May 2012 09:13:09 +0800
+
+deepin-default-settings (12.06.1-4) precise; urgency=low
+
+  * remove prerm num 80. 
+
+ -- Li Longyu <leaeasy@gmail.com>  Wed, 09 May 2012 23:20:54 +0800
+
+deepin-default-settings (12.06.1-3) precise; urgency=low
+
+  * add cursor-theme='PolarCursorTheme-Green' 
+  * add wm theme
+
+ -- Li Longyu <leaeasy@gmail.com>  Wed, 09 May 2012 20:52:57 +0800
+
+deepin-default-settings (12.06.1-2) precise; urgency=low
+
+  * enable hide-messagetray gse.
+
+ -- Li Longyu <leaeasy@gmail.com>  Wed, 09 May 2012 13:37:26 +0800
+
+deepin-default-settings (12.06.1-1) precise; urgency=low
+
+  * remove postinst "set -e". 
+  * rollback deepin-screenshot to deepin-scrot 
+
+ -- Li Longyu <leaeasy@gmail.com>  Thu, 19 Apr 2012 03:34:05 +0800
+
+deepin-default-settings (11.12.13-8) oneiric; urgency=low
+
+  * update deepin-scrot to deepin-screenshot
+
+ -- Li Longyu <leaeasy@gmail.com>  Mon, 16 Apr 2012 09:43:11 +0800
+
+deepin-default-settings (11.12.13-7) oneiric; urgency=low
+
+  * 修改rules文件实现firefox about页面显示的ubuntu信息改变为deepin
+
+ -- Li Longyu <leaeasy@gmail.com>  Fri, 30 Mar 2012 04:28:49 +0800
+
+deepin-default-settings (11.12.13-5) oneiric; urgency=low
+
+  * Disable shell-osd extension
+
+ -- Li Longyu <leaeasy@gmail.com>  Thu, 29 Mar 2012 17:38:54 +0800
+
+deepin-default-settings (11.12.13-4) oneiric; urgency=low
+
+  * Add gcal-search, multi-volume, shell-osd, steal-my-focuse,
+    windows-alt-tab-3d extensions 
+
+ -- Li Longyu <leaeasy@gmail.com>  Wed, 28 Mar 2012 10:50:41 +0800
+
+deepin-default-settings (11.12.13-3) oneiric; urgency=low
+
+  * Add global keybinds
+    - Print             take screenshot for fullscreen
+    - Alt-Print         take screenshot for current window
+    - Crtl-Print        take screenshot for fullscreen, delay 5s
+    - Ctrl-Alt-Print    take screenshot for current window, delay 5s
+    - Ctrl-Alt-A        take screenshot freely
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 29 Dec 2011 22:56:49 +0800
+
+deepin-default-settings (11.12.13-2) oneiric; urgency=low
+
+  * replace gnome-mplayer.desktop with shotwell.desktop in favourites panel
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 29 Dec 2011 19:45:47 +0800
+
+deepin-default-settings (11.12.13) oneiric; urgency=low
+
+  * Seperate out -{en,zh-han{s,t}}
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 29 Dec 2011 17:08:56 +0800
+
+deepin-default-settings (11.12.12) oneiric; urgency=low
+
+  * Fix format mistakes in desktop/default-applications.txt
+  * Add deepin-default-settings-{zh-han{s,t},en}
+    * translate Computer/Home/Network/Trash icon name on desktop for
+      zh-han{s,t}
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 29 Dec 2011 16:17:44 +0800
+
+deepin-default-settings (11.12.11-1) oneiric; urgency=low
+
+  * Use ubuntu-defaults-builder
+  * Set default music player as deadbeef
+  * Set default video player as gnome-mplayer
+  * remove etc/skel/.mozilla
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Wed, 28 Dec 2011 18:15:18 +0800
+
+deepin-default-settings (11.12.10-2) oneiric; urgency=low
+
+  * Set default applications in deepin dock
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Wed, 28 Dec 2011 14:28:28 +0800
+
+deepin-default-settings (11.12.10-1) oneiric; urgency=low
+
+  * Move override/deepin-artwork.gschema.override to
+    debian/gsettings-override
+  * Remove gconf settings from debian/postinst, use debian/gconf-defaults
+    instead
+  * Use gnome-screenshot to serve PrintSc & <Alt>PrintSc
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Wed, 28 Dec 2011 11:45:50 +0800
+
+deepin-default-settings (11.12.9-4) oneiric; urgency=low
+
+  * Fix typo in ibus preload engines settings
+  * remove alternatives of {startup,shutdown}.wav in prerm
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 27 Dec 2011 11:57:47 +0800
+
+deepin-default-settings (11.12.9-3) oneiric; urgency=low
+
+  * debian/postinstall
+    - set ibus preload engines
+      - cangjie3
+      - cangjie5
+      - chewing
+    - fix shutdown.wav
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 27 Dec 2011 11:52:13 +0800
+
+deepin-default-settings (11.12.9-2) oneiric; urgency=low
+
+  * debian/postinstall
+    - mkdir -pv /etc/hal/fdi/policy to fix ntfs-config
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Sat, 24 Dec 2011 16:35:52 +0800
+
+deepin-default-settings (11.12.9) oneiric; urgency=low
+
+  * Set default screenshot program to deepin-scrot
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 23 Dec 2011 19:49:35 +0800
+
+deepin-default-settings (11.12.8-1) oneiric; urgency=low
+
+  * Enable show-desktop gnome-shell extension
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 23 Dec 2011 13:31:16 +0800
+
+deepin-default-settings (11.12.7-1) oneiric; urgency=low
+
+  * Add gtkrc to hide resize-grip
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 23 Dec 2011 12:10:25 +0800
+
+deepin-default-settings (11.12.6-1) oneiric; urgency=low
+
+  * Fix fcitx issue (remove etc/skel/.xprofile)
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Wed, 21 Dec 2011 17:05:45 +0800
+
+deepin-default-settings (11.12.5-3) oneiric; urgency=low
+
+  * remove obsolete gconftool-2 settings in debian/postinst
+  * update alternative for startup.wav and shutdown.wav
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 20 Dec 2011 17:43:16 +0800
+
+deepin-default-settings (11.12.5-2) oneiric; urgency=low
+
+  * debian/postinst: fix default_background.jpg
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 16 Dec 2011 17:07:50 +0800
+
+deepin-default-settings (11.12.5-1) oneiric; urgency=low
+
+  * Disable show-desktop extensions
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 16 Dec 2011 17:03:56 +0800
+
+deepin-default-settings (11.12.4-1) oneiric; urgency=low
+
+  * Fix default enabled gnome-shell extensions
+    - window list
+    - panel favourite
+    - move clock 
+    - extend left box
+  * Set default background
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 16 Dec 2011 14:38:24 +0800
+
+deepin-default-settings (11.12.3-1) oneiric; urgency=low
+
+  * Remove Replaces and Conflicts to obsolete packages to ease upgrade
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 16 Dec 2011 12:18:13 +0800
+
+deepin-default-settings (11.12.3) oneiric; urgency=low
+
+  * Import old deepin-default-settings contents
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 13 Dec 2011 20:56:07 +0800
+
+deepin-default-settings (11.12.2) oneiric; urgency=low
+
+  * Add description to debian/control
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 13 Dec 2011 20:41:21 +0800
+
+deepin-default-settings (11.12.1) oneiric; urgency=low
+
+  * Initial pack.
+  * update-alternatives to set default cursor theme
+  * use gschema.override to set a bunch of stuffs
+  * use gconf-tools to set a bunch of stuffs
+    - should be convertd to gschema
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 08 Dec 2011 20:35:11 +0800
+
+deepin-default-settings (11.12-6) oneiric; urgency=low
+
+  * Added ~/.gconf//desktop/gnome/interface/%gconf.xml
+    (gtk theme, icon theme)
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 20 Nov 2011 16:44:36 +0800
+
+deepin-default-settings (11.12-5) oneiric; urgency=low
+
+  * Shutter:
+    - Added ~/.gconf/apps/metacity/keybinding_commands/%gconf.xml and
+            ~/.gconf/apps/metacity/global_keybindings/%gconf.xml
+       to make sure shutter will be called when PrintScreen key is pressed
+    - Added  ~/.shutter/settings.xml 
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 17 Nov 2011 17:59:56 +0800
+
+deepin-default-settings (11.12-4) oneiric; urgency=low
+
+  * Added .config/uGet/Setting.xml to skel
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 17 Nov 2011 08:44:47 +0800
+
+deepin-default-settings (11.12-3) oneiric; urgency=low
+
+  * Restored etc/skel/.mozilla
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 17 Nov 2011 06:30:20 +0800
+
+deepin-default-settings (11.12-2) oneiric; urgency=low
+
+  * skel: added .xprofile
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 09 Nov 2011 10:11:21 +0800
+
+deepin-default-settings (11.12-1) oneiric; urgency=low
+
+  * Added /usr/share/xsessions/deepin.desktop
+  * Removed etc folder
+
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 30 Sep 2011 02:00:34 +0000
+
+deepin-default-settings (11.12) oneiric; urgency=low
+
+  * Removed .mozilla/firefox/deepin/extensions/ 
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 29 Sep 2011 23:19:33 +0000
+
+deepin-default-settings (1.1.8-22) natty-updates; urgency=low
+
+  * Homepage: start.linuxdeepin.com
+
+ -- Leng Ganghua <leng@lenox>  Tue, 09 Aug 2011 17:01:23 +0800
+
+deepin-default-settings (1.1.8-21) natty-updates; urgency=low
+
+  * Change firefox font settings
+
+ -- Leng Ganghua <leng@lenox>  Fri, 05 Aug 2011 08:42:16 +0800
+
+deepin-default-settings (1.1.8-19) natty-updates; urgency=low
+
+  * Added keybinds of shutter
+
+ -- Leng Ganghua <leng@lenox>  Thu, 04 Aug 2011 15:46:27 +0800
+
+deepin-default-settings (1.1.8-18) natty-updates; urgency=low
+
+  * Added ~/.gconf/desktop/gnome/keybindings/custom0/%gconf.xml
+    (to disable F1 key)
+
+ -- Leng Ganghua <leng@lenox>  Wed, 03 Aug 2011 17:09:42 +0800
+
+deepin-default-settings (1.1.8-17) natty-updates; urgency=low
+
+  * hide menu bar
+
+ -- Leng Ganghua <leng@lenox>  Wed, 03 Aug 2011 10:38:10 +0800
+
+deepin-default-settings (1.1.8-16) natty-updates; urgency=low
+
+  * Added gtkrc to etc/gtk-2.0/ and etc/gtk-3.0/ 
+
+ -- Leng Ganghua <leng@lenox>  Fri, 15 Jul 2011 20:04:49 +0800
+
+deepin-default-settings (1.1.8-15) natty-updates; urgency=low
+
+  * Updated .mozilla files
+
+ -- Leng Ganghua <leng@lenox>  Thu, 14 Jul 2011 19:30:36 +0800
+
+deepin-default-settings (1.1.8-14) natty-updates; urgency=low
+
+  * Removed ~/.webapps, ~/.xscreensaver
+
+ -- Leng Ganghua <leng@lenox>  Fri, 08 Jul 2011 19:27:31 +0800
+
+deepin-default-settings (1.1.8-13) natty-updates; urgency=low
+
+  * Flashgot setting updated.
+
+ -- Leng Ganghua <leng@lenox>  Fri, 08 Jul 2011 18:57:08 +0800
+
+deepin-default-settings (1.1.8-12) natty; urgency=low
+
+  * Updated firefox configs.
+
+ -- Leng Ganghua <leng@lenox>  Sun, 03 Jul 2011 17:32:45 +0800
+
+deepin-default-settings (1.1.8-11) natty; urgency=low
+
+  * Renamed '深度 Linux 软件中心'
+
+ -- Leng Ganghua <leng@lenox>  Fri, 01 Jul 2011 15:42:27 +0800
+
+deepin-default-settings (1.1.8-10) natty; urgency=low
+
+  * Added uGet settings
+
+ -- Leng Ganghua <leng@lenox>  Fri, 01 Jul 2011 13:59:07 +0800
+
+deepin-default-settings (1.1.8-9) natty; urgency=low
+
+  * Removed network connection
+
+ -- Leng Ganghua <leng@lenox>  Fri, 01 Jul 2011 11:12:26 +0800
+
+deepin-default-settings (1.1.8-8) natty; urgency=low
+
+  * Added Deepin Software Center to dock
+
+ -- Leng Ganghua <leng@lenox>  Thu, 23 Jun 2011 13:55:47 +0800
+
+deepin-default-settings (1.1.8-7) natty; urgency=low
+
+  * added gnome-mplayer default settings
+
+ -- Leng Ganghua <leng@lenox>  Thu, 23 Jun 2011 13:42:39 +0800
+
+deepin-default-settings (1.1.8-6) natty; urgency=low
+
+  * Added "complete -cf sudo" to etc/skel/.bashrc
+
+ -- Leng Ganghua <hiweed@gmail.com>  Tue, 21 Jun 2011 19:11:27 +0800
+
+deepin-default-settings (1.1.8-5) natty; urgency=low
+
+  * etc/skel/.gconf/apps/deepin/font_selector/%gconf.xml:
+    Set deepin-font-selector not to start automatically
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sat, 18 Jun 2011 16:12:40 +0800
+
+deepin-default-settings (1.1.8-4) natty; urgency=low
+
+  * Removed sources.list.d folder
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sat, 18 Jun 2011 09:25:55 +0800
+
+deepin-default-settings (1.1.8-3) natty; urgency=low
+
+  * Firefox: Flashgot replaced Downthemall
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sat, 18 Jun 2011 07:52:26 +0800
+
+deepin-default-settings (1.1.8-2) natty; urgency=low
+
+  * Added Thunderbird stuff
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 16 Jun 2011 17:12:51 +0800
+
+deepin-default-settings (1.1.8) natty; urgency=low
+
+  * Updated Firefox 5.0 stuff
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 16 Jun 2011 17:02:28 +0800
+
+deepin-default-settings (1.1.7-69) natty; urgency=low
+
+  * ibus 输入法添加了繁体输入法
+
+ -- Leng Ganghua <hiweed@gmail.com>  Tue, 14 Jun 2011 16:03:12 +0800
+
+deepin-default-settings (1.1.7-68) natty; urgency=low
+
+  * Changed font size to 10
+
+ -- Leng Ganghua <hiweed@gmail.com>  Tue, 14 Jun 2011 11:57:34 +0800
+
+deepin-default-settings (1.1.7-67) natty; urgency=low
+
+  * Added panel settings
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 13 Jun 2011 16:38:48 +0800
+
+deepin-default-settings (1.1.7-66) natty; urgency=low
+
+  * /etc/skel/.bashrc: bash 自动完成等等
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 13 Jun 2011 16:22:42 +0800
+
+deepin-default-settings (1.1.7-65) natty; urgency=low
+
+  * 将 MintMenu 的透明度设置为 100，修复第一次点击无效的问题
+  * /etc/apt/sources.list.d 加了进来
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 13 Jun 2011 13:25:12 +0800
+
+deepin-default-settings (1.1.7-64) natty; urgency=low
+
+  * Added /etc/xdg/autostart/compiz.desktop
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 12 Jun 2011 18:21:06 +0800
+
+deepin-default-settings (1.1.7-63) natty; urgency=low
+
+  * 更新屏幕截图快捷键设置:
+    apps/metacity/global_keybindings/%gconf.xml
+    apps/metacity/keybinding_commands/%gconf.xml
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 08 Jun 2011 16:32:11 +0800
+
+deepin-default-settings (1.1.7-62) natty; urgency=low
+
+  * Cleaned Firefox extensions
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 08 Jun 2011 15:50:30 +0800
+
+deepin-default-settings (1.1.7-61) natty; urgency=low
+
+  * 将 gnome-globalmenu 去掉，换成 appmenu-gtk 地
+  * 更新 Firefox 的扩展
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 08 Jun 2011 13:01:13 +0800
+
+deepin-default-settings (1.1.7-60) natty; urgency=low
+
+  * Updated MintMenu and Cairo-Dock settings
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 08 Jun 2011 10:01:47 +0800
+
+deepin-default-settings (1.1.7-59) natty; urgency=low
+
+  * updated ~/.yong/yong.ini
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 06 Jun 2011 13:40:56 +0800
+
+deepin-default-settings (1.1.7-58) natty; urgency=low
+
+  * removed firefox-prism-addon etc.
+  * build for amd64
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sat, 04 Jun 2011 09:04:22 +0800
+
+deepin-default-settings (1.1.7-57) maverick-special; urgency=low
+
+  * Updated firefox pref.js
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 04 May 2011 19:17:54 +0800
+
+deepin-default-settings (1.1.7-56) maverick-special; urgency=low
+
+  * Removed etc/xdg/autostart/xscreensaver.desktop
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sat, 09 Apr 2011 08:44:00 +0800
+
+deepin-default-settings (1.1.7-55) maverick-updates; urgency=low
+
+  * font-selector: 还是改回“自动运行”
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 27 Mar 2011 07:27:24 +0800
+
+deepin-default-settings (1.1.7-54) maverick-updates; urgency=low
+
+  * Firefox:
+    - 去掉 autoproxy 扩展
+    - 添加 tab untilities 扩展
+  * /etc/skel/.gconf/apps/totem/%gconf.xml: 修订对比度
+
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 25 Mar 2011 10:29:24 +0800
+
+deepin-default-settings (1.1.7-53) maverick-updates; urgency=low
+
+  * 添加 /etc/xdg/autostart/ 目录，
+    - xscreensaver.desktop ： 启动屏保（锁定屏幕功能就可以用了）
+    - 将 cairo-dock.desktop 也从 /etc/skel/.config/autostart 目录移过来
+  * cairo-dock.desktop:
+    默认不使用 OpenGL 硬件加速（- o 选项），而是使用 -c 选项
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 24 Mar 2011 07:38:35 +0800
+
+deepin-default-settings (1.1.7-52) maverick-updates; urgency=low
+
+  * Cairo-Dock:
+     1. 鼠标悬停：取消动画。
+     2. 点击：由“跳跃3次”改为“脉动1次”。
+
+ -- Leng Ganghua <hiweed@gmail.com>  Tue, 15 Mar 2011 08:51:03 +0800
+
+deepin-default-settings (1.1.7-51) maverick; urgency=low
+
+  * Typo.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 30 Dec 2010 18:54:32 +0800
+
+deepin-default-settings (1.1.7-50) maverick; urgency=low
+
+  * Renew Cairo-Dock configs.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 30 Dec 2010 18:43:16 +0800
+
+deepin-default-settings (1.1.7-49) maverick; urgency=low
+
+  * 加入 Yong 输入法字体设置
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 30 Dec 2010 17:51:38 +0800
+
+deepin-default-settings (1.1.7-48) maverick; urgency=low
+
+  * Added 1616 to Dock
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 30 Dec 2010 16:17:44 +0800
+
+deepin-default-settings (1.1.7-47) maverick; urgency=low
+
+  * ~/.local/share/applications: added gstreamer
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 30 Dec 2010 14:46:56 +0800
+
+deepin-default-settings (1.1.7-46) maverick; urgency=low
+
+  * Fixed DeaDBeeF etc.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 30 Dec 2010 13:28:48 +0800
+
+deepin-default-settings (1.1.7-45) maverick; urgency=low
+
+  * 默认启用 ease link
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 30 Dec 2010 08:28:33 +0800
+
+deepin-default-settings (1.1.7-44) maverick; urgency=low
+
+  * A new version of yong.ini
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 30 Dec 2010 05:50:17 +0800
+
+deepin-default-settings (1.1.7-43) maverick; urgency=low
+
+  * gstreamer: 默认使用 x11 视频输出
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 29 Dec 2010 14:35:27 +0800
+
+deepin-default-settings (1.1.7-42) maverick; urgency=low
+
+  * DeaDBeeF: 更新设置
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 29 Dec 2010 11:21:43 +0800
+
+deepin-default-settings (1.1.7-41) maverick; urgency=low
+
+  * Firefox: 设置最小字号为 12
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 29 Dec 2010 10:28:45 +0800
+
+deepin-default-settings (1.1.7-40) maverick; urgency=low
+
+  * ~/.yong/yong.ini: 添加输入法图标
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 29 Dec 2010 07:21:56 +0800
+
+deepin-default-settings (1.1.7-39) maverick; urgency=low
+
+  * 添加 /etc/apt/apt.conf.d/10broken_proxy
+    希望借此可以减少 apt update 时“签名无效”的机会
+  * 修正 .vimrc
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 27 Dec 2010 17:03:33 +0800
+
+deepin-default-settings (1.1.7-38) maverick; urgency=low
+
+  * ~/.local/share/applications/mimeapps.list: 
+    修正 deb 文件类型的打开方式（gdebi-gtk）
+  * 让 gedit 使用系统默认等宽字体
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 27 Dec 2010 11:50:16 +0800
+
+deepin-default-settings (1.1.7-37) maverick; urgency=low
+
+  * 添加 ~/.shutter 配置，改“自动保存”为“每次都询问”
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 27 Dec 2010 10:10:42 +0800
+
+deepin-default-settings (1.1.7-36) maverick; urgency=low
+
+  * 修正默认 email 程序为 craws mail
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 26 Dec 2010 18:15:13 +0800
+
+deepin-default-settings (1.1.7-35) maverick; urgency=low
+
+  * 调整 notification 这个 applets 的位置
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 26 Dec 2010 16:37:19 +0800
+
+deepin-default-settings (1.1.7-34) maverick; urgency=low
+
+  * ~/.gconf/apps/compiz/plugins/decoration/allscreens/options/%gconf.xml:
+    改为“窗口最大化时，隐藏标题栏”
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 26 Dec 2010 15:27:59 +0800
+
+deepin-default-settings (1.1.7-33) maverick; urgency=low
+
+  * windowbuttons: 最大化时隐藏标题栏
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 26 Dec 2010 11:23:24 +0800
+
+deepin-default-settings (1.1.7-32) maverick; urgency=low
+
+  * 修改 Dock 的 leafpad 为 gedit
+  * 加入 gedit 的配置
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 26 Dec 2010 10:22:37 +0800
+
+deepin-default-settings (1.1.7-31) maverick; urgency=low
+
+  * Added .gconf/apps/deepin configurations.
+  * control: Replaces: Added bash (/etc/skel/.bashrc)
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 26 Dec 2010 09:26:35 +0800
+
+deepin-default-settings (1.1.7-29) maverick; urgency=low
+
+  * 添加农历 Panel 插件
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sat, 25 Dec 2010 09:37:39 +0800
+
+deepin-default-settings (1.1.7-28) maverick; urgency=low
+
+  * 去掉几个 Firefox 插件
+
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 24 Dec 2010 18:10:05 +0800
+
+deepin-default-settings (1.1.7-27) maverick; urgency=low
+
+  * 加入 xscreensaver 设置，自动启动屏保服务
+
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 24 Dec 2010 16:31:42 +0800
+
+deepin-default-settings (1.1.7-26) maverick; urgency=low
+
+  * 更新了开始菜单、Panel 等一系列设置
+
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 24 Dec 2010 15:57:57 +0800
+
+deepin-default-settings (1.1.7-25) maverick; urgency=low
+
+  * 重新整理 Dock 图标，去掉重复的 WebApp
+
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 24 Dec 2010 09:05:06 +0800
+
+deepin-default-settings (1.1.7-24) maverick; urgency=low
+
+  * ibus 添加小鹤双拼
+  * Dock 图标位置修改，添加 PPS 图标
+  * gmplayer 布局修改
+  * deadbeef 默认打开样例音乐
+ 
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 23 Dec 2010 09:36:13 +0800
+
+deepin-default-settings (1.1.7-22) maverick; urgency=low
+
+  * postinst: create /etc/hal/fdi/policy if not exist
+  * .config/ppstream.co/pps_player.conf updated
+  * Add Firefox addon: FireGestures
+  * New Cairo-Dock and Panel configs
+  * Moved mo files to deepin-artwork-common
+  * Added Chrome and Opera settings
+  * ibus 设置更新，添加 yong 的各种输入法
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 20 Dec 2010 9:51:00 +0800
+
+deepin-default-settings (1.1.7-3) maverick; urgency=low
+
+  * Added /etc/gdm/custom.conf for autologin
+  * Added autoproxy folder to .mozilla/firefox/deepin.default
+
+ -- Leng Ganghua <hiweed@gmail.com>  Tue, 7 Dec 2010 07:01:19 +0800
+
+deepin-default-settings (1.1.6-9) maverick; urgency=low
+
+  * .gconf/apps/metacity/general/%gconf.xml updated for cairo-dock 
+    transparent
+  * Changed auto_move to 1 in ~/.yong/yong.ini 
+  * Added .webapps (also cairo-dock luanchers)
+  * Moved webapps to MainDock_2
+
+ -- Leng Ganghua <hiweed@gmail.com>  Tue, 7 Dec 2010 06:02:13 +0800
+
+deepin-default-settings (1.1.5-4) maverick; urgency=low
+
+  * Replace /etc/skel/.gconf/desktop/ibus with new config files.
+  * Added /etc/skel/.yong (yong ime config)
+  * Added zh_CN tranlation for cairo-dock-plug-ins-data 
+
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 2 Dec 2010 11:03:01 +0800
+
+deepin-default-settings (1.1.2-8) maverick; urgency=low
+
+  * /etc/skel/.config: Added pps configs.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 12 Nov 2010 16:51:01 +0800
+
+deepin-default-settings (1.1.2-7) maverick; urgency=low
+
+  * ibus: show panel when ibus active.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 12 Nov 2010 06:00:47 +0800
+
+deepin-default-settings (1.1.2-6) maverick; urgency=low
+
+  * Changed Cairo-Dock launchers
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 10 Nov 2010 19:37:05 +0800
+
+deepin-default-settings (1.1.2-5) maverick; urgency=low
+
+  * Changed default cursor theme to PolarCursorTheme-Green.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 25 Oct 2010 20:43:46 +0800
+
+deepin-default-settings (1.1.2-4) maverick; urgency=low
+
+  * Updated /etc/gconf/gconf.xml.defaults/%gconf-tree.xml
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 24 Oct 2010 08:32:54 +0800
+
+deepin-default-settings (1.1.1) maverick; urgency=low
+
+  * debian/control: Replaces: added gnome-session
+  * added usr/share/xsessions
+  * updated cairo-dock theme
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sat, 23 Oct 2010 13:28:54 +0800
+
+deepin-default-settings (1.1.0-2) maverick; urgency=low
+
+  * Firefox search plugins:
+    - Added usr/lib/firefox-addons/searchplugins/
+    - Added debian/prerm to clear Firefox search engines first before install.
+    - debian/control: added Replaces 
+  * Added etc/timezone and etc/localtime 
+  * Removed .profile (we'll use the default one)
+  * Added debian/postinst to change UTC as no
+
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 22 Oct 2010 15:58:24 +0800
+
+deepin-default-settings (1.0.9-3) maverick; urgency=low
+
+  * Removed etc/skel/.gconf/desktop/gnome/background/%gconf.xml
+  * Added scim skel files.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 20 Oct 2010 16:45:23 +0800
+
+deepin-default-settings (1.0.9-1) maverick; urgency=low
+
+  * Added timezone info to /etc/skel/.profile
+
+ -- Leng Ganghua <hiweed@gmail.com>  Tue, 19 Oct 2010 05:24:23 +0800
+
+deepin-default-settings (1.0.7) maverick; urgency=low
+
+  * Updated gnome-terminal font settings.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 18 Oct 2010 10:05:34 +0800
+
+deepin-default-settings (1.0.6) maverick; urgency=low
+
+  * Added Gnome wallpaper slider.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Mon, 18 Oct 2010 08:32:25 +0800
+
+deepin-default-settings (1.0.5) maverick; urgency=low
+
+  * Updates cairo-dock configs.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 17 Oct 2010 07:52:42 +0800
+
+deepin-default-settings (1.0.3) maverick; urgency=low
+
+  * Added firefox extensions.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Sun,  16 Oct 2010 10:34:00 +0800
+
+deepin-default-settings (1.0.2) maverick; urgency=low
+
+  * Cairo Dock config updated.
+
+ -- Leng Ganghua <hiweed@gmail.com>  Wed,  13 Oct 2010 20:45:00 +0800
+

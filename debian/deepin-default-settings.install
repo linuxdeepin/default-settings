@@ -1,0 +1,4 @@
+etc/
+usr/
+desktop-version /usr/share/deepin-default-settings/
+backgrounds/* /usr/share/backgrounds/

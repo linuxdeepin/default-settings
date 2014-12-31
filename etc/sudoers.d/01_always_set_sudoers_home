@@ -1,0 +1,2 @@
+#Enable alway_set_home to avoid unexpected error of dconf file permission changing to root
+Defaults always_set_home

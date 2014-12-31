@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul">
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#main-window"/>
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#toolbar-menubar"/>
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#sidebar-box"/>
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#sidebar-title"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul#toolbar-menubar"
+                   autohide="true" />
+  <RDF:Description RDF:about="chrome://tabmixplus/content/pref/pref-tabmix.xul#pref-tabmix"
+                   screenX="410"
+                   screenY="210" />
+  <RDF:Description RDF:about="chrome://tabmixplus/content/pref/pref-tabmix.xul">
+    <NC:persist RDF:resource="chrome://tabmixplus/content/pref/pref-tabmix.xul#pref-tabmix"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://mozapps/content/downloads/downloads.xul">
+    <NC:persist RDF:resource="chrome://mozapps/content/downloads/downloads.xul#downloadManager"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://mozapps/content/downloads/downloads.xul#downloadManager"
+                   screenX="1"
+                   screenY="63"
+                   width="485"
+                   height="300"
+                   sizemode="normal" />
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul#main-window"
+                   width="994"
+                   height="829"
+                   sizemode="normal"
+                   screenX="0"
+                   screenY="33" />
+  <RDF:Description RDF:about="chrome://mozapps/content/downloads/unknownContentType.xul">
+    <NC:persist RDF:resource="chrome://mozapps/content/downloads/unknownContentType.xul#unknownContentType"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul#sidebar-box"
+                   sidebarcommand=""
+                   width=""
+                   src="" />
+  <RDF:Description RDF:about="chrome://dta/content/preferences/prefs.xul">
+    <NC:persist RDF:resource="chrome://dta/content/preferences/prefs.xul#DownThemAll"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://mozapps/content/downloads/unknownContentType.xul#unknownContentType"
+                   screenX="247"
+                   screenY="242" />
+  <RDF:Description RDF:about="chrome://dta/content/preferences/prefs.xul#DownThemAll"
+                   screenX="367"
+                   screenY="188"
+                   lastSelected="paneAdvanced" />
+</RDF:RDF>

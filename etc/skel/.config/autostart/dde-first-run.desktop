@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=DDE First Run
+Name[zh_CN]=深度首次运行
+Comment=Init script for dde.
+Comment[zh_CN]=首次运行脚本
+Icon=preferences-system_information
+Exec=/usr/bin/dde-first-run
+TryExec=/usr/bin/dde-first-run
+Terminal=false
+Type=Application
+Categories=
+OnlyShowIn=Deepin;
+#X-GNOME-AutoRestart=true
+NoDisplay=true

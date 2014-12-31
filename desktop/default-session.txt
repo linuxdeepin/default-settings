@@ -1,0 +1,9 @@
+# Set the default desktop session for login managers. Right now lightdm and
+# gdm are supported.
+#
+# Format: Single line with a session name. This must correspond to
+# /usr/share/xsessions/<name>.desktop
+#
+# Example:
+# ubuntu-2d
+deepin

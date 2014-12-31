@@ -1,0 +1,151 @@
+#!/usr/bin/env python2
+# vim: set ts=4 sw=4 fileencoding=utf-8:
+# Luomio <nohappiness@gmail.com>
+# Filename: dde-first-run.py
+# Create Date: 27-03, 13
+
+import locale
+from os import path, rename, remove
+import subprocess
+import os
+
+def touch(filename):
+    with open(filename, 'a') as fp:
+        fp.write('')
+
+def add_qq_shortcut():
+    _short_cut = "<Control><Alt>Z"
+    _action = "/opt/cxoffice/support/Deepin-QQ/qq-sendkeys.sh"
+    _name = u"提取QQ消息"
+    if path.exists(_action):
+        try:
+            import gobject
+            from dbus import glib
+            import dbus
+        except ImportError:
+            return False
+
+        gobject.threads_init()
+        glib.init_threads()
+        bus = dbus.SessionBus()
+        keybinding = bus.get_object("com.deepin.daemon.KeyBinding", "/com/deepin/daemon/KeyBinding")
+        valid, _ =  keybinding.CheckShortcutConflict(_short_cut)
+        if valid != "Valid":
+            return False
+        id, ok = keybinding.AddCustomShortcut(_name, _action)
+        if ok == False:
+            return False
+        keybinding.ModifyShortcut(id, _short_cut)
+
+def add_docs_links(LANG):
+    template={'zh_CN':'用户手册'}
+    _doc = path.join('/usr/share/doc/deepin-manuals/',LANG)
+    if path.exists(_doc) and template.get(LANG):
+        _dest = get_xdg_user_dir('DOCUMENTS')
+        if not path.exists(_dest):
+            os.makedirs(_dest)
+        _link=path.join(_dest,template[LANG])
+        if not path.exists(_link):
+            os.symlink(_doc, _link)
+
+def get_xdg_user_dir(PATH):
+    p = subprocess.Popen(['xdg-user-dir',PATH], stdout=subprocess.PIPE)
+    status = p.poll()
+    if status is None:
+        dir = p.stdout.readline().strip()
+    else:
+        dir = path.expanduser('~')
+    return dir
+
+
+def add_sample_music():
+    user_folder = os.path.expanduser("~")
+    sample_music_dir = os.path.join(user_folder, ".sample-music")
+    if not os.path.exists(sample_music_dir):
+        os.makedirs(sample_music_dir)
+    playlist_name = "太歌·四季.m3u"
+    playlist_link = path.join(sample_music_dir, playlist_name)
+    if path.exists('/usr/share/deepin-sample-music/playlist.m3u') and not path.exists(playlist_link):
+        os.symlink('/usr/share/deepin-sample-music/playlist.m3u',playlist_link)
+
+if __name__ == "__main__":
+    content_cn="""# This file is written by dde-first-run
+# If you want to change or add directories, just edit the line you're
+# interested in. All local changes will be retained on the next run
+# Format is XDG_xxx_DIR="$HOME/yyy", where yyy is a shell-escaped
+# homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
+# absolute path. No other format is supported.
+#
+XDG_DESKTOP_DIR="$HOME/桌面"
+XDG_DOWNLOAD_DIR="$HOME/下载"
+XDG_TEMPLATES_DIR="$HOME/模板"
+XDG_PUBLICSHARE_DIR="$HOME/公共的"
+XDG_DOCUMENTS_DIR="$HOME/文档"
+XDG_MUSIC_DIR="$HOME/音乐"
+XDG_PICTURES_DIR="$HOME/图片"
+XDG_VIDEOS_DIR="$HOME/视频"
+"""
+    content_tw="""# This file is written by xdg-user-dirs-update
+# If you want to change or add directories, just edit the line you're
+# interested in. All local changes will be retained on the next run
+# Format is XDG_xxx_DIR="$HOME/yyy", where yyy is a shell-escaped
+# homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
+# absolute path. No other format is supported.
+#
+XDG_DESKTOP_DIR="$HOME/桌面"
+XDG_DOWNLOAD_DIR="$HOME/下載"
+XDG_TEMPLATES_DIR="$HOME/模板"
+XDG_PUBLICSHARE_DIR="$HOME/公共"
+XDG_DOCUMENTS_DIR="$HOME/文件"
+XDG_MUSIC_DIR="$HOME/音樂"
+XDG_PICTURES_DIR="$HOME/圖片"
+XDG_VIDEOS_DIR="$HOME/影片"
+"""
+    lang, charset = locale.getdefaultlocale()
+    if lang == "zh_CN":
+        if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
+            with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
+                fp.write(content_cn)
+        if path.exists(path.expanduser('~/Desktop')):
+            rename(path.expanduser('~/Desktop'), path.expanduser('~/桌面'))
+        if path.exists(path.expanduser('~/Templates')):
+            rename(path.expanduser('~/Templates'), path.expanduser('~/模板'))
+            #touch(path.expanduser('~/模板/文本文件'))
+    elif lang == "zh_TW":
+        if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
+            with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
+                fp.write(content_tw)
+        if path.exists(path.expanduser('~/Desktop')):
+            rename(path.expanduser('~/Desktop'), path.expanduser('~/桌面'))
+        if path.exists(path.expanduser('~/Templates')):
+            rename(path.expanduser('~/Templates'), path.expanduser('~/模板'))
+            touch(path.expanduser('~/模板/新增檔案'))
+    else:
+        if path.exists(path.expanduser('~/Templates')):
+            touch(path.expanduser('~/Templates/New file'))
+
+    chrome_config = None
+    if not path.exists(path.expanduser('~/.config/google-chrome')):
+        if path.exists('/usr/share/deepin-default-settings/google-chrome/override-chrome-config.tar'):
+            chrome_config = '/usr/share/deepin-default-settings/google-chrome/override-chrome-config.tar'
+        elif path.exists('/usr/share/deepin-default-settings/google-chrome/chrome-config-%s.tar' % lang):
+            chrome_config = '/usr/share/deepin-default-settings/google-chrome/chrome-config-%s.tar' % lang
+        elif path.exists('/usr/share/deepin-default-settings/google-chrome/chrome-config.tar'):
+            chrome_config = '/usr/share/deepin-default-settings/google-chrome/chrome-config.tar'
+
+    if chrome_config is not None:
+        import tarfile
+        tar = tarfile.open(chrome_config)
+        tar.extractall(path.expanduser('~/.config/'))
+        tar.close()
+
+    add_docs_links(lang)
+    add_sample_music()
+
+    try:
+        add_qq_shortcut()
+    except:
+        pass
+
+    if path.exists(path.expanduser('~/.config/autostart/dde-first-run.desktop')):
+        remove(path.expanduser('~/.config/autostart/dde-first-run.desktop'))

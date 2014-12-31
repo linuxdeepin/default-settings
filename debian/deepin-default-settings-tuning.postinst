@@ -1,0 +1,40 @@
+#!/bin/sh
+# postinst script 
+# see: dh_installdeb(1)
+#DEBHELPER#
+
+
+case "$1" in
+    configure)
+
+    if [ -f /usr/share/cups/data/default-testpage.pdf ] && [ -f /usr/share/deepin-default-settings/cups-filters/default-testpage.pdf ];then
+        cp /usr/share/deepin-default-settings/cups-filters/default-testpage.pdf /usr/share/cups/data/default-testpage.pdf
+    fi
+
+    for i in 16 22 24 32 48 128 ;do 
+        [ -f /usr/share/icons/hicolor/${i}x${i}/apps/fcitx.png ] && rm -f /usr/share/icons/hicolor/${i}x${i}/apps/fcitx.png
+        done
+    [ -f /usr/share/icons/hicolor/scalable/apps/fcitx.svg ] && rm -f /usr/share/icons/hicolor/scalable/apps/fcitx.svg
+    install -Dm644 /usr/share/deepin-default-settings/fcitx/fcitx.png /usr/share/icons/hicolor/16x16/apps/fcitx.png || true
+
+    [ -f /usr/share/icons/hicolor/16x16/status/fcitx-kbd.png ] && rm -f /usr/share/icons/hicolor/16x16/status/fcitx-kbd.png
+    install -Dm644 /usr/share/deepin-default-settings/fcitx/fcitx.png /usr/share/icons/hicolor/16x16/status/fcitx-kbd.png || true
+    
+    rm -f /etc/apt/sources.list.d/google-chrome*.list
+
+	;;
+
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+	;;
+
+    *)
+
+	;;
+esac
+
+exit 0
+
+
+

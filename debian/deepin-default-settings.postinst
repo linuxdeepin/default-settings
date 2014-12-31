@@ -1,0 +1,53 @@
+#!/bin/sh
+# postinst script 
+# see: dh_installdeb(1)
+#DEBHELPER#
+
+
+case "$1" in
+    configure)
+
+	glib-compile-schemas /usr/share/glib-2.0/schemas
+	update-gconf-defaults
+
+	update-alternatives --install /usr/share/backgrounds/default_background.jpg \
+	    deepin-default-background /usr/share/backgrounds/desktop.jpg 50
+    
+	update-alternatives --install /etc/deepin-version \
+	    deepin-version /usr/share/deepin-default-settings/desktop-version 50
+
+	sed -ie 's/UTC=yes/UTC=no/g' /etc/default/rcS
+	hwclock --systohc
+
+	if [ ! -d /etc/hal/fdi/policy ]; then
+	    mkdir -pv /etc/hal/fdi/policy
+	fi
+
+    if [ -f /etc/skel/.bashrc ]; then
+        sed -i '/#\ Set\ LS_COLORS\ environment/,+5d' /etc/skel/.bashrc
+        cat >> /etc/skel/.bashrc << EOF 
+# Set LS_COLORS environment by Deepin
+if [[ ("\$TERM" = *256color || "\$TERM" = screen* || "\$TERM" = xterm* ) && -f /etc/lscolor-256color ]]; then
+    eval \$(dircolors -b /etc/lscolor-256color)
+else
+    eval \$(dircolors)
+fi
+EOF
+    fi
+
+	;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+	;;
+
+    *)
+
+	exit 0
+	;;
+esac
+
+exit 0
+
+
+

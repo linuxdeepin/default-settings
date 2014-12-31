@@ -1,0 +1,6 @@
+[Release]
+Version=2014.2
+Type=Desktop
+Type[zh_CN]=桌面版
+Type[zh_TW]=桌面版
+

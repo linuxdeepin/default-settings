@@ -1,0 +1,6 @@
+<mime-info>
+    <mime-type="text/plain">
+        <glob pattern="*.ini" />
+        <comments>Configuration Settings</comments>
+    </mime-type>
+</mime-ini>
