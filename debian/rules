@@ -10,7 +10,6 @@
 
 override_dh_install:
 	dh_install
-	dh_ubuntu_defaults -pdeepin-default-settings
 	rm -rf debian/deepin-default-settings/usr/lib/
 	#sed -i "s/canonical/linuxdeepin/g" debian/deepin-default-settings/usr/lib/firefox/distribution/distribution.ini
 	#sed -i "s/ubuntu\”/Deepin\”/g" debian/deepin-default-settings/usr/lib/firefox/distribution/distribution.ini

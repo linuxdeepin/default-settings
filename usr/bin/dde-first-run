@@ -4,7 +4,6 @@
 # Filename: dde-first-run.py
 # Create Date: 27-03, 13
 
-import locale
 from os import path, rename, remove
 import subprocess
 import os
@@ -58,71 +57,26 @@ def get_xdg_user_dir(PATH):
     return dir
 
 
-def add_sample_music():
-    user_folder = os.path.expanduser("~")
-    sample_music_dir = os.path.join(user_folder, ".sample-music")
-    if not os.path.exists(sample_music_dir):
-        os.makedirs(sample_music_dir)
-    playlist_name = "太歌·四季.m3u"
-    playlist_link = path.join(sample_music_dir, playlist_name)
-    if path.exists('/usr/share/deepin-sample-music/playlist.m3u') and not path.exists(playlist_link):
-        os.symlink('/usr/share/deepin-sample-music/playlist.m3u',playlist_link)
-
 if __name__ == "__main__":
-    content_cn="""# This file is written by dde-first-run
+    xdg_default_content="""# This file is written by dde-first-run
 # If you want to change or add directories, just edit the line you're
 # interested in. All local changes will be retained on the next run
 # Format is XDG_xxx_DIR="$HOME/yyy", where yyy is a shell-escaped
 # homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
 # absolute path. No other format is supported.
 #
-XDG_DESKTOP_DIR="$HOME/桌面"
-XDG_DOWNLOAD_DIR="$HOME/下载"
-XDG_TEMPLATES_DIR="$HOME/模板"
-XDG_PUBLICSHARE_DIR="$HOME/公共的"
-XDG_DOCUMENTS_DIR="$HOME/文档"
-XDG_MUSIC_DIR="$HOME/音乐"
-XDG_PICTURES_DIR="$HOME/图片"
-XDG_VIDEOS_DIR="$HOME/视频"
+XDG_DESKTOP_DIR="$HOME/Desktop"
+XDG_DOWNLOAD_DIR="$HOME/Downloads"
+XDG_TEMPLATES_DIR="$HOME/Templates"
+XDG_PUBLICSHARE_DIR="$HOME/Public"
+XDG_DOCUMENTS_DIR="$HOME/Documents"
+XDG_MUSIC_DIR="$HOME/Music"
+XDG_PICTURES_DIR="$HOME/Pictures"
+XDG_VIDEOS_DIR="$HOME/Videos"
 """
-    content_tw="""# This file is written by xdg-user-dirs-update
-# If you want to change or add directories, just edit the line you're
-# interested in. All local changes will be retained on the next run
-# Format is XDG_xxx_DIR="$HOME/yyy", where yyy is a shell-escaped
-# homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
-# absolute path. No other format is supported.
-#
-XDG_DESKTOP_DIR="$HOME/桌面"
-XDG_DOWNLOAD_DIR="$HOME/下載"
-XDG_TEMPLATES_DIR="$HOME/模板"
-XDG_PUBLICSHARE_DIR="$HOME/公共"
-XDG_DOCUMENTS_DIR="$HOME/文件"
-XDG_MUSIC_DIR="$HOME/音樂"
-XDG_PICTURES_DIR="$HOME/圖片"
-XDG_VIDEOS_DIR="$HOME/影片"
-"""
-    lang, charset = locale.getdefaultlocale()
-    if lang == "zh_CN":
-        if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
-            with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
-                fp.write(content_cn)
-        if path.exists(path.expanduser('~/Desktop')):
-            rename(path.expanduser('~/Desktop'), path.expanduser('~/桌面'))
-        if path.exists(path.expanduser('~/Templates')):
-            rename(path.expanduser('~/Templates'), path.expanduser('~/模板'))
-            #touch(path.expanduser('~/模板/文本文件'))
-    elif lang == "zh_TW":
-        if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
-            with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
-                fp.write(content_tw)
-        if path.exists(path.expanduser('~/Desktop')):
-            rename(path.expanduser('~/Desktop'), path.expanduser('~/桌面'))
-        if path.exists(path.expanduser('~/Templates')):
-            rename(path.expanduser('~/Templates'), path.expanduser('~/模板'))
-            touch(path.expanduser('~/模板/新增檔案'))
-    else:
-        if path.exists(path.expanduser('~/Templates')):
-            touch(path.expanduser('~/Templates/New file'))
+    if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
+        with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
+            fp.write(xdg_default_content)
 
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
@@ -140,7 +94,6 @@ XDG_VIDEOS_DIR="$HOME/影片"
         tar.close()
 
     add_docs_links(lang)
-    add_sample_music()
 
     try:
         add_qq_shortcut()
