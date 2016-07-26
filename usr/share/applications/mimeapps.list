@@ -1,0 +1,26 @@
+[Default Applications]
+application/wps-office.et=/usr/share/applications/wps-office-et.desktop
+application/wps-office.ett=/usr/share/applications/wps-office-et.desktop
+application/wps-office.xls=/usr/share/applications/wps-office-et.desktop
+application/wps-office.xlt=/usr/share/applications/wps-office-et.desktop
+application/vnd.ms-excel=/usr/share/applications/wps-office-et.desktop
+application/msexcel=/usr/share/applications/wps-office-et.desktop
+application/wps-office.xlsx=/usr/share/applications/wps-office-et.desktop
+application/wps-office.xltx=/usr/share/applications/wps-office-et.desktop
+application/wps-office.dps=/usr/share/applications/wps-office-wpp.desktop
+application/wps-office.dpt=/usr/share/applications/wps-office-wpp.desktop
+application/wps-office.ppt=/usr/share/applications/wps-office-wpp.desktop
+application/wps-office.pot=/usr/share/applications/wps-office-wpp.desktop
+application/vnd.ms-powerpoint=/usr/share/applications/wps-office-wpp.desktop
+application/vnd.mspowerpoint=/usr/share/applications/wps-office-wpp.desktop
+application/powerpoint=/usr/share/applications/wps-office-wpp.desktop
+application/wps-office.pptx=/usr/share/applications/wps-office-wpp.desktop
+application/wps-office.potx=/usr/share/applications/wps-office-wpp.desktop
+application/wps-office.wps=/usr/share/applications/wps-office-wps.desktop
+application/wps-office.wpt=/usr/share/applications/wps-office-wps.desktop
+application/wps-office.doc=/usr/share/applications/wps-office-wps.desktop
+application/wps-office.dot=/usr/share/applications/wps-office-wps.desktop
+application/vnd.ms-word=/usr/share/applications/wps-office-wps.desktop
+application/msword=/usr/share/applications/wps-office-wps.desktop
+application/msword-template=/usr/share/applications/wps-office-wps.desktop
+application/x-deb=gdebi.desktop

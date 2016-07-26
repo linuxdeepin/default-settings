@@ -1,17 +1,3 @@
 #! /usr/bin/make -f
 %:
 	dh $@
-
-#override_dh_gconf:
-#	dh_gconf --priority=20
-
-#override_dh_installgsettings:
-#	dh_installgsettings --priority=99
-
-override_dh_install:
-	dh_install
-	rm -rf debian/deepin-default-settings/usr/lib/
-	#sed -i "s/canonical/linuxdeepin/g" debian/deepin-default-settings/usr/lib/firefox/distribution/distribution.ini
-	#sed -i "s/ubuntu\”/Deepin\”/g" debian/deepin-default-settings/usr/lib/firefox/distribution/distribution.ini
-	#sed -i "s/Ubuntu/Deepin/g" debian/deepin-default-settings/usr/lib/firefox/distribution/distribution.ini
-

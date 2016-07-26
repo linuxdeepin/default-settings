@@ -1,3 +1,106 @@
+deepin-default-settings (2016~1) unstable; urgency=medium
+
+  * remove never used qq short cut. 
+  * remove deepin xdg-user-dirs func.
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 26 Jul 2016 14:29:26 +0800
+
+deepin-default-settings (2015~8.4) unstable; urgency=medium
+
+  * modify qq short cut.
+
+ -- Deepin Packages Builder <packages@deepin.com>  Sun, 12 Jun 2016 14:31:27 +0800
+
+deepin-default-settings (2015~8.3) unstable; urgency=medium
+
+  * add qq message. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 13 Jan 2016 09:46:42 +0800
+
+deepin-default-settings (2015~8.2) unstable; urgency=medium
+
+  * remove old files. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 30 Dec 2015 15:26:37 +0800
+
+deepin-default-settings (2015~8.1) unstable; urgency=medium
+
+  * modify Templates . 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 10 Dec 2015 21:01:53 +0800
+
+deepin-default-settings (2015~8) unstable; urgency=medium
+
+  * modify Templates . 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 09 Dec 2015 19:25:33 +0800
+
+deepin-default-settings (2015~7) unstable; urgency=medium
+
+  * assign lang to en to avoid chrome fontconfig bug.
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 09 Dec 2015 09:21:27 +0800
+
+deepin-default-settings (2015~6) unstable; urgency=medium
+
+  *  modify Templates.
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Fri, 04 Dec 2015 20:38:07 +0800
+
+deepin-default-settings (2015~5) unstable; urgency=medium
+
+  * fix alpha1 sources.list to packages.deepin.com 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Thu, 26 Nov 2015 09:43:20 +0800
+
+deepin-default-settings (2015~4) unstable; urgency=medium
+
+  * remove deepin-default-gsettings from depends. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 03 Nov 2015 17:56:56 +0800
+
+deepin-default-settings (2015~3) unstable; urgency=medium
+
+  * change background to deepin-desktop-base.
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 20 Oct 2015 10:43:30 +0800
+
+deepin-default-settings (2015~2) unstable; urgency=medium
+
+  * add postinst to remove newTxt. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 16 Sep 2015 16:25:16 +0800
+
+deepin-default-settings (2015~1) unstable; urgency=medium
+
+  * remove newTxt Template. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 16 Sep 2015 10:01:23 +0800
+
+deepin-default-settings (2014~12-37~unstable) unstable; urgency=medium
+
+  * add x-deb mimeapps. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 06 Jul 2015 10:15:58 +0800
+
+deepin-default-settings (2014~12-36~unstable) unstable; urgency=medium
+
+  * add mimeapps.list.
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 18 May 2015 09:24:21 +0800
+
+deepin-default-settings (2014~12-35~unstable) unstable; urgency=medium
+
+  * remove mozilla. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 19 Jan 2015 15:30:11 +0800
+
+deepin-default-settings (2014~12-35~trusty) trusty; urgency=medium
+
+  * postinst: update default_background  when install|upgrade.
+
+ -- pkg-builder <pkg-builder@packages.linuxdeepin.com>  Wed, 31 Dec 2014 14:20:31 +0800
+
 deepin-default-settings (2014~12-34~trusty) trusty; urgency=medium
 
   * add chrome default setting override. 

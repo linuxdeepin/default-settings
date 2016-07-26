@@ -5,6 +5,7 @@
 # Create Date: 27-03, 13
 
 from os import path, rename, remove
+import locale
 import subprocess
 import os
 
@@ -14,27 +15,28 @@ def touch(filename):
 
 def add_qq_shortcut():
     _short_cut = "<Control><Alt>Z"
-    _action = "/opt/cxoffice/support/Deepin-QQ/qq-sendkeys.sh"
+    _action = "/opt/cxoffice/support/apps.com.qq.im/qq-sendkeys.sh"
     _name = u"提取QQ消息"
-    if path.exists(_action):
-        try:
-            import gobject
-            from dbus import glib
-            import dbus
-        except ImportError:
-            return False
+    if not path.exists(_action):
+        return False
+    try:
+        import gobject
+        from dbus import glib
+        import dbus
+    except ImportError:
+        return False
 
-        gobject.threads_init()
-        glib.init_threads()
-        bus = dbus.SessionBus()
-        keybinding = bus.get_object("com.deepin.daemon.KeyBinding", "/com/deepin/daemon/KeyBinding")
-        valid, _ =  keybinding.CheckShortcutConflict(_short_cut)
-        if valid != "Valid":
-            return False
-        id, ok = keybinding.AddCustomShortcut(_name, _action)
-        if ok == False:
-            return False
-        keybinding.ModifyShortcut(id, _short_cut)
+    gobject.threads_init()
+    glib.init_threads()
+    bus = dbus.SessionBus()
+    keybinding = bus.get_object("com.deepin.daemon.KeyBinding", "/com/deepin/daemon/KeyBinding")
+    valid, _ =  keybinding.CheckShortcutConflict(_short_cut)
+    if valid != "Valid":
+        return False
+    id, ok = keybinding.AddCustomShortcut(_name, _action)
+    if ok == False:
+        return False
+    keybinding.ModifyShortcut(id, _short_cut)
 
 def add_docs_links(LANG):
     template={'zh_CN':'用户手册'}
@@ -77,7 +79,7 @@ XDG_VIDEOS_DIR="$HOME/Videos"
     if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
         with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
             fp.write(xdg_default_content)
-
+    lang, _ = locale.getdefaultlocale()
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
         if path.exists('/usr/share/deepin-default-settings/google-chrome/override-chrome-config.tar'):

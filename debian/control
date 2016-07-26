@@ -1,13 +1,13 @@
 Source: deepin-default-settings
 Section: admin
 Priority: optional
-Maintainer: Zhang Cheng <zhangcheng@linuxdeepin.com>
+Maintainer: sysdev <sysdev@deepin.com>
 Standards-Version: 3.9.4
-Build-Depends: debhelper (>= 8.1.3~) 
+Build-Depends: debhelper (>= 8.1.3~)
 
 Package: deepin-default-settings
 Architecture: all
-Depends: ${misc:Depends}, deepin-artwork, deepin-default-gsettings, deepin-default-settings-tuning
+Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning
 Suggests: binfmt-support
 Conflicts: chrome-default-settings, deepin-default-settings (<< 2014~03-24), deepin-gtk-theme( << 14.07+20140919162552 )
 Description: Deepin default settings
