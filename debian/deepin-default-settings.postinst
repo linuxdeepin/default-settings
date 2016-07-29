@@ -42,5 +42,19 @@ EOF
         exit 0
     ;;
 esac
+# Set Max Size for journal
+	if [ -f /etc/systemd/journald.conf ]; then
+		sed -i '22s/^.*$/SystemMaxUse=500M/'  /etc/systemd/journald.conf
+		sed -i '15s/^.*$/Storage=persistent/'  /etc/systemd/journald.conf
+    fi
+	if [ -f /etc/logrotate.conf ] &&! grep -qr "size 1000M" /etc/logrotate.conf; then
+		echo  "size 1000M\n/var/log/*.log {\n    maxsize 100M\n    hourly\n    missingok\n    rotate 8\n    compress\n    notifempty\n    nocreate\n}" >> /etc/logrotate.conf
+    fi
+
+
+
+
+
+
 
 exit 0
