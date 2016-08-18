@@ -24,3 +24,4 @@ application/vnd.ms-word=/usr/share/applications/wps-office-wps.desktop
 application/msword=/usr/share/applications/wps-office-wps.desktop
 application/msword-template=/usr/share/applications/wps-office-wps.desktop
 application/x-deb=gdebi.desktop
+inode/directory=/usr/share/applications/dde-file-manager.desktop
