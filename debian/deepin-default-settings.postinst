@@ -50,6 +50,16 @@ esac
 	if [ -f /etc/logrotate.conf ] &&! grep -qr "size 1000M" /etc/logrotate.conf; then
 		echo  "size 1000M\n/var/log/*.log {\n    maxsize 100M\n    hourly\n    missingok\n    rotate 8\n    compress\n    notifempty\n    nocreate\n}" >> /etc/logrotate.conf
     fi
+# set greeter pam no waiting
+	if [ -f /etc/pam.d/common-auth ]; then
+		cp /etc/pam.d/common-auth /etc/pam.d/common-auth-nodelay
+		sed -i "s/nullok_secure.*/nullok_secure nodelay/g" /etc/pam.d/common-auth-nodelay
+	fi
+	# if [ -f /etc/pam.d/lightdm ]; then
+	# sed -i "s/@include common-auth.*/@include common-auth-nodelay/g" /etc/pam.d/lightdm
+	#fi
+
+
 
 
 
