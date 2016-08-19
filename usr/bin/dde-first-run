@@ -79,6 +79,8 @@ XDG_VIDEOS_DIR="$HOME/Videos"
     if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
         with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
             fp.write(xdg_default_content)
+    subprocess.call(['xdg-user-dirs-update'])
+    subprocess.call(['xdg-user-dirs-update', '--force'])
     lang, _ = locale.getdefaultlocale()
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
