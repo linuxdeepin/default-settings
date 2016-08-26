@@ -8,6 +8,7 @@ from os import path, rename, remove
 import locale
 import subprocess
 import os
+import shutil
 
 def touch(filename):
     with open(filename, 'a') as fp:
@@ -17,26 +18,22 @@ def add_qq_shortcut():
     _short_cut = "<Control><Alt>Z"
     _action = "/opt/cxoffice/support/apps.com.qq.im/qq-sendkeys.sh"
     _name = u"提取QQ消息"
-    if not path.exists(_action):
-        return False
-    try:
-        import gobject
-        from dbus import glib
-        import dbus
-    except ImportError:
-        return False
+    if path.exists(_action):
+        try:
+            import gobject
+            from dbus import glib
+            import dbus
+        except ImportError:
+            return False
 
-    gobject.threads_init()
-    glib.init_threads()
-    bus = dbus.SessionBus()
-    keybinding = bus.get_object("com.deepin.daemon.KeyBinding", "/com/deepin/daemon/KeyBinding")
-    valid, _ =  keybinding.CheckShortcutConflict(_short_cut)
-    if valid != "Valid":
-        return False
-    id, ok = keybinding.AddCustomShortcut(_name, _action)
-    if ok == False:
-        return False
-    keybinding.ModifyShortcut(id, _short_cut)
+        gobject.threads_init()
+        glib.init_threads()
+        bus = dbus.SessionBus()
+        keybinding = bus.get_object("com.deepin.daemon.Keybinding", "/com/deepin/daemon/Keybinding")
+        _, ok = keybinding.Add(_name, _action, _short_cut)
+        if ok == False:
+            return False
+
 
 def add_docs_links(LANG):
     template={'zh_CN':'用户手册'}
@@ -76,11 +73,45 @@ XDG_MUSIC_DIR="$HOME/Music"
 XDG_PICTURES_DIR="$HOME/Pictures"
 XDG_VIDEOS_DIR="$HOME/Videos"
 """
-    if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
-        with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
-            fp.write(xdg_default_content)
+
+    lang, charset = locale.getdefaultlocale()
+    if lang == "zh_CN":
+        if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
+            with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
+                fp.write(xdg_default_content)
+
+        if path.exists(path.expanduser('~/Templates')):
+            for  i in os.listdir(path.expanduser('~/Templates/zh')):
+                shutil.move(os.path.join(path.expanduser('~/Templates/zh'),i),path.expanduser('~/Templates/'))
+            shutil.rmtree(path.expanduser('~/Templates/zh'))
+            shutil.rmtree(path.expanduser('~/Templates/tw'))
+            shutil.rmtree(path.expanduser('~/Templates/en'))
+
+            #touch(path.expanduser('~/模板/文本文件'))
+    elif lang == "zh_TW":
+        if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
+            with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
+                fp.write(xdg_default_content)
+
+        if path.exists(path.expanduser('~/Templates')):
+            for  i in os.listdir(path.expanduser('~/Templates/tw')):
+                shutil.move(os.path.join(path.expanduser('~/Templates/tw'),i),path.expanduser('~/Templates/'))
+            shutil.rmtree(path.expanduser('~/Templates/zh'))
+            shutil.rmtree(path.expanduser('~/Templates/tw'))
+            shutil.rmtree(path.expanduser('~/Templates/en'))
+            touch(path.expanduser('~/Templates/文本.txt'))
+    else:
+        if path.exists(path.expanduser('~/Templates')):
+            for  i in os.listdir(path.expanduser('~/Templates/en')):
+                shutil.move(os.path.join(path.expanduser('~/Templates/en'),i),path.expanduser('~/Templates/'))
+            shutil.rmtree(path.expanduser('~/Templates/zh'))
+            shutil.rmtree(path.expanduser('~/Templates/tw'))
+            shutil.rmtree(path.expanduser('~/Templates/en'))
+            touch(path.expanduser('~/Templates/Text.txt'))
+
     subprocess.call(['xdg-user-dirs-update'])
     subprocess.call(['xdg-user-dirs-update', '--force'])
+
     lang, _ = locale.getdefaultlocale()
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
