@@ -59,12 +59,13 @@ esac
 	# sed -i "s/@include common-auth.*/@include common-auth-nodelay/g" /etc/pam.d/lightdm
 	#fi
 
-
-
-
-
-
-
-
+# make skel dirs.
+mkdir -p /etc/skel/Desktop;
+mkdir -p /etc/skel/Documents;
+mkdir -p /etc/skel/Downloads;
+mkdir -p /etc/skel/Music;
+mkdir -p /etc/skel/Pictures;
+mkdir -p /etc/skel/Videos;
+mkdir -p /etc/skel/.Public;
 
 exit 0

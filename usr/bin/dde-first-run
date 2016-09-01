@@ -57,60 +57,30 @@ def get_xdg_user_dir(PATH):
 
 
 if __name__ == "__main__":
-    xdg_default_content="""# This file is written by dde-first-run
-# If you want to change or add directories, just edit the line you're
-# interested in. All local changes will be retained on the next run
-# Format is XDG_xxx_DIR="$HOME/yyy", where yyy is a shell-escaped
-# homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
-# absolute path. No other format is supported.
-#
-XDG_DESKTOP_DIR="$HOME/Desktop"
-XDG_DOWNLOAD_DIR="$HOME/Downloads"
-XDG_TEMPLATES_DIR="$HOME/Templates"
-XDG_PUBLICSHARE_DIR="$HOME/Public"
-XDG_DOCUMENTS_DIR="$HOME/Documents"
-XDG_MUSIC_DIR="$HOME/Music"
-XDG_PICTURES_DIR="$HOME/Pictures"
-XDG_VIDEOS_DIR="$HOME/Videos"
-"""
+    # Users update from a version before 15.3 have /etc/skel/Templates,
+    # so we should remove the redundant templates directory first.
+    shutil.rmtree(path.expanduser('~/Templates/'))
 
     lang, charset = locale.getdefaultlocale()
     if lang == "zh_CN":
-        if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
-            with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
-                fp.write(xdg_default_content)
-
-        if path.exists(path.expanduser('~/Templates')):
-            for  i in os.listdir(path.expanduser('~/Templates/zh')):
-                shutil.move(os.path.join(path.expanduser('~/Templates/zh'),i),path.expanduser('~/Templates/'))
-            shutil.rmtree(path.expanduser('~/Templates/zh'))
-            shutil.rmtree(path.expanduser('~/Templates/tw'))
-            shutil.rmtree(path.expanduser('~/Templates/en'))
-
-            #touch(path.expanduser('~/模板/文本文件'))
+        if path.exists(path.expanduser('~/.Templates')):
+            for  i in os.listdir(path.expanduser('~/.Templates/zh')):
+                shutil.move(os.path.join(path.expanduser('~/.Templates/zh'), i),
+                    path.expanduser('~/.Templates/'))
     elif lang == "zh_TW":
-        if path.exists(path.expanduser('~/.config/user-dirs.dirs')):
-            with open(path.expanduser('~/.config/user-dirs.dirs'),'w') as fp:
-                fp.write(xdg_default_content)
-
-        if path.exists(path.expanduser('~/Templates')):
-            for  i in os.listdir(path.expanduser('~/Templates/tw')):
-                shutil.move(os.path.join(path.expanduser('~/Templates/tw'),i),path.expanduser('~/Templates/'))
-            shutil.rmtree(path.expanduser('~/Templates/zh'))
-            shutil.rmtree(path.expanduser('~/Templates/tw'))
-            shutil.rmtree(path.expanduser('~/Templates/en'))
-            touch(path.expanduser('~/Templates/文本.txt'))
+        if path.exists(path.expanduser('~/.Templates')):
+            for  i in os.listdir(path.expanduser('~/.Templates/tw')):
+                shutil.move(os.path.join(path.expanduser('~/.Templates/tw'), i),
+                    path.expanduser('~/.Templates/'))
     else:
-        if path.exists(path.expanduser('~/Templates')):
-            for  i in os.listdir(path.expanduser('~/Templates/en')):
-                shutil.move(os.path.join(path.expanduser('~/Templates/en'),i),path.expanduser('~/Templates/'))
-            shutil.rmtree(path.expanduser('~/Templates/zh'))
-            shutil.rmtree(path.expanduser('~/Templates/tw'))
-            shutil.rmtree(path.expanduser('~/Templates/en'))
-            touch(path.expanduser('~/Templates/Text.txt'))
+        if path.exists(path.expanduser('~/.Templates')):
+            for  i in os.listdir(path.expanduser('~/.Templates/en')):
+                shutil.move(os.path.join(path.expanduser('~/.Templates/en'), i),
+                    path.expanduser('~/.Templates/'))
 
-    subprocess.call(['xdg-user-dirs-update'])
-    subprocess.call(['xdg-user-dirs-update', '--force'])
+    shutil.rmtree(path.expanduser('~/.Templates/zh'))
+    shutil.rmtree(path.expanduser('~/.Templates/tw'))
+    shutil.rmtree(path.expanduser('~/.Templates/en'))
 
     lang, _ = locale.getdefaultlocale()
     chrome_config = None
