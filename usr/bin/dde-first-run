@@ -58,29 +58,34 @@ def get_xdg_user_dir(PATH):
 
 if __name__ == "__main__":
     # Users update from a version before 15.3 have /etc/skel/Templates,
-    # so we should remove the redundant templates directory first.
-    shutil.rmtree(path.expanduser('~/Templates/'))
+    # if they try to create a new user, there will be a redundant templates
+    # directory, we need to remove it first.
+    if path.exists(path.expanduser('~/Templates')):
+       shutil.rmtree(path.expanduser('~/Templates/'))
 
     lang, charset = locale.getdefaultlocale()
     if lang == "zh_CN":
-        if path.exists(path.expanduser('~/.Templates')):
+        if path.exists(path.expanduser('~/.Templates/zh')):
             for  i in os.listdir(path.expanduser('~/.Templates/zh')):
                 shutil.move(os.path.join(path.expanduser('~/.Templates/zh'), i),
                     path.expanduser('~/.Templates/'))
     elif lang == "zh_TW":
-        if path.exists(path.expanduser('~/.Templates')):
+        if path.exists(path.expanduser('~/.Templates/tw')):
             for  i in os.listdir(path.expanduser('~/.Templates/tw')):
                 shutil.move(os.path.join(path.expanduser('~/.Templates/tw'), i),
                     path.expanduser('~/.Templates/'))
     else:
-        if path.exists(path.expanduser('~/.Templates')):
+        if path.exists(path.expanduser('~/.Templates/en')):
             for  i in os.listdir(path.expanduser('~/.Templates/en')):
                 shutil.move(os.path.join(path.expanduser('~/.Templates/en'), i),
                     path.expanduser('~/.Templates/'))
 
-    shutil.rmtree(path.expanduser('~/.Templates/zh'))
-    shutil.rmtree(path.expanduser('~/.Templates/tw'))
-    shutil.rmtree(path.expanduser('~/.Templates/en'))
+    if path.exists(path.expanduser('~/.Templates/zh')):
+        shutil.rmtree(path.expanduser('~/.Templates/zh'))
+    if path.exists(path.expanduser('~/.Templates/tw')):
+        shutil.rmtree(path.expanduser('~/.Templates/tw'))
+    if path.exists(path.expanduser('~/.Templates/en')):
+        shutil.rmtree(path.expanduser('~/.Templates/en'))
 
     lang, _ = locale.getdefaultlocale()
     chrome_config = None
