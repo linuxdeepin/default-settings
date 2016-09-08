@@ -87,6 +87,9 @@ if __name__ == "__main__":
     if path.exists(path.expanduser('~/.Templates/en')):
         shutil.rmtree(path.expanduser('~/.Templates/en'))
 
+    # initialize mime-apps association
+    subprocess.Popen(["/usr/lib/deepin-api/mime-helper"], shell=True)
+
     lang, _ = locale.getdefaultlocale()
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
