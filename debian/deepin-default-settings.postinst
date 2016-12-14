@@ -24,6 +24,9 @@ else
 fi
 EOF
         fi
+        if [ -d /etc/skel/Templates/ ]; then
+            rm -rf /etc/skel/Templates/
+        fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

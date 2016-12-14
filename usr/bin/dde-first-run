@@ -106,7 +106,7 @@ if __name__ == "__main__":
         tar.extractall(path.expanduser('~/.config/'))
         tar.close()
 
-    add_docs_links(lang)
+    #add_docs_links(lang)
 
     try:
         add_qq_shortcut()
