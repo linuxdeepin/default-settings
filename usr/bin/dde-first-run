@@ -9,6 +9,8 @@ import locale
 import subprocess
 import os
 import shutil
+import getpass
+import re
 
 def touch(filename):
     with open(filename, 'a') as fp:
@@ -106,7 +108,16 @@ if __name__ == "__main__":
         tar.extractall(path.expanduser('~/.config/'))
         tar.close()
 
-    #add_docs_links(lang)
+    if path.exists('/usr/lib/PepperFlash'):
+		user_name=getpass.getuser()
+		pepperflash = path.expanduser('~/.config/google-chrome/PepperFlash/latest-component-updated-flash')
+		with open(pepperflash,"r") as f:
+			lines = f.readlines()
+		with open(pepperflash,"w") as f:
+			for line in lines:
+				f.write(re.sub(r'deepin',user_name,line)) 
+
+    add_docs_links(lang)
 
     try:
         add_qq_shortcut()
