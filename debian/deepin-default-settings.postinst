@@ -6,9 +6,6 @@
 
 case "$1" in
     configure)
-        sed -ie 's/UTC=yes/UTC=no/g' /etc/default/rcS
-        hwclock --systohc
-
         if [ -f /opt/cxoffice/etc/cxoffice.conf ]; then
             sed -i "s#;;\(\"AntiVirusScan\" = \)\"\"#\1\"never\"#" /opt/cxoffice/etc/cxoffice.conf
         fi
