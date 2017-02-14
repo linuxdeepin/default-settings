@@ -7,6 +7,10 @@
         "Standard":"Noto Sans CJK TC",
         "Mono":"Noto Mono"
     },
+    "zh_HK":{
+        "Standard":"Noto Sans CJK TC",
+        "Mono":"Noto Mono"
+    },
     "ja":{
         "Standard":"Noto Sans CJK JP",
         "Mono":"Noto Mono"
