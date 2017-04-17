@@ -90,7 +90,7 @@ if __name__ == "__main__":
         shutil.rmtree(path.expanduser('~/.Templates/en'))
 
     # initialize mime-apps association
-    subprocess.Popen(["/usr/lib/deepin-api/mime-helper"], shell=True)
+#    subprocess.Popen(["/usr/lib/deepin-api/mime-helper"], shell=True)
 
     lang, _ = locale.getdefaultlocale()
     chrome_config = None
