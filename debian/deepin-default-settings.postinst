@@ -76,4 +76,11 @@ mkdir -p /etc/skel/.Public;
 # They need to watch this directory while it is not created by default.
 mkdir -p /etc/skel/.local/share/Trash
 
+# change sources.list panda
+case $(uname -m) in
+	"x86_64"|"i686"|"i386"|"amd64"|"x86")
+		sed -i 's/deepin unstable/deepin panda/g' /etc/apt/sources.list >/dev/null 2>&1||true
+	;;
+esac
+
 exit 0
