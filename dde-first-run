@@ -4,59 +4,12 @@
 # Filename: dde-first-run.py
 # Create Date: 27-03, 13
 
-from os import path, rename, remove
+from os import path, remove
 import locale
-import subprocess
 import os
 import shutil
 import getpass
 import re
-
-def touch(filename):
-    with open(filename, 'a') as fp:
-        fp.write('')
-
-def add_qq_shortcut():
-    _short_cut = "<Control><Alt>Z"
-    _action = "/opt/cxoffice/support/apps.com.qq.im/qq-sendkeys.sh"
-    _name = u"提取QQ消息"
-    if path.exists(_action):
-        try:
-            import gobject
-            from dbus import glib
-            import dbus
-        except ImportError:
-            return False
-
-        gobject.threads_init()
-        glib.init_threads()
-        bus = dbus.SessionBus()
-        keybinding = bus.get_object("com.deepin.daemon.Keybinding", "/com/deepin/daemon/Keybinding")
-        _, ok = keybinding.Add(_name, _action, _short_cut)
-        if ok == False:
-            return False
-
-
-def add_docs_links(LANG):
-    template={'zh_CN':'用户手册'}
-    _doc = path.join('/usr/share/doc/deepin-manuals/',LANG)
-    if path.exists(_doc) and template.get(LANG):
-        _dest = get_xdg_user_dir('DOCUMENTS')
-        if not path.exists(_dest):
-            os.makedirs(_dest)
-        _link=path.join(_dest,template[LANG])
-        if not path.exists(_link):
-            os.symlink(_doc, _link)
-
-def get_xdg_user_dir(PATH):
-    p = subprocess.Popen(['xdg-user-dir',PATH], stdout=subprocess.PIPE)
-    status = p.poll()
-    if status is None:
-        dir = p.stdout.readline().strip()
-    else:
-        dir = path.expanduser('~')
-    return dir
-
 
 if __name__ == "__main__":
     # Users update from a version before 15.3 have /etc/skel/Templates,
@@ -89,10 +42,6 @@ if __name__ == "__main__":
     if path.exists(path.expanduser('~/.Templates/en')):
         shutil.rmtree(path.expanduser('~/.Templates/en'))
 
-    # initialize mime-apps association
-#    subprocess.Popen(["/usr/lib/deepin-api/mime-helper"], shell=True)
-
-    lang, _ = locale.getdefaultlocale()
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
         if path.exists('/usr/share/deepin-default-settings/google-chrome/override-chrome-config.tar'):
@@ -116,13 +65,6 @@ if __name__ == "__main__":
 		with open(pepperflash,"w") as f:
 			for line in lines:
 				f.write(re.sub(r'deepin',user_name,line)) 
-
-    add_docs_links(lang)
-
-    try:
-        add_qq_shortcut()
-    except:
-        pass
 
     if path.exists(path.expanduser('~/.config/autostart/dde-first-run.desktop')):
         remove(path.expanduser('~/.config/autostart/dde-first-run.desktop'))
