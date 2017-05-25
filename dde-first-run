@@ -12,35 +12,16 @@ import getpass
 import re
 
 if __name__ == "__main__":
-    # Users update from a version before 15.3 have /etc/skel/Templates,
-    # if they try to create a new user, there will be a redundant templates
-    # directory, we need to remove it first.
-    if path.exists(path.expanduser('~/Templates')):
-       shutil.rmtree(path.expanduser('~/Templates/'))
-
     lang, charset = locale.getdefaultlocale()
-    if lang == "zh_CN":
-        if path.exists(path.expanduser('~/.Templates/zh')):
-            for  i in os.listdir(path.expanduser('~/.Templates/zh')):
-                shutil.move(os.path.join(path.expanduser('~/.Templates/zh'), i),
-                    path.expanduser('~/.Templates/'))
-    elif lang == "zh_TW":
-        if path.exists(path.expanduser('~/.Templates/tw')):
-            for  i in os.listdir(path.expanduser('~/.Templates/tw')):
-                shutil.move(os.path.join(path.expanduser('~/.Templates/tw'), i),
-                    path.expanduser('~/.Templates/'))
-    else:
-        if path.exists(path.expanduser('~/.Templates/en')):
-            for  i in os.listdir(path.expanduser('~/.Templates/en')):
-                shutil.move(os.path.join(path.expanduser('~/.Templates/en'), i),
-                    path.expanduser('~/.Templates/'))
 
-    if path.exists(path.expanduser('~/.Templates/zh')):
-        shutil.rmtree(path.expanduser('~/.Templates/zh'))
-    if path.exists(path.expanduser('~/.Templates/tw')):
-        shutil.rmtree(path.expanduser('~/.Templates/tw'))
-    if path.exists(path.expanduser('~/.Templates/en')):
-        shutil.rmtree(path.expanduser('~/.Templates/en'))
+    desktops = ['dde-computer.desktop', 'dde-trash.desktop']
+    desktop_path = path.expanduser("~/Desktop")
+    if not path.exists(desktop_path):
+        os.makedirs(desktop_path)
+    for desktop in desktops:
+        desktop_file = path.join("/usr/share/applications", desktop)
+        if path.exists(desktop_file):
+            shutil.copyfile(desktop_file, path.join(desktop_path, desktop))
 
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
@@ -50,21 +31,14 @@ if __name__ == "__main__":
             chrome_config = '/usr/share/deepin-default-settings/google-chrome/chrome-config-%s.tar' % lang
         elif path.exists('/usr/share/deepin-default-settings/google-chrome/chrome-config.tar'):
             chrome_config = '/usr/share/deepin-default-settings/google-chrome/chrome-config.tar'
+        else:
+            chrome_config = None
 
     if chrome_config is not None:
         import tarfile
         tar = tarfile.open(chrome_config)
         tar.extractall(path.expanduser('~/.config/'))
         tar.close()
-
-    if path.exists('/usr/lib/PepperFlash'):
-		user_name=getpass.getuser()
-		pepperflash = path.expanduser('~/.config/google-chrome/PepperFlash/latest-component-updated-flash')
-		with open(pepperflash,"r") as f:
-			lines = f.readlines()
-		with open(pepperflash,"w") as f:
-			for line in lines:
-				f.write(re.sub(r'deepin',user_name,line)) 
 
     if path.exists(path.expanduser('~/.config/autostart/dde-first-run.desktop')):
         remove(path.expanduser('~/.config/autostart/dde-first-run.desktop'))
