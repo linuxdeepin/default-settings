@@ -40,5 +40,14 @@ if __name__ == "__main__":
         tar.extractall(path.expanduser('~/.config/'))
         tar.close()
 
+    if path.exists(path.expanduser('~/.config/google-chrome/PepperFlash/latest-component-updated-flash')):
+        user_name=getpass.getuser()
+        pepperflash = path.expanduser('~/.config/google-chrome/PepperFlash/latest-component-updated-flash')
+        with open(pepperflash,"r") as f:
+            lines = f.readlines()
+        with open(pepperflash,"w") as f:
+            for line in lines:
+                f.write(re.sub(r'deepin',user_name,line))
+
     if path.exists(path.expanduser('~/.config/autostart/dde-first-run.desktop')):
         remove(path.expanduser('~/.config/autostart/dde-first-run.desktop'))
