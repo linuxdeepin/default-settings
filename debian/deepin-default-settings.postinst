@@ -24,6 +24,12 @@ EOF
         if [ -d /etc/skel/Templates/ ]; then
             rm -rf /etc/skel/Templates/
         fi
+        if [ -d /etc/skel/.Templates/ ]; then
+            rm -rf /etc/skel/.Templates/
+        fi
+        if [ -d /etc/skel/.config/hexchat/ ]; then
+            rm -rf /etc/skel/.config/hexchat/
+        fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
