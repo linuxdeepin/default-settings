@@ -14,14 +14,14 @@ import re
 if __name__ == "__main__":
     lang, charset = locale.getdefaultlocale()
 
-    desktops = ['dde-computer.desktop', 'dde-trash.desktop']
-    desktop_path = path.expanduser("~/Desktop")
-    if not path.exists(desktop_path):
-        os.makedirs(desktop_path)
-    for desktop in desktops:
-        desktop_file = path.join("/usr/share/applications", desktop)
-        if path.exists(desktop_file):
-            shutil.copyfile(desktop_file, path.join(desktop_path, desktop))
+#    desktops = ['dde-computer.desktop', 'dde-trash.desktop']
+#    desktop_path = path.expanduser("~/Desktop")
+#    if not path.exists(desktop_path):
+#        os.makedirs(desktop_path)
+#    for desktop in desktops:
+#        desktop_file = path.join("/usr/share/applications", desktop)
+#        if path.exists(desktop_file):
+#            shutil.copyfile(desktop_file, path.join(desktop_path, desktop))
 
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
