@@ -64,10 +64,6 @@ esac
 	# if [ -f /etc/pam.d/lightdm ]; then
 	# sed -i "s/@include common-auth.*/@include common-auth-nodelay/g" /etc/pam.d/lightdm
 	#fi
-# set tty for english
-	if [ -f /etc/profile ] &&! grep -qr "LC_ALL=C" /etc/profile; then
-		echo "tty | egrep -q tty[1-6] && export LC_ALL=C" >> /etc/profile
-	fi
 
 # make skel dirs.
 mkdir -p /etc/skel/Desktop;
