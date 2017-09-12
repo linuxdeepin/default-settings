@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+
+  <!-- Mime types must match the desktop file associations -->
+  <mime-type type="application/xmind">
+    <comment xml:lang="en">xmind file</comment>
+    <glob pattern="*.xmind"/>
+    <generic-icon name="xmind"/>
+  </mime-type>
+</mime-info>
