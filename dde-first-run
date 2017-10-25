@@ -21,7 +21,7 @@ if __name__ == "__main__":
 #    for desktop in desktops:
 #        desktop_file = path.join("/usr/share/applications", desktop)
 #        if path.exists(desktop_file):
-#            shutil.copyfile(desktop_file, path.join(desktop_path, desktop))
+##            shutil.copyfile(desktop_file, path.join(desktop_path, desktop))
 
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
