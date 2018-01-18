@@ -8,6 +8,7 @@ Build-Depends: debhelper (>= 8.1.3~)
 Package: deepin-default-settings
 Architecture: all
 Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning
+Recommends: deepin-default-settings-network
 Suggests: binfmt-support
 Conflicts: chrome-default-settings, deepin-default-settings (<< 2014~03-24), deepin-gtk-theme( << 14.07+20140919162552 )
 Description: Deepin default settings
@@ -25,3 +26,9 @@ Description: Deepin default settings tuning
   user.
   .
   Split from deepin-default-settings
+
+Package: deepin-default-settings-network
+Architecture: all
+Depends: ${misc:Depends} 
+Description: Deepin default settings network
+  This package config the system to Deepin default. Most of the 

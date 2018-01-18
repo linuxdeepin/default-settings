@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for devnames in `ls /sys/class/net/`
+do
+	if grep -rq "DEVTYPE=wlan" /sys/class/net/$devnames/uevent; then
+		devname=`grep -r "INTERFACE" /sys/class/net/$devnames/uevent`
+		devname=${devname#*=}
+		iw dev $devname set power_save off || true
+	fi
+done
+
