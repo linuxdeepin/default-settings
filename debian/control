@@ -8,20 +8,20 @@ Build-Depends: debhelper (>= 8.1.3~)
 Package: deepin-default-settings
 Architecture: all
 Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning, iw
-Recommends: deepin-default-settings-network
 Suggests: binfmt-support
-Conflicts: chrome-default-settings, deepin-default-settings (<< 2014~03-24),
- deepinop, deepin-default-settings-network
+Conflicts: chrome-default-settings,
+ deepinop, deepin-default-settings-network,
+ deepin-default-settings (<< 2018.1.23)
 Description: default settings for deepin destkop environment
-  This package does tweaking and to provide better experience of deepin desktop
-  environment.
+ This package does tweaking and to provide better experience of deepin desktop
+ environment.
 
 Package: deepin-default-settings-tuning
 Architecture: all
 Depends: ${misc:Depends} 
-Conflicts: deepin-default-settings (<< 2014~03-24)
+Conflicts: deepin-default-settings (<< 2018.1.23)
 Description: default settings for deepin destkop environment - misc overrides
-  This package does tweaking and to provide better experience of deepin desktop
-  environment.
-  .
-  This package includes files to override cups default page and fcitx icon.
+ This package does tweaking and to provide better experience of deepin desktop
+ environment.
+ .
+ This package includes files to override cups default page and fcitx icon.
