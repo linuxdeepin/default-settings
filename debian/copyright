@@ -1,7 +1,7 @@
 Format: http://dep.debian.net/deps/dep5/
-Upstream-Name: deepin-scrot
+Upstream-Name: default-settings
 Upstream-Contact: Yong Wang <lazycat.manatee@gmail.com>
-Source: http://github.com/manateelazycat/deepin-scrot
+Source: http://github.com/linuxdeepin/default-settings
 
 License: LGPL-3+
  This is free software; you can redistribute it and/or modify it
@@ -21,7 +21,7 @@ License: LGPL-3+
  .
  See /usr/share/common-licenses/LGPL-3 on your debian system.
 
-Files: debian/*
-Copyright: 2011 Deepin, Inc.
+Files: *
+Copyright: 2011, 2017 Deepin, Inc. <support@deepin.com>
            2011 Zhang Cheng <zhangcheng@linuxdeepin.com>
 License: LGPL-3+
