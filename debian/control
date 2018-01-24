@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 8.1.3~)
 
 Package: deepin-default-settings
 Architecture: all
-Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning, iw
+Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning(>= 2018.1.23), iw
 Suggests: binfmt-support
 Conflicts: chrome-default-settings,
  deepinop, deepin-default-settings-network
@@ -18,7 +18,6 @@ Description: default settings for deepin destkop environment
 Package: deepin-default-settings-tuning
 Architecture: all
 Depends: ${misc:Depends} 
-Breaks: deepin-default-settings (<< 2018.1.23)
 Description: default settings for deepin destkop environment - misc overrides
  This package does tweaking and to provide better experience of deepin desktop
  environment.
