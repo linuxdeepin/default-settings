@@ -19,6 +19,7 @@ Description: default settings for deepin destkop environment
 Package: deepin-default-settings-tuning
 Architecture: all
 Depends: ${misc:Depends} 
+Breaks: deepin-default-settings (<= 2018.1.23)
 Description: default settings for deepin destkop environment - misc overrides
  This package does tweaking and to provide better experience of deepin desktop
  environment.
