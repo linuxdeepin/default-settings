@@ -1,5 +1,5 @@
-tuning/cups-filters  /usr/share/deepin-default-settings/cups-filters
+tuning/cups-filters/*.pdf  /usr/share/deepin-default-settings/cups-filters
 tuning/google-chrome/defalut-plugins-settings.json /etc/opt/chrome/policies/recommended
 tuning/google-chrome/*.tar /usr/share/deepin-default-settings/google-chrome
-tuning/fcitx  /usr/share/deepin-default-settings/fcitx
+tuning/fcitx/*.png  /usr/share/deepin-default-settings/fcitx
 
