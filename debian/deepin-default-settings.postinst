@@ -21,6 +21,9 @@ else
 fi
 EOF
         fi
+        if [ -f /etc/profile.d/xft-resources.sh ]; then
+            rm /etc/profile.d/xft-resources.sh
+        fi
         if [ -d /etc/skel/Templates/ ]; then
             rm -rf /etc/skel/Templates/
         fi
