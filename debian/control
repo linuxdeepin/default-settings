@@ -11,6 +11,7 @@ Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning(>= 2018
 Suggests: binfmt-support
 Conflicts: chrome-default-settings,
  deepinop, deepin-default-settings-network
+Replaces: deepinop, deepin-default-settings-network
 Description: default settings for deepin destkop environment
  This package does tweaking and to provide better experience of deepin desktop
  environment.
