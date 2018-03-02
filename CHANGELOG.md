@@ -1,3 +1,5 @@
+### 2018.1.25
+
 ### 2018.1.24 (2018-1-24)
 feat: merge deepinop with configuration file centralized management.
 fix: use udev rule to disable wlan power_on features instead the loop scripts
