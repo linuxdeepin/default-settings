@@ -79,6 +79,9 @@ mkdir -p /etc/skel/Pictures;
 mkdir -p /etc/skel/Videos;
 mkdir -p /etc/skel/.Public;
 
+# add default pictures
+cp -f /usr/share/wallpapers/deepin/* /etc/skel/Pictures/
+
 # Provide convenience for dde components like dock, file-manager.
 # They need to watch this directory while it is not created by default.
 mkdir -p /etc/skel/.local/share/Trash

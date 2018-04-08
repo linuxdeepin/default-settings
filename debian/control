@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 8.1.3~)
 
 Package: deepin-default-settings
 Architecture: all
-Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning(>= 2018.1.23), iw
+Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning(>= 2018.1.23), iw, deepin-wallpapers
 Suggests: binfmt-support
 Conflicts: chrome-default-settings,
  deepinop, deepin-default-settings-network
