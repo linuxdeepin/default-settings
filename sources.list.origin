@@ -1,0 +1,2 @@
+deb  [by-hash=force] http://packages.deepin.com/deepin panda main contrib non-free
+#deb-src http://packages.deepin.com/deepin panda main contrib non-free
