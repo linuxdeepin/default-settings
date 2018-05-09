@@ -23,6 +23,8 @@ if __name__ == "__main__":
     lang, charset = locale.getdefaultlocale()
     sys_type = querySystemType()
 
+    os.popen("/usr/bin/dde-introduction")
+
     if sys_type != "Desktop":
         desktops = ['dde-computer.desktop', 'dde-trash.desktop']
         desktop_path = path.expanduser("~/Desktop")
