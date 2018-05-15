@@ -1,4 +1,4 @@
-### 2018.1.27
+### 2018.5.15
 
 ### 2018.1.24 (2018-1-24)
 feat: merge deepinop with configuration file centralized management.
