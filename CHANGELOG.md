@@ -1,4 +1,7 @@
-### 2018.5.15
+### 2018.5.23
+feat: support run dde-introduction
+Merge "Fix: computer and trash icon should't appear in desktop"
+update flash init iso
 
 ### 2018.1.24 (2018-1-24)
 feat: merge deepinop with configuration file centralized management.
