@@ -10,6 +10,7 @@ import os
 import shutil
 import getpass
 import re
+import subprocess
 
 def querySystemType():
     f = open("/etc/deepin-version", "r")
@@ -23,7 +24,7 @@ if __name__ == "__main__":
     lang, charset = locale.getdefaultlocale()
     sys_type = querySystemType()
 
-    os.popen("/usr/bin/dde-introduction")
+    subprocess.Popen("/usr/bin/dde-introduction")
 
     if sys_type != "Desktop":
         desktops = ['dde-computer.desktop', 'dde-trash.desktop']
