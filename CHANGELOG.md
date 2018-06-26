@@ -1,4 +1,4 @@
-### 2018.5.31
+### 2018.6.26
 feat: support run dde-introduction
 Merge "Fix: computer and trash icon should't appear in desktop"
 update flash init iso
