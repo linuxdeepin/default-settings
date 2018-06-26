@@ -1,8 +1,12 @@
 ARCH=$(shell dpkg --print-architecture)
-ifeq ($(ARCH), amd64)
+SYSTYPE=Desktop
+SYSTYPE=$(shell cat /etc/deepin-version | grep Type= | awk -F'=' '{print $$2}')
+ifeq ($(ARCH)_$(SYSTYPE), amd64_Desktop)
 	ORIGIN=true
-else ifeq ($(ARCH), i386)
+else ifeq ($(ARCH)_$(SYSTYPE), i386_Desktop)
 	ORIGIN=true
+else
+	ORIGIN=false
 endif
 
 all: 
