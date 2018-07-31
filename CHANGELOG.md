@@ -1,3 +1,7 @@
+### 2018.7.31
+feat: add symlink for dde-introduction video
+feat: add music to default music folder
+
 ### 2018.6.26
 feat: support run dde-introduction
 Merge "Fix: computer and trash icon should't appear in desktop"
