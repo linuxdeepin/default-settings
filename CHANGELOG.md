@@ -1,3 +1,6 @@
+### 2018.8.2
+fix: error auto_agg=0
+
 ### 2018.7.31
 feat: add symlink for dde-introduction video
 feat: add music to default music folder
