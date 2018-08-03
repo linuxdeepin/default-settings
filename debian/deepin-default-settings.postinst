@@ -83,7 +83,7 @@ mkdir -p /etc/skel/.Public;
 #cp -f /usr/share/wallpapers/deepin/* /etc/skel/Pictures/
 for file in `ls /usr/share/wallpapers/deepin/`
 do
-	if [ ! -d /etc/skel/Pictures/$file ]; then
+	if [ ! -f /etc/skel/Pictures/$file ]; then
 		ln -s  /usr/share/wallpapers/deepin/$file /etc/skel/Pictures/$file
 
 	fi
