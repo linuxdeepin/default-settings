@@ -1,3 +1,6 @@
+### 2018.8.3
+set home picture to link
+
 ### 2018.8.2
 fix: error auto_agg=0
 
