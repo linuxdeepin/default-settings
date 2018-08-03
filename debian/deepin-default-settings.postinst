@@ -80,7 +80,14 @@ mkdir -p /etc/skel/Videos;
 mkdir -p /etc/skel/.Public;
 
 # add default pictures
-cp -f /usr/share/wallpapers/deepin/* /etc/skel/Pictures/
+#cp -f /usr/share/wallpapers/deepin/* /etc/skel/Pictures/
+for file in `ls /usr/share/wallpapers/deepin/`
+do
+	if [ ! -d /etc/skel/Pictures/$file ]; then
+		ln -s  /usr/share/wallpapers/deepin/$file /etc/skel/Pictures/$file
+
+	fi
+done
 
 # Provide convenience for dde components like dock, file-manager.
 # They need to watch this directory while it is not created by default.
