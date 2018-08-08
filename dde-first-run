@@ -27,7 +27,7 @@ if __name__ == "__main__":
     subprocess.Popen("/usr/bin/dde-introduction")
 
     # create symlink for introduction video
-    introduction_video_path = "/usr/share/dde-introduction/15.6demo_" + os.environ['LANGUAGE'] + "@2x.mp4"
+    introduction_video_path = "/usr/share/dde-introduction/demo.mp4"
     if path.exists(introduction_video_path):
         os.symlink(introduction_video_path, path.expanduser('~/Videos/dde-introduction.mp4'))
 
