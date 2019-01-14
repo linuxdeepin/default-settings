@@ -1,3 +1,13 @@
+<a name="2018.8.9"></a>
+### 2019.1.14 (2019-01-14)
+
+
+#### Bug Fixes
+
+*   fc-match prints non-localized family name ([34ce7928](https://github.com/linuxdeepin/default-settings/commit/34ce7928e70f082b02a7da7e60a9ddaaf7a036f4))
+
+
+
 <a name="2018.8.8"></a>
 ### 2018.8.8 (2018-08-08)
 
