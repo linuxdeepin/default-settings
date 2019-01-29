@@ -21,6 +21,9 @@ case "$1" in
     install -Dm644 /usr/share/deepin-default-settings/fcitx/fcitx.png /usr/share/icons/hicolor/16x16/status/fcitx-kbd.png || true
     
     rm -f /etc/apt/sources.list.d/google-chrome*.list
+    if [ -f /etc/opt/chrome/policies/recommended/defalut-plugins-settings.json ];then
+	rm -f /etc/opt/chrome/policies/recommended/defalut-plugins-settings.json
+    fi
 
 	;;
 
