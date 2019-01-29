@@ -22,7 +22,7 @@ case "$1" in
     
     rm -f /etc/apt/sources.list.d/google-chrome*.list
     if [ -f /etc/opt/chrome/policies/recommended/defalut-plugins-settings.json ];then
-	rm -f /etc/opt/chrome/policies/recommended/defalut-plugins-settings.json
+        rm -f /etc/opt/chrome/policies/recommended/defalut-plugins-settings.json
     fi
 
 	;;
