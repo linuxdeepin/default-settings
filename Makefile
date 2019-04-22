@@ -2,9 +2,9 @@ ARCH=$(shell dpkg --print-architecture)
 SYSTYPE=Desktop
 SYSTYPE=$(shell cat /etc/deepin-version | grep Type= | awk -F'=' '{print $$2}')
 ifeq ($(ARCH)_$(SYSTYPE), amd64_Desktop)
-	ORIGIN=true
+	ORIGIN=false
 else ifeq ($(ARCH)_$(SYSTYPE), i386_Desktop)
-	ORIGIN=true
+	ORIGIN=false
 else
 	ORIGIN=false
 endif
