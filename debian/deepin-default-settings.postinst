@@ -78,6 +78,7 @@ mkdir -p /etc/skel/Music;
 mkdir -p /etc/skel/Pictures;
 mkdir -p /etc/skel/Videos;
 mkdir -p /etc/skel/.Public;
+mkdir -p /etc/skel/.Templates;
 
 # add default pictures
 #cp -f /usr/share/wallpapers/deepin/* /etc/skel/Pictures/
