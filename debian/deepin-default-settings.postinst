@@ -81,11 +81,15 @@ mkdir -p /etc/skel/.Public;
 mkdir -p /etc/skel/.Templates;
 
 # add default pictures
-#cp -f /usr/share/wallpapers/deepin/* /etc/skel/Pictures/
+skel_wallpapers=/etc/skel/Pictures/Wallpapers
+if [ ! -d $skel_wallpapers ]; then
+	mkdir -p $skel_wallpapers
+fi
+
 for file in `ls /usr/share/wallpapers/deepin/`
 do
-	if [ ! -f /etc/skel/Pictures/$file ]; then
-		ln -s  /usr/share/wallpapers/deepin/$file /etc/skel/Pictures/$file
+	if [ ! -f $skel_wallpapers/$file ]; then
+		ln -s  /usr/share/wallpapers/deepin/$file $skel_wallpapers/$file
 
 	fi
 done
