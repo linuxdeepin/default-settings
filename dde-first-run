@@ -24,7 +24,8 @@ if __name__ == "__main__":
     lang, charset = locale.getdefaultlocale()
     sys_type = querySystemType()
 
-    subprocess.Popen("/usr/bin/dde-introduction")
+    if path.exists("/usr/bin/dde-introduction"):
+        subprocess.Popen("/usr/bin/dde-introduction")
 
     # create symlink for introduction video
     introduction_video_path = "/usr/share/dde-introduction/demo.mp4"
