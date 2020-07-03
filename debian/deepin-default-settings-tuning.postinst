@@ -7,10 +7,6 @@
 case "$1" in
     configure)
 
-    if [ -f /usr/share/cups/data/default-testpage.pdf ] && [ -f /usr/share/deepin-default-settings/cups-filters/default-testpage.pdf ];then
-        cp /usr/share/deepin-default-settings/cups-filters/default-testpage.pdf /usr/share/cups/data/default-testpage.pdf
-    fi
-
     for i in 16 22 24 32 48 128 ;do 
         [ -f /usr/share/icons/hicolor/${i}x${i}/apps/fcitx.png ] && rm -f /usr/share/icons/hicolor/${i}x${i}/apps/fcitx.png
         done
