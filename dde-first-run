@@ -29,7 +29,10 @@ if __name__ == "__main__":
 
     # create symlink for introduction video
     introduction_video_path = "/usr/share/dde-introduction/demo.mp4"
+    introduction_video_link_path = "~/Videos/dde-introduction.mp4"
     if path.exists(introduction_video_path):
+        if path.exists(path.expanduser(introduction_video_link_path)):
+            remove(path.expanduser(introduction_video_link_path))
         os.symlink(introduction_video_path, path.expanduser('~/Videos/dde-introduction.mp4'))
 
     if sys_type != "Desktop":
