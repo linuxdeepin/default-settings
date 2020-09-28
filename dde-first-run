@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # vim: set ts=4 sw=4 fileencoding=utf-8:
 # Luomio <nohappiness@gmail.com>
 # Filename: dde-first-run.py
@@ -11,6 +11,7 @@ import shutil
 import getpass
 import re
 import subprocess
+from gi.repository import GLib
 
 def querySystemType():
     f = open("/etc/deepin-version", "r")
@@ -20,9 +21,13 @@ def querySystemType():
 
     return r.group(1)
 
+def queryXDGDesktopDir():
+    return GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DESKTOP)
+
 if __name__ == "__main__":
     lang, charset = locale.getdefaultlocale()
     sys_type = querySystemType()
+    desktop_path = queryXDGDesktopDir()
 
     if path.exists("/usr/bin/dde-introduction"):
         subprocess.Popen("/usr/bin/dde-introduction")
@@ -37,7 +42,6 @@ if __name__ == "__main__":
 
     if sys_type != "Desktop":
         desktops = ['dde-computer.desktop', 'dde-trash.desktop', 'dde-home.desktop']
-        desktop_path = path.expanduser("~/Desktop")
         if not path.exists(desktop_path):
             os.makedirs(desktop_path)
         for desktop in desktops:
