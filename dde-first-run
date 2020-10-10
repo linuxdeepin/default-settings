@@ -33,8 +33,10 @@ if __name__ == "__main__":
         subprocess.Popen("/usr/bin/dde-introduction")
 
     # create symlink for introduction video
-    introduction_video_path = "/usr/share/dde-introduction/demo.mp4"
+    introduction_video_path = "/usr/share/dde-introduction/professional.mp4"
     introduction_video_link_path = "~/Videos/dde-introduction.mp4"
+    if sys_type == "Community":
+        introduction_video_path = introduction_video_path.replace("professional", "community")
     if path.exists(introduction_video_path):
         if path.exists(path.expanduser(introduction_video_link_path)):
             remove(path.expanduser(introduction_video_link_path))
