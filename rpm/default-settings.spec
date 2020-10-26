@@ -1,5 +1,5 @@
 Name:           deepin-default-settings
-Version:        2020.10.12
+Version:        2020.10.25
 Release:        1
 Summary:        default settings for deepin destkop environment
 License:        GPLv3
@@ -19,7 +19,7 @@ Summary:        default settings for deepin destkop environment
 This package includes files to override cups default page and fcitx icon.
 
 %prep
-%autosetup -c -n %{name}-%{version}
+%autosetup
 
 %build
 echo "build OK"
