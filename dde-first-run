@@ -37,6 +37,8 @@ if __name__ == "__main__":
     introduction_video_link_path = "~/Videos/dde-introduction.mp4"
     if sys_type == "Community":
         introduction_video_path = introduction_video_path.replace("professional", "community")
+    if sys_type == "Server":
+        introduction_video_path = introduction_video_path.replace("professional", "server")
     if path.exists(introduction_video_path):
         if path.exists(path.expanduser(introduction_video_link_path)):
             remove(path.expanduser(introduction_video_link_path))
