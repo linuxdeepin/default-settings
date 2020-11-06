@@ -1,0 +1,4 @@
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/Music/
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/Music/bensound-sunny.mp3
+deepin-default-settings: source-contains-unsafe-symlink etc/skel/Music/bensound-sunny.mp3
+deepin-default-settings: package-contains-mime-cache-file usr/share/mime/wine-ini.xml

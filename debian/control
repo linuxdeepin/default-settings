@@ -3,23 +3,37 @@ Section: admin
 Priority: optional
 Maintainer: sysdev <sysdev@deepin.com>
 Standards-Version: 3.9.4
-Build-Depends: debhelper (>= 8.1.3~)
+Build-Depends:
+ debhelper-compat (= 11),
 
 Package: deepin-default-settings
 Architecture: all
-Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning(>= 2018.1.23), iw, deepin-wallpapers
-Suggests: binfmt-support
-Conflicts: chrome-default-settings,
- deepinop, deepin-default-settings-network
-Replaces: deepinop, deepin-default-settings-network
+Depends:
+ deepin-artwork,
+ deepin-default-settings-tuning(>= 2018.1.23),
+ deepin-wallpapers,
+ iw,
+ python3,
+ ${misc:Depends},
+Suggests:
+ binfmt-support,
+Conflicts:
+ chrome-default-settings,
+ deepin-default-settings-network,
+ deepinop,
+Replaces:
+ deepin-default-settings-network,
+ deepinop,
 Description: default settings for deepin destkop environment
  This package does tweaking and to provide better experience of deepin desktop
  environment.
 
 Package: deepin-default-settings-tuning
 Architecture: all
-Depends: ${misc:Depends} 
-Replaces: deepin-default-settings (<= 2018.1.23)
+Depends:
+ ${misc:Depends},
+Replaces:
+ deepin-default-settings (<= 2018.1.23),
 Description: default settings for deepin destkop environment - misc overrides
  This package does tweaking and to provide better experience of deepin desktop
  environment.
