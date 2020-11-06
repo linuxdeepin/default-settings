@@ -1,2 +1,3 @@
 etc/
+skel/* etc/skel/
 usr/
