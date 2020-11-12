@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c018156_586e2c51",
+        "filename": "dde-first-run",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000042
+      },
+      "writtenOn": "2020-11-12T08:16:36Z",
+      "side": 1,
+      "message": "这里要换成 introduction_video_link_path 吗？\n感觉 path.expanduser 调用了好多次",
+      "range": {
+        "startLine": 41,
+        "startChar": 44,
+        "endLine": 41,
+        "endChar": 88
+      },
+      "revId": "03186a839e5bc27365774a5a7b48dafd2b6a385d",
+      "serverId": "7c03bcd7-3a90-48d7-8881-a48a22a829d2",
+      "unresolved": true
+    }
+  ]
+}
