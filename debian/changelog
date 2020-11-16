@@ -1227,92 +1227,92 @@ deepin-default-settings (1.1.8-22) natty-updates; urgency=low
 
   * Homepage: start.linuxdeepin.com
 
- -- Leng Ganghua <leng@lenox>  Tue, 09 Aug 2011 17:01:23 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Tue, 09 Aug 2011 17:01:23 +0800
 
 deepin-default-settings (1.1.8-21) natty-updates; urgency=low
 
   * Change firefox font settings
 
- -- Leng Ganghua <leng@lenox>  Fri, 05 Aug 2011 08:42:16 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 05 Aug 2011 08:42:16 +0800
 
 deepin-default-settings (1.1.8-19) natty-updates; urgency=low
 
   * Added keybinds of shutter
 
- -- Leng Ganghua <leng@lenox>  Thu, 04 Aug 2011 15:46:27 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 04 Aug 2011 15:46:27 +0800
 
 deepin-default-settings (1.1.8-18) natty-updates; urgency=low
 
   * Added ~/.gconf/desktop/gnome/keybindings/custom0/%gconf.xml
     (to disable F1 key)
 
- -- Leng Ganghua <leng@lenox>  Wed, 03 Aug 2011 17:09:42 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 03 Aug 2011 17:09:42 +0800
 
 deepin-default-settings (1.1.8-17) natty-updates; urgency=low
 
   * hide menu bar
 
- -- Leng Ganghua <leng@lenox>  Wed, 03 Aug 2011 10:38:10 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Wed, 03 Aug 2011 10:38:10 +0800
 
 deepin-default-settings (1.1.8-16) natty-updates; urgency=low
 
   * Added gtkrc to etc/gtk-2.0/ and etc/gtk-3.0/ 
 
- -- Leng Ganghua <leng@lenox>  Fri, 15 Jul 2011 20:04:49 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 15 Jul 2011 20:04:49 +0800
 
 deepin-default-settings (1.1.8-15) natty-updates; urgency=low
 
   * Updated .mozilla files
 
- -- Leng Ganghua <leng@lenox>  Thu, 14 Jul 2011 19:30:36 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 14 Jul 2011 19:30:36 +0800
 
 deepin-default-settings (1.1.8-14) natty-updates; urgency=low
 
   * Removed ~/.webapps, ~/.xscreensaver
 
- -- Leng Ganghua <leng@lenox>  Fri, 08 Jul 2011 19:27:31 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 08 Jul 2011 19:27:31 +0800
 
 deepin-default-settings (1.1.8-13) natty-updates; urgency=low
 
   * Flashgot setting updated.
 
- -- Leng Ganghua <leng@lenox>  Fri, 08 Jul 2011 18:57:08 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 08 Jul 2011 18:57:08 +0800
 
 deepin-default-settings (1.1.8-12) natty; urgency=low
 
   * Updated firefox configs.
 
- -- Leng Ganghua <leng@lenox>  Sun, 03 Jul 2011 17:32:45 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Sun, 03 Jul 2011 17:32:45 +0800
 
 deepin-default-settings (1.1.8-11) natty; urgency=low
 
   * Renamed '深度 Linux 软件中心'
 
- -- Leng Ganghua <leng@lenox>  Fri, 01 Jul 2011 15:42:27 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 01 Jul 2011 15:42:27 +0800
 
 deepin-default-settings (1.1.8-10) natty; urgency=low
 
   * Added uGet settings
 
- -- Leng Ganghua <leng@lenox>  Fri, 01 Jul 2011 13:59:07 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 01 Jul 2011 13:59:07 +0800
 
 deepin-default-settings (1.1.8-9) natty; urgency=low
 
   * Removed network connection
 
- -- Leng Ganghua <leng@lenox>  Fri, 01 Jul 2011 11:12:26 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Fri, 01 Jul 2011 11:12:26 +0800
 
 deepin-default-settings (1.1.8-8) natty; urgency=low
 
   * Added Deepin Software Center to dock
 
- -- Leng Ganghua <leng@lenox>  Thu, 23 Jun 2011 13:55:47 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 23 Jun 2011 13:55:47 +0800
 
 deepin-default-settings (1.1.8-7) natty; urgency=low
 
   * added gnome-mplayer default settings
 
- -- Leng Ganghua <leng@lenox>  Thu, 23 Jun 2011 13:42:39 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 23 Jun 2011 13:42:39 +0800
 
 deepin-default-settings (1.1.8-6) natty; urgency=low
 
