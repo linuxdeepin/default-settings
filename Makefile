@@ -16,6 +16,7 @@ install:
 	mkdir -p $(DESTDIR)/etc/fonts/conf.d
 	mkdir -p $(DESTDIR)/etc/apt
 	cp -r etc.d/* $(DESTDIR)/etc/
+	cp -r skel $(DESTDIR)/etc/
 	cp -r usr.share.d/* $(DESTDIR)/usr/share
 	if [ $(ORIGIN) = true ]; then install -Dm444 sources.list.origin $(DESTDIR)/etc/apt/sources.list.origin; fi
 	install -Dm755 dde-first-run $(DESTDIR)/usr/bin/dde-first-run

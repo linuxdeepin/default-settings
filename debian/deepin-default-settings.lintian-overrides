@@ -1,0 +1,15 @@
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.config/
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.config/SogouPY/
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.config/SogouPY/sogouEnv.ini
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.config/Trolltech.conf
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.config/autostart/
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.config/autostart/dde-first-run.desktop
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.config/deepin/
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.config/deepin/qt-theme.ini
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.config/user-dirs.dirs
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.icons/
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.icons/default/
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.icons/default/index.theme
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/Music/
+deepin-default-settings: package-contains-file-in-etc-skel etc/skel/Music/bensound-sunny.mp3
+deepin-default-settings: package-contains-mime-cache-file usr/share/mime/wine-ini.xml
