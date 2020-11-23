@@ -33,12 +33,16 @@ if __name__ == "__main__":
         subprocess.Popen("/usr/bin/dde-introduction")
 
     # create symlink for introduction video
-    introduction_video_path = "/usr/share/dde-introduction/introduction.mp4"
-    user_introduction_video_path = path.expanduser("~/Videos/introduction.mp4")
+    introduction_video_path = "/usr/share/dde-introduction/professional.mp4"
+    introduction_video_link_path = "~/Videos/dde-introduction.mp4"
+    if sys_type == "Community":
+        introduction_video_path = introduction_video_path.replace("professional", "community")
+    if sys_type == "Server":
+        introduction_video_path = introduction_video_path.replace("professional", "server")
     if path.exists(introduction_video_path):
-        if path.exists(user_introduction_video_path):
-            remove(user_introduction_video_path)
-        os.symlink(introduction_video_path, user_introduction_video_path)
+        if path.exists(path.expanduser(introduction_video_link_path)):
+            remove(path.expanduser(introduction_video_link_path))
+        os.symlink(introduction_video_path, path.expanduser('~/Videos/dde-introduction.mp4'))
 
     if sys_type != "Desktop":
         desktops = ['dde-computer.desktop', 'dde-trash.desktop']
