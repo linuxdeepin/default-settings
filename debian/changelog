@@ -1,3 +1,9 @@
+deepin-default-settings (2020.11.23-1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+ -- system-dev <system-dev@uniontech.com>  Mon, 23 Nov 2020 13:01:40 +0800
+
 deepin-default-settings (2016~1) unstable; urgency=medium
 
   * remove never used qq short cut.
