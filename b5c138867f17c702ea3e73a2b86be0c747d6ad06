@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "59d188fe_04c7eb82",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-12-16T01:20:47Z",
+      "side": 1,
+      "message": "缺少Log信息",
+      "revId": "b5c138867f17c702ea3e73a2b86be0c747d6ad06",
+      "serverId": "7c03bcd7-3a90-48d7-8881-a48a22a829d2",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "156066ce_c7ced257",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-12-16T01:20:47Z",
+      "side": 1,
+      "message": "Task: 后请输入正确网址, 例Bug: https://pms.uniontech/xxxxx/xxx.html",
+      "revId": "b5c138867f17c702ea3e73a2b86be0c747d6ad06",
+      "serverId": "7c03bcd7-3a90-48d7-8881-a48a22a829d2",
+      "unresolved": true
+    }
+  ]
+}
