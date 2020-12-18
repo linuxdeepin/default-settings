@@ -1,3 +1,10 @@
+deepin-default-settings (2020.12.18-1) unstable; urgency=medium
+
+  * fix: Uniform introduction interface.
+
+
+ -- system-dev <system-dev@uniontech.com>  Fri, 18 Dec 2020 11:24:00 +0800
+
 deepin-default-settings (2020.12.16-1) unstable; urgency=medium
 
   * remove iwlwifi.conf.
