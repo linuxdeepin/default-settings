@@ -40,6 +40,8 @@ if __name__ == "__main__":
             desktop_file = path.join("/usr/share/applications", desktop)
             if path.exists(desktop_file):
                 shutil.copyfile(desktop_file, path.join(desktop_path, desktop))
+                # 防止突然断电导致文件复制失败
+                os.system('sync')
 
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
@@ -58,6 +60,8 @@ if __name__ == "__main__":
         tar.extractall(path.expanduser('~/.config/'))
         tar.close()
 
+
+
     if path.exists(path.expanduser('~/.config/google-chrome/PepperFlash/latest-component-updated-flash')):
         user_name=getpass.getuser()
         pepperflash = path.expanduser('~/.config/google-chrome/PepperFlash/latest-component-updated-flash')
@@ -69,3 +73,6 @@ if __name__ == "__main__":
 
     if path.exists(path.expanduser('~/.config/autostart/dde-first-run.desktop')):
         remove(path.expanduser('~/.config/autostart/dde-first-run.desktop'))
+
+    # 强制同步，防止突然断电
+    os.system('sync')
