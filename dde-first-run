@@ -41,6 +41,9 @@ if __name__ == "__main__":
             if path.exists(desktop_file):
                 shutil.copyfile(desktop_file, path.join(desktop_path, desktop))
 
+    # 防止突然断电导致文件复制失败
+    os.system('sync')
+
     chrome_config = None
     if not path.exists(path.expanduser('~/.config/google-chrome')):
         if path.exists('/usr/share/deepin-default-settings/google-chrome/override-chrome-config.tar'):
