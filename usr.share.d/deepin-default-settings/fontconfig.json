@@ -11,6 +11,10 @@
         "Standard":"Noto Sans CJK TC",
         "Mono":"Noto Mono"
     },
+    "bo_CN":{
+        "Standard":"Noto Sans Tibetan",
+        "Mono":"Noto Mono"
+    },
     "ja":{
         "Standard":"Noto Sans CJK JP",
         "Mono":"Noto Mono"
