@@ -13,3 +13,4 @@ deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.icons/
 deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.icons/default/
 deepin-default-settings: package-contains-file-in-etc-skel etc/skel/.icons/default/index.theme
 deepin-default-settings: package-contains-mime-cache-file usr/share/mime/wine-ini.xml
+deepin-default-settings: no-manual-page usr/bin/dde-first-run
