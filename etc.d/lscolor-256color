@@ -72,7 +72,7 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 .csv                  38;5;78
 .ctp                  38;5;95
 .diff                 48;5;197;38;5;232
-.enc                  38;5;192;3
+.enc                  38;5;21
 .eps                  38;5;33;1
 .etx                  38;5;172
 .ex                   38;5;148;1
@@ -107,7 +107,7 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 .json                 38;5;213
 .jsp                  38;5;45
 .lisp                 38;5;204;1
-.log                  38;5;190
+.log                  38;5;170
 .lua                  38;5;34;1
 .m                    38;5;130;3
 .mht                  38;5;129
@@ -138,7 +138,7 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 .py                   38;5;41
 # compiled python code - https://github.com/trapd00r/LS_COLORS/pull/10
 .pyc                  38;5;245
-.rb                   38;5;192
+.rb                   38;5;190
 .rdf                  38;5;144
 .rst                  38;5;67
 .ru                   38;5;142
@@ -159,11 +159,11 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 .tfm                  38;5;64
 .tfnt                 38;5;140
 .theme                38;5;109
-.txt                  38;5;192
+.txt                  38;5;33;1
 .list                 38;5;44
 .save                 38;5;240
 .urlview              38;5;85
-.vim                  38;5;14
+.vim                  38;5;33;1
 .vimrc                38;5;13
 .viminfo              38;5;240;1
 .xml                  38;5;199
@@ -199,7 +199,7 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 # Emulator roms, emulator savegames
 .32x                  38;5;137
 .A64                  38;5;82
-.a00                  38;5;11
+.a00                  38;5;99
 .a52                  38;5;112
 .a64                  38;5;82
 .a78                  38;5;112
@@ -284,15 +284,15 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 .psf                  38;5;64
 # backups, undo files, tempfiles
 .bak                  38;5;222;1
-.bin                  38;5;228
-.pid                  38;5;228
-.state                38;5;228
-.swo                  38;5;228
-.swp                  38;5;228
-.tmp                  38;5;228
-.un~                  38;5;228
-.zcompdump            38;5;228
-.zwc                  38;5;228
+.bin                  38;5;196
+.pid                  38;5;33;1
+.state                38;5;21
+.swo                  38;5;21
+.swp                  38;5;21
+.tmp                  38;5;21
+.un~                  38;5;21
+.zcompdump            38;5;21
+.zwc                  38;5;21
 # databases
 .db                   38;5;147
 .dump                 38;5;147
@@ -428,26 +428,26 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 .r98                  38;5;220
 .r99                  38;5;220
 .rar                  38;5;217;1
-.tar                  38;5;222
-.tar.gz               38;5;216
-.tgz                  38;5;214;1
-.gz                   38;5;224
-.xz                   38;5;182
-.zip                  38;5;208
+.tar                  38;5;130.1
+.tar.gz               38;5;130.1
+.tgz                  38;5;130.1
+.gz                   38;5;130.1
+.xz                   38;5;130.1
+.zip                  38;5;130.1
 # really compressed archives, but mostly used for documents, comics (and
 # documentation on MS Windows)
-.doc				  38;5;190  
-.wps				  38;5;190
-.docx				  38;5;190 
-.xls				  38;5;190
-.xlsx				  38;5;190
-.ppt				  38;5;190
-.pptx				  38;5;190
-.pdf                  38;5;190
-.djvu                 38;5;190
-.cbr                  38;5;190
-.cbz                  38;5;190
-.chm                  38;5;190
+.doc				  38;5;33;1
+.wps				  38;5;33;1
+.docx				  38;5;33;1
+.xls				  38;5;33;1
+.xlsx				  38;5;33;1
+.ppt				  38;5;33;1
+.pptx				  38;5;33;1
+.pdf                  38;5;33;1
+.djvu                 38;5;33;1
+.cbr                  38;5;33;1
+.cbz                  38;5;33;1
+.chm                  38;5;33;1
 # open document formats
 .odt                  38;5;112
 .ods                  38;5;112
