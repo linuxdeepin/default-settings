@@ -1,3 +1,9 @@
+deepin-default-settings (2021.04.08-1) unstable; urgency=medium
+
+  * release 2021.04.08
+
+ -- system-dev <system-dev@uniontech.com>  Thu, 08 Apr 2021 15:55:07 +0800
+
 deepin-default-settings (2020.12.17-1) unstable; urgency=medium
 
   * fix: Uniform introduction interface
