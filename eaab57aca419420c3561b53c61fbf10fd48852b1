@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7c82d9cb_19a5ec33",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-04-12T07:27:48Z",
+      "side": 1,
+      "message": "标题不存在或者名称错误, 模块名推荐使用fix|feat|chore|docs|style|refactor|perf|test|abigail 例fix: xxxxx",
+      "revId": "eaab57aca419420c3561b53c61fbf10fd48852b1",
+      "serverId": "7c03bcd7-3a90-48d7-8881-a48a22a829d2",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3790fa0c_38b26856",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-04-12T07:27:48Z",
+      "side": 1,
+      "message": "缺少Log信息",
+      "revId": "eaab57aca419420c3561b53c61fbf10fd48852b1",
+      "serverId": "7c03bcd7-3a90-48d7-8881-a48a22a829d2",
+      "unresolved": true
+    }
+  ]
+}
