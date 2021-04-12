@@ -2,7 +2,7 @@ Source: deepin-default-settings
 Section: admin
 Priority: optional
 Maintainer: sysdev <sysdev@deepin.com>
-Standards-Version: 4.5.1
+Standards-Version: 3.9.4
 Build-Depends:
  debhelper-compat (= 11),
 

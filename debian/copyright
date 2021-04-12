@@ -3,11 +3,6 @@ Upstream-Name: default-settings
 Upstream-Contact: Yong Wang <lazycat.manatee@gmail.com>
 Source: http://github.com/linuxdeepin/default-settings
 
-Files: *
-Copyright: 2011, 2017 Deepin, Inc. <support@deepin.com>
-           2011 Zhang Cheng <zhangcheng@linuxdeepin.com>
-License: LGPL-3+
-
 License: LGPL-3+
  This is free software; you can redistribute it and/or modify it
  under the terms of the GNU Lesser General Public License as published by the
@@ -25,3 +20,8 @@ License: LGPL-3+
  02110-1301  USA.
  .
  See /usr/share/common-licenses/LGPL-3 on your debian system.
+
+Files: *
+Copyright: 2011, 2017 Deepin, Inc. <support@deepin.com>
+           2011 Zhang Cheng <zhangcheng@linuxdeepin.com>
+License: LGPL-3+
