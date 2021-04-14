@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3097ed9_0d66600a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-04-14T02:14:30Z",
+      "side": 1,
+      "message": "详细信息下方缺少空行",
+      "revId": "d5f88a4d6b00b435d75fa4e4c23bc5424b1e95bc",
+      "serverId": "7c03bcd7-3a90-48d7-8881-a48a22a829d2",
+      "unresolved": true
+    }
+  ]
+}
