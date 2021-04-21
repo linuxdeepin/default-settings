@@ -1,13 +1,18 @@
-Name:           deepin-default-settings
-Version:        2020.10.25
-Release:        1
+%define specrelease 1%{?dist}
+%if 0%{?openeuler}
+%define specrelease 1
+%endif
+
+Name:           default-settings
+Version:        2020.10.26.1
+Release:        %{specrelease}
 Summary:        default settings for deepin destkop environment
 License:        GPLv3
 URL:            https://github.com/linuxdeepin/default-settings
-Source0:        %{name}-%{version}.tar.gz
+Source0:        %{name}-%{version}.orig.tar.xz
 
 BuildArch:      noarch
-BuildRequires:	dde-desktop
+BuildRequires:  dde-desktop
 BuildRequires:  deepin-wallpapers
 
 %description
@@ -19,7 +24,7 @@ Summary:        default settings for deepin destkop environment
 This package includes files to override cups default page and fcitx icon.
 
 %prep
-%autosetup
+%autosetup -n %{name}-%{version}
 
 %build
 echo "build OK"
@@ -95,7 +100,8 @@ fi
 %{_sysconfdir}/sudoers.d/01_always_set_sudoers_home
 /lib/udev/rules.d/99-deepin.rules
 %{_bindir}/dde-first-run
-%{_sysctldir}/deepin.conf
+#服务器不需要桌面版调优参数
+%exclude %{_sysctldir}/deepin.conf
 %{_datadir}/applications/deepin/dde-mimetype.list
 %{_datadir}/deepin-default-settings/fontconfig.json
 %{_datadir}/fontconfig/conf.avail/*.conf
@@ -109,11 +115,5 @@ fi
 %{_datadir}/deepin-default-settings/fcitx/*.png
 
 %changelog
-* Tue Oct 13 2020 guoqinglan <guoqinglan@uniontech.com> - 2020.10.12-2
-- bugfix-50456, update root user Desktop
-
-* Tue Oct 13 2020 guoqinglan <guoqinglan@uniontech.com> - 2020.10.09-2
-- bugfix-50589, update root user Desktop
-
-* Fri Oct 09 2020 guoqinglan <guoqinglan@uniontech.com> - 2020.10.09-1
-- bugfix-49314, remove dde-home.desktop in user's Desktop directory
+* Tue Apr 21 2021 uoser <uoser@uniontech.com> - 2020.10.26.1-1
+- update to 2020.10.26.1
