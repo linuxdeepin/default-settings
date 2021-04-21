@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bb6ea9a9_c00587df",
+        "filename": "rpm/default-settings.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000545
+      },
+      "writtenOn": "2021-04-21T13:50:30Z",
+      "side": 1,
+      "message": "版本和changelog匹配不上",
+      "revId": "9adc39e23d8f5b033ecf181351057d4099e14a5f",
+      "serverId": "7c03bcd7-3a90-48d7-8881-a48a22a829d2",
+      "unresolved": true
+    }
+  ]
+}
