@@ -3,7 +3,7 @@
 %define specrelease 1
 %endif
 
-Name:           default-settings
+Name:           deepin-default-settings
 Version:        2020.10.26.1
 Release:        %{specrelease}
 Summary:        default settings for deepin destkop environment
