@@ -428,12 +428,12 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 .r98                  38;5;220
 .r99                  38;5;220
 .rar                  38;5;217;1
-.tar                  38;5;130.1
-.tar.gz               38;5;130.1
-.tgz                  38;5;130.1
-.gz                   38;5;130.1
-.xz                   38;5;130.1
-.zip                  38;5;130.1
+.tar                  38;5;130;1
+.tar.gz               38;5;130;1
+.tgz                  38;5;130;1
+.gz                   38;5;130;1
+.xz                   38;5;130;1
+.zip                  38;5;130;1
 # really compressed archives, but mostly used for documents, comics (and
 # documentation on MS Windows)
 .doc				  38;5;33;1
