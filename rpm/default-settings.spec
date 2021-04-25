@@ -9,7 +9,7 @@ Release:        %{specrelease}
 Summary:        default settings for deepin destkop environment
 License:        GPLv3
 URL:            https://github.com/linuxdeepin/default-settings
-Source0:        %{name}-%{version}.orig.tar.xz
+Source0:        default-settings-%{version}.orig.tar.xz
 
 BuildArch:      noarch
 BuildRequires:  dde-desktop
@@ -24,7 +24,7 @@ Summary:        default settings for deepin destkop environment
 This package includes files to override cups default page and fcitx icon.
 
 %prep
-%autosetup -n %{name}-%{version}
+%autosetup -n default-settings-%{version}
 
 %build
 echo "build OK"
