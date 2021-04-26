@@ -24,7 +24,7 @@ Summary:        default settings for deepin destkop environment
 This package includes files to override cups default page and fcitx icon.
 
 %prep
-%autosetup -n {%name}-%{version}
+%autosetup -n %{name}-%{version}
 
 %build
 echo "build OK"
