@@ -9,7 +9,7 @@ Release:        %{specrelease}
 Summary:        default settings for deepin destkop environment
 License:        GPLv3
 URL:            https://github.com/linuxdeepin/default-settings
-Source0:        default-settings-%{version}.orig.tar.xz
+Source0:        default-settings-%{version}.tar.xz
 
 BuildArch:      noarch
 BuildRequires:  dde-desktop
