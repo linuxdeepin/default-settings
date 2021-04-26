@@ -35,12 +35,12 @@ echo "build OK"
 mkdir -p  %{buildroot}/usr/share/deepin-default-settings/cups-filters/
 mkdir -p  %{buildroot}/usr/share/deepin-default-settings/google-chrome/
 mkdir -p  %{buildroot}/usr/share/deepin-default-settings/fcitx/
-mkdir -p  %{buildroot}/etc/
+mkdir -p  %{buildroot}/etc/skel
 
 install -Dm644 tuning/cups-filters/*.pdf  %{buildroot}/usr/share/deepin-default-settings/cups-filters/
 install -Dm644 tuning/google-chrome/*.tar %{buildroot}/usr/share/deepin-default-settings/google-chrome/
 install -Dm644 tuning/fcitx/*.png  %{buildroot}/usr/share/deepin-default-settings/fcitx/
-install -Dm644 skel/ %{buildroot}/etc/
+install skel/*  %{buildroot}/etc/skel/
 
 install -d %{buildroot}%{_sysconfdir}/skel/{Desktop,Documents,Downloads,Pictures/Wallpapers,Music,Videos,.Public,.Templates}
 install -d %{buildroot}%{_sysconfdir}/skel/.local/share/Trash
