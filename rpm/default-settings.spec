@@ -102,7 +102,7 @@ fi
 %{_sysconfdir}/skel/Music/bensound-sunny.mp3
 %{_sysconfdir}/sudoers.d/01_always_set_sudoers_home
 /lib/udev/rules.d/99-deepin.rules
-%{_bindir}/dde-first-run
+%{_libexecdir}/dde-first-run
 #服务器不需要桌面版调优参数
 %exclude %{_sysctldir}/deepin.conf
 %{_datadir}/applications/deepin/dde-mimetype.list
