@@ -4,7 +4,7 @@
 %endif
 
 Name:           deepin-default-settings
-Version:        2020.10.26.1
+Version:        2021.04.13.1
 Release:        %{specrelease}
 Summary:        default settings for deepin destkop environment
 License:        GPLv3
@@ -35,9 +35,12 @@ echo "build OK"
 mkdir -p  %{buildroot}/usr/share/deepin-default-settings/cups-filters/
 mkdir -p  %{buildroot}/usr/share/deepin-default-settings/google-chrome/
 mkdir -p  %{buildroot}/usr/share/deepin-default-settings/fcitx/
+mkdir -p  %{buildroot}/etc/
+
 install -Dm644 tuning/cups-filters/*.pdf  %{buildroot}/usr/share/deepin-default-settings/cups-filters/
 install -Dm644 tuning/google-chrome/*.tar %{buildroot}/usr/share/deepin-default-settings/google-chrome/
 install -Dm644 tuning/fcitx/*.png  %{buildroot}/usr/share/deepin-default-settings/fcitx/
+cp -r skel  %{buildroot}/etc/
 
 install -d %{buildroot}%{_sysconfdir}/skel/{Desktop,Documents,Downloads,Pictures/Wallpapers,Music,Videos,.Public,.Templates}
 install -d %{buildroot}%{_sysconfdir}/skel/.local/share/Trash
@@ -99,7 +102,7 @@ fi
 %{_sysconfdir}/skel/Music/bensound-sunny.mp3
 %{_sysconfdir}/sudoers.d/01_always_set_sudoers_home
 /lib/udev/rules.d/99-deepin.rules
-%{_bindir}/dde-first-run
+%{_libexecdir}/dde-first-run
 #服务器不需要桌面版调优参数
 %exclude %{_sysctldir}/deepin.conf
 %{_datadir}/applications/deepin/dde-mimetype.list
@@ -115,5 +118,5 @@ fi
 %{_datadir}/deepin-default-settings/fcitx/*.png
 
 %changelog
-* Tue Apr 21 2021 uoser <uoser@uniontech.com> - 2020.10.26.1-1
-- update to 2020.10.26.1
+* Tue Apr 21 2021 uoser <uoser@uniontech.com> - 2021.04.13.1-1
+- update to 2021.04.13.1
