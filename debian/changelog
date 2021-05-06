@@ -1,3 +1,10 @@
+deepin-default-settings (2021.05.06-1) unstable; urgency=medium
+
+  * fix: 增加配置文件让驱动去主动探测声卡编解码器
+  * Bug: https://pms.uniontech.com/zentao/bug-view-69530.html
+
+ -- Hu Feng <hufeng@uniontech.com>  Thu, 06 May 2021 14:54:19 +0800
+
 deepin-default-settings (2021.04.13-1) unstable; urgency=medium
 
   * release 2021.03.13
