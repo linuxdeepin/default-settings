@@ -61,8 +61,6 @@ if [ ! -f /root/Desktop/dde-computer.desktop ] && [ ! -f /root/Desktop/dde-trash
 	install -m644 /etc/skel/Music/bensound-sunny.mp3   /root//Music/ || true
 fi
 
-# %sysctl_apply deepin.conf
-
 %post -n deepin-default-settings-tuning
 
 for i in 16 22 24 32 48 128 ;do
