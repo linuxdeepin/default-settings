@@ -1,4 +1,7 @@
 #! /usr/bin/make -f
+
+export GOCACHE := /tmp/gocache
+
 ARCH := $(shell dpkg --print-architecture)
 %:
 	dh $@
