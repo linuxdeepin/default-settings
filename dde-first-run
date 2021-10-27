@@ -32,8 +32,7 @@ if __name__ == "__main__":
         os.symlink(introduction_video_path, path.expanduser('~/Videos/dde-introduction.mp4'))
 
     if sys_type != "Desktop":
-        #desktops = ['dde-computer.desktop', 'dde-trash.desktop']
-        desktops = []
+        desktops = ['dde-computer.desktop', 'dde-trash.desktop']
         desktop_path = path.expanduser("~/Desktop")
         if not path.exists(desktop_path):
             os.makedirs(desktop_path)
