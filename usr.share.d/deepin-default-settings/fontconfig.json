@@ -23,6 +23,10 @@
         "Standard":"Noto Sans Tibetan",
         "Mono":"Noto Mono"
     },
+    "ug_CN":{
+        "Standard":"DejaVu Sans",
+        "Mono":"Noto Mono"
+    },
     "en_US":{
         "Standard":"Noto Sans",
         "Mono":"Noto Mono"
