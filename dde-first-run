@@ -43,6 +43,8 @@ if __name__ == "__main__":
 
     if sys_type != "Desktop":
         desktops = ['dde-computer.desktop', 'dde-trash.desktop']
+        if os.geteuid() != 0:
+            desktops.clear()
         if not path.exists(desktop_path):
             os.makedirs(desktop_path)
         for desktop in desktops:
