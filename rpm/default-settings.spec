@@ -1,6 +1,6 @@
 %define specrelease 1%{?dist}
 %if 0%{?openeuler}
-%define specrelease 1
+%define specrelease 2
 %endif
 
 Name:           deepin-default-settings
@@ -14,6 +14,7 @@ Source0:        %{name}-%{version}.orig.tar.xz
 BuildArch:      noarch
 BuildRequires:  dde-desktop
 BuildRequires:  deepin-wallpapers
+Requires:       deepin-wallpapers
 
 %description
 default settings for deepin destkop environment.
@@ -58,7 +59,7 @@ if [ ! -f /root/Desktop/dde-computer.desktop ] && [ ! -f /root/Desktop/dde-trash
 	install -m644 /etc/skel/Music/bensound-sunny.mp3   /root//Music/ || true
 fi
 
-# %sysctl_apply deepin.conf
+# %%sysctl_apply deepin.conf
 
 %post -n deepin-default-settings-tuning
 
@@ -115,5 +116,8 @@ fi
 %{_datadir}/deepin-default-settings/fcitx/*.png
 
 %changelog
+* Tue Mar 08 2022 liweiganga <liweiganga@uniontech.com> - 2020.10.26.1-2
+- add require and comment deepin.conf
+
 * Tue Apr 21 2021 uoser <uoser@uniontech.com> - 2020.10.26.1-1
 - update to 2020.10.26.1
