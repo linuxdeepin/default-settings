@@ -86,7 +86,6 @@ fi
 %{_sysconfdir}/X11/xorg.conf.d/*.conf
 %{_sysconfdir}/binfmt.d/wine.conf
 %{_sysconfdir}/fonts/conf.d/*.conf
-%{_sysconfdir}/gimp/2.0/fonts.conf
 %{_sysconfdir}/lscolor-256color
 %{_sysconfdir}/modprobe.d/8821ce.conf
 %{_sysconfdir}/modprobe.d/iwlwifi.conf
