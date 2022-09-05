@@ -1,0 +1,49 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: default-settings
+Upstream-Contact: UnionTech Software Technology Co., Ltd.  <>
+Source: https://github.com/linuxdeepin/default-settings
+
+# README 
+Files: README.md README.zh_CN.md CHANGELOG.md
+Copyright: UnionTech Software Technology Co., Ltd.
+License: CC-BY-4.0
+
+# Project file
+Files: Makefile udev.rules.d/99-deepin.rules etc.d/sudoers.d/01_always_set_sudoers_home
+Copyright: None
+License: CC0-1.0
+
+# ci
+Files: .github/* .gitlab-ci.yml
+Copyright: None
+License: CC0-1.0
+
+# debian rpm archlinux
+Files: debian/* rpm/* archlinux/*
+Copyright: None
+License: CC0-1.0
+
+# config
+Files: *.conf *.ini *.json *.xml *.list .clog.toml
+Copyright: UnionTech Software Technology Co., Ltd.
+License: GPL-3.0-or-later
+
+# sh
+Files: dde-first-run 50-systemd-user.sh etc.d/X11/xinit/xinitrc.d/50-systemd-user.sh
+Copyright: None
+License: CC0-1.0
+
+# resource files
+Files: *.png usr.share.d/music/bensound-sunny.mp3 skel/.icons/default/index.theme
+Copyright: UnionTech Software Technology Co., Ltd.
+License: GPL-3.0-or-later
+
+# tuning files
+Files: tuning/*
+Copyright: None
+License: CC0-1.0
+
+# color
+Files: etc.d/lscolor-256color
+Copyright: Magnus Woldrich.
+License: Artistic-1.0	
