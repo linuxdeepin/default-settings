@@ -24,6 +24,7 @@ application/vnd.ms-word=/usr/share/applications/wps-office-wps.desktop
 application/msword=/usr/share/applications/wps-office-wps.desktop
 application/msword-template=/usr/share/applications/wps-office-wps.desktop
 application/x-deb=gdebi.desktop
+application/pdf=deepin-reader.desktop
 inode/directory=/usr/share/applications/dde-file-manager.desktop
 image/bmp=/usr/share/applications/deepin-image-viewer.desktop
 image/gif=/usr/share/applications/deepin-image-viewer.desktop
