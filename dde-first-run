@@ -13,6 +13,32 @@ import re
 import subprocess
 from gi.repository import GLib
 
+###################################################################################
+def setupVMCompositingEnabled():
+    try:
+        memsize = os.popen("free | grep 'Mem' | awk '{print($2)}'").read().strip("\n")
+        blks = os.popen("lsblk -o name,uuid,rota,mountpoint | awk '{print $2,$3,$4}'").read().strip("\n").split("\n")
+        for blk in blks:
+            blka = blk.split(" ")
+            if len(blka) > 2:
+                uuid = blka[0]
+                rota = blka[1]
+                mp = blka[2]
+                if mp == "/":
+                    print("memsize: %s, uuid: %s, rota: %s" % (memsize, uuid, rota))
+                    if int(memsize) <= 4*1024*1024 and int(rota) == 1:
+                        print("set VM compositingEnabled to false.")
+                        dest="com.deepin.wm"
+                        path="/com/deepin/wm"
+                        inter="org.freedesktop.DBus.Properties.Set"
+                        inter1="com.deepin.wm"
+                        os.popen("dbus-send --session --print-reply --dest=%s %s %s string:\"%s\" string:\"compositingEnabled\" variant:boolean:false" %(dest, path, inter, inter1))
+                    break
+
+    except:
+        raise Exception
+
+###################################################################################
 def querySystemType():
     f = open("/etc/deepin-version", "r")
     content = f.read()
@@ -21,10 +47,13 @@ def querySystemType():
 
     return r.group(1)
 
+###################################################################################
 def queryXDGDesktopDir():
     return GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DESKTOP)
 
 if __name__ == "__main__":
+    setupVMCompositingEnabled()
+
     lang, charset = locale.getdefaultlocale()
     sys_type = querySystemType()
     desktop_path = queryXDGDesktopDir()
