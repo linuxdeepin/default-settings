@@ -1,3 +1,9 @@
+deepin-default-settings (2023.04.21) unstable; urgency=medium
+
+  * fix: 新用户第一次登陆没有介绍视频
+
+ -- dengbo <dengbo@uniontech.com>  Fri, 21 Apr 2023 14:23:38 +0800
+
 deepin-default-settings (2022.10.19) unstable; urgency=medium
 
   [ Deepin Packages Builder ]
