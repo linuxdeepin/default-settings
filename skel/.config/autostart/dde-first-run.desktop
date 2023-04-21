@@ -9,6 +9,6 @@ TryExec=/usr/libexec/dde-first-run
 Terminal=false
 Type=Application
 Categories=
-OnlyShowIn=Deepin;
+OnlyShowIn=DDE
 #X-GNOME-AutoRestart=true
 NoDisplay=true
