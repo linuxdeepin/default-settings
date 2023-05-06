@@ -103,7 +103,6 @@ fi
 #服务器不需要桌面版调优参数
 %exclude %{_sysctldir}/deepin.conf
 %{_datadir}/applications/deepin/dde-mimetype.list
-%{_datadir}/deepin-default-settings/fontconfig.json
 %{_datadir}/fontconfig/conf.avail/*.conf
 %{_datadir}/mime/packages/deepin-workaround.xml
 %{_datadir}/mime/wine-ini.xml
