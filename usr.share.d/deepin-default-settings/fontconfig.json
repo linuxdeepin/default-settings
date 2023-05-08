@@ -1,4 +1,8 @@
 {
+    "ar_SA":{
+        "Standard":"Noto Naskh Arabic",
+        "Mono":"Noto Mono"
+    }
     "zh_CN":{
         "Standard":"Noto Sans CJK SC",
         "Mono":"Noto Mono"
