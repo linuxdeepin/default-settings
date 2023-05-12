@@ -1,3 +1,9 @@
+deepin-default-settings (2023.05.12) unstable; urgency=medium
+
+  * update fontconfig
+
+ -- zsien <quezhiyong@deepin.org>  Fri, 12 May 2023 11:06:46 +0800
+
 deepin-default-settings (2023.04.21) unstable; urgency=medium
 
   * fix: 新用户第一次登陆没有介绍视频
