@@ -53,9 +53,11 @@ EOF
     ;;
 esac
 # Set Max Size for journal
-	if [ -f /etc/systemd/journald.conf ]; then
-		sed -i '22s/^.*$/SystemMaxUse=500M/'  /etc/systemd/journald.conf
-		sed -i '15s/^.*$/Storage=persistent/'  /etc/systemd/journald.conf
+    if [ -f /etc/systemd/journald.conf ]; then
+        sed -i \
+            -e 's/^#SystemMaxUse=.*$/SystemMaxUse=500M/' \
+            -e 's/^#Storage=.*$/Storage=persistent/' \
+            /etc/systemd/journald.conf
     fi
 
 #	if [ -f /etc/logrotate.conf ] &&! grep -qr "size 1000M" /etc/logrotate.conf; then
@@ -67,9 +69,9 @@ esac
 #		cp /etc/pam.d/common-auth /etc/pam.d/common-auth-nodelay
 #		sed -i "s/nullok_secure.*/nullok_secure nodelay/g" /etc/pam.d/common-auth-nodelay
 #	fi
-	# if [ -f /etc/pam.d/lightdm ]; then
-	# sed -i "s/@include common-auth.*/@include common-auth-nodelay/g" /etc/pam.d/lightdm
-	#fi
+    # if [ -f /etc/pam.d/lightdm ]; then
+    # sed -i "s/@include common-auth.*/@include common-auth-nodelay/g" /etc/pam.d/lightdm
+    #fi
 # make skel dirs.
 mkdir -p /etc/skel/Desktop;
 mkdir -p /etc/skel/Documents;
@@ -83,26 +85,19 @@ mkdir -p /etc/skel/.Templates;
 # add default pictures
 skel_wallpapers=/etc/skel/Pictures/Wallpapers
 if [ ! -d $skel_wallpapers ]; then
-	mkdir -p $skel_wallpapers
+    mkdir -p $skel_wallpapers
 fi
 
 for file in `ls /usr/share/wallpapers/deepin/`
 do
-	if [ ! -f $skel_wallpapers/$file ]; then
-		ln -s  /usr/share/wallpapers/deepin/$file $skel_wallpapers/$file
+    if [ ! -f $skel_wallpapers/$file ]; then
+        ln -s  /usr/share/wallpapers/deepin/$file $skel_wallpapers/$file
 
-	fi
+    fi
 done
 
 # Provide convenience for dde components like dock, file-manager.
 # They need to watch this directory while it is not created by default.
 mkdir -p /etc/skel/.local/share/Trash
-
-# change sources.list panda
-case $(uname -m) in
-	"x86_64"|"i686"|"i386"|"amd64"|"x86")
-		sed -i 's/deepin unstable/deepin panda/g' /etc/apt/sources.list >/dev/null 2>&1||true
-	;;
-esac
 
 exit 0
