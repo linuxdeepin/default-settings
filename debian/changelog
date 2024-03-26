@@ -1,3 +1,9 @@
+deepin-default-settings (2024.03.26) unstable; urgency=medium
+
+  * add item-arrangement skel config for dde-launchpad
+
+ -- Wang Zichong <wangzichong@deepin.org>  Tue, 26 Mar 2024 17:48:00 +0800
+
 deepin-default-settings (2023.08.07) unstable; urgency=medium
 
   * remove panda related code.
