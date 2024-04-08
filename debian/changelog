@@ -1,3 +1,10 @@
+deepin-default-settings (2024.04.08) unstable; urgency=medium
+
+  * Change sysctl config priority
+  * Add vm.max_map_count=262144
+
+ -- xiangzelong <xiangzelong@deepin.org>  Mon, 08 Apr 2024 19:44:21 +0800
+
 deepin-default-settings (2024.03.26) unstable; urgency=medium
 
   * add item-arrangement skel config for dde-launchpad
