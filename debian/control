@@ -9,7 +9,6 @@ Build-Depends:
 Package: deepin-default-settings
 Architecture: all
 Depends:
- deepin-artwork,
  deepin-default-settings-tuning (>= 2018.1.23),
  deepin-wallpapers,
  iw,
