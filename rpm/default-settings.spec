@@ -32,12 +32,10 @@ echo "build OK"
 %install
 %make_install
 
-mkdir -p  %{buildroot}/usr/share/deepin-default-settings/cups-filters/
 mkdir -p  %{buildroot}/usr/share/deepin-default-settings/google-chrome/
 mkdir -p  %{buildroot}/usr/share/deepin-default-settings/fcitx/
 mkdir -p  %{buildroot}/etc/
 
-install -Dm644 tuning/cups-filters/*.pdf  %{buildroot}/usr/share/deepin-default-settings/cups-filters/
 install -Dm644 tuning/google-chrome/*.tar %{buildroot}/usr/share/deepin-default-settings/google-chrome/
 install -Dm644 tuning/fcitx/*.png  %{buildroot}/usr/share/deepin-default-settings/fcitx/
 cp -r skel  %{buildroot}/etc/
@@ -109,7 +107,6 @@ fi
 %{_datadir}/music/bensound-sunny.mp3
 
 %files  -n deepin-default-settings-tuning
-%{_datadir}/deepin-default-settings/cups-filters/*.pdf
 %{_datadir}/deepin-default-settings/google-chrome/*.tar
 %{_datadir}/deepin-default-settings/fcitx/*.png
 
