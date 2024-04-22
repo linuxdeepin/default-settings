@@ -30,7 +30,10 @@ if __name__ == "__main__":
     desktop_path = queryXDGDesktopDir()
 
     if path.exists("/usr/bin/dde-introduction"):
-        subprocess.Popen("/usr/bin/dde-introduction")
+        if path.exists("/usr/bin/dde-am"):
+            subprocess.Popen(["/usr/bin/dde-am", "dde-introduction"])
+        else:
+            subprocess.Popen("dde-introduction")
 
     # create symlink for introduction video
     # fix introduction to demo.mp4,different mirror interfaces are consistent,but the content is different
