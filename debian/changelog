@@ -1,3 +1,9 @@
+deepin-default-settings (2024.04.23) unstable; urgency=medium
+
+  * make dde-file-manager first launched by AM
+
+ -- tsic404 <liuheng@deepin.org>  Tue, 23 Apr 2024 17:03:46 +0800
+
 deepin-default-settings (2024.04.22) unstable; urgency=medium
 
   * Fix #8101
