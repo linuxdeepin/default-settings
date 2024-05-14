@@ -1,3 +1,9 @@
+deepin-default-settings (2024.05.14) unstable; urgency=medium
+
+  * chore: set systemd services stop timeout to 30s (linuxdeepin/developer-center#8554)
+
+ -- zsien <quezhiyong@deepin.org>  Tue, 14 May 2024 13:31:52 +0800
+
 deepin-default-settings (2024.04.22) unstable; urgency=medium
 
   * Fix #8101
