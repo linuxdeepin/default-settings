@@ -1,3 +1,15 @@
+deepin-default-settings (2024.08.13) unstable; urgency=medium
+
+  * Using postinst script to process browser icons
+
+ -- LiChengGang <lichenggang@uniontech.com>  Tue, 13 Aug 2024 11:19:48 +0800
+
+deepin-default-settings (2024.08.08) unstable; urgency=medium
+
+  * add /etc/skel/Desktop/  deepin-manual dde-computer deepin-home org.deepin.browser
+
+ -- LiChengGang <lichenggang@uniontech.com>  Thu, 08 Aug 2024 11:27:14 +0800
+
 deepin-default-settings (2024.04.22) unstable; urgency=medium
 
   * Fix #8101
