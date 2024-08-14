@@ -4,6 +4,7 @@
 #DEBHELPER#
 
 set -e
+ARCH=$(uname -m)
 
 case "$1" in
     configure)
@@ -96,6 +97,31 @@ do
     fi
 done
 
+case "$ARCH" in
+    x86_64)
+        if [ ! -f /etc/skel/Desktop/org.deepin.browser.desktop ];then
+        ln -s /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop /etc/skel/Desktop/org.deepin.browser.desktop
+        fi
+        ;;
+    loongarch64)
+        if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
+        ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
+        fi
+        ;;
+    riscv64)
+        if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
+        ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
+        fi
+        ;;
+    aarch64)
+        if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
+        ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
+        fi
+        ;;
+    *)
+        echo "Unknown architecture: $ARCH"
+        ;;
+esac
 # Provide convenience for dde components like dock, file-manager.
 # They need to watch this directory while it is not created by default.
 mkdir -p /etc/skel/.local/share/Trash
