@@ -1,3 +1,9 @@
+deepin-default-settings (2024.11.13) unstable; urgency=medium
+
+  * fix: add m4a format
+
+ -- Wang Fei <wangfei@deepin.org>  Wed, 13 Nov 2024 17:43:40 +0800
+
 deepin-default-settings (2024.08.13) unstable; urgency=medium
 
   * Using postinst script to process browser icons
