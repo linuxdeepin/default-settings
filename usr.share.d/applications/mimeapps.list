@@ -81,6 +81,7 @@ audio/x-mpeg-3=deepin-music.desktop;com.deepin.Music.desktop
 audio/mpeg3=deepin-music.desktop;com.deepin.Music.desktop
 audio/mp3=deepin-music.desktop;com.deepin.Music.desktop
 audio/mpc=deepin-music.desktop;com.deepin.Music.desktop
+audio/m4a=deepin-music.desktop;com.deepin.Music.desktop
 audio/x-mpc=deepin-music.desktop;com.deepin.Music.desktop
 audio/vorbis=deepin-music.desktop;com.deepin.Music.desktop
 audio/x-vorbis=deepin-music.desktop;com.deepin.Music.desktop
