@@ -1,3 +1,9 @@
+deepin-default-settings (2024.11.14) unstable; urgency=medium
+
+  * release 2024.11.14
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 14 Nov 2024 16:03:45 +0800
+
 deepin-default-settings (2024.08.13) unstable; urgency=medium
 
   * Using postinst script to process browser icons
