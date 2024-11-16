@@ -1,3 +1,9 @@
+deepin-default-settings (2024.11.16) unstable; urgency=medium
+
+  * update .desktosp install. 
+
+ -- lichenggang <lichenggang@deepin.org>  Sat, 16 Nov 2024 15:40:52 +0800
+
 deepin-default-settings (2024.11.14) unstable; urgency=medium
 
   * update deepin-manual.desktop.

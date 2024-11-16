@@ -100,23 +100,49 @@ done
 case "$ARCH" in
     x86_64)
         if [ ! -f /etc/skel/Desktop/org.deepin.browser.desktop ];then
-        ln -s /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop /etc/skel/Desktop/org.deepin.browser.desktop
+            if [ -f /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop ];then
+                ln -s /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop /etc/skel/Desktop/org.deepin.browser.desktop
+            fi
         fi
+        if [ ! -f /etc/skel/Desktop/deepin-manual.desktop ];then
+            if [ -f /var/lib/linglong/entries/share/applications/deepin-manual.desktop ];then
+                ln -s /var/lib/linglong/entries/share/applications/deepin-manual.desktop /etc/skel/Desktop/deepin-manual.desktop
+            fi 
+        fi        
         ;;
     loongarch64)
         if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
-        ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
+            if [ -f /usr/share/applications/firefox.desktop ];then
+                ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
+            fi             
         fi
+        if [ ! -f /etc/skel/Desktop/deepin-manual.desktop ];then
+            if [ -f /usr/share/applications/deepin-manual.desktop ];then
+                ln -s /usr/share/applications/deepin-manual.desktop /etc/skel/Desktop/deepin-manual.desktop
+            fi          
+        fi   
         ;;
     riscv64)
         if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
-        ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
+            if [ -f /usr/share/applications/firefox.desktop ];then
+                ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
+            fi      
         fi
+        if [ ! -f /etc/skel/Desktop/deepin-manual.desktop ];then
+            if [ -f /usr/share/applications/deepin-manual.desktop ];then
+                ln -s /usr/share/applications/deepin-manual.desktop /etc/skel/Desktop/deepin-manual.desktop
+            fi      
+        fi           
         ;;
     aarch64)
         if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
         ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
         fi
+        if [ ! -f /etc/skel/Desktop/deepin-manual.desktop ];then
+            if [ -f /var/lib/linglong/entries/share/applications/deepin-manual.desktop ];then
+                ln -s /var/lib/linglong/entries/share/applications/deepin-manual.desktop /etc/skel/Desktop/deepin-manual.desktop
+            fi          
+        fi   
         ;;
     *)
         echo "Unknown architecture: $ARCH"
