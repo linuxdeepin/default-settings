@@ -100,22 +100,30 @@ done
 case "$ARCH" in
     x86_64)
         if [ ! -f /etc/skel/Desktop/org.deepin.browser.desktop ];then
-        ln -s /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop /etc/skel/Desktop/org.deepin.browser.desktop
+            if [ -f /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop ];then
+                ln -s /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop /etc/skel/Desktop/org.deepin.browser.desktop || true
+            fi
         fi
         ;;
     loongarch64)
         if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
-        ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
+            if [ -f /usr/share/applications/firefox.desktop ];then
+                ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop || true
+            fi  
         fi
         ;;
     riscv64)
         if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
-        ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
+            if [ -f /usr/share/applications/firefox.desktop ];then
+                ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop || true 
+            fi   
         fi
         ;;
     aarch64)
         if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
-        ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop
+            if [ -f /usr/share/applications/firefox.desktop ];then
+                ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop || true 
+            fi  
         fi
         ;;
     *)

@@ -1,3 +1,9 @@
+deepin-default-settings (2024.11.25) unstable; urgency=medium
+
+  * update postinst.
+
+ -- lichenggang <lichenggang@deepin.org>  Mon, 25 Nov 2024 09:55:51 +0800
+
 deepin-default-settings (2024.08.13) unstable; urgency=medium
 
   * Using postinst script to process browser icons
