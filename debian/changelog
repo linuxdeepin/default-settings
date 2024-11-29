@@ -1,3 +1,9 @@
+deepin-default-settings (2024.11.29) unstable; urgency=medium
+
+  * Add welcome
+
+ -- Chengqi E <echengqi@uniontech.com>  Fri, 29 Nov 2024 09:55:51 +0800
+
 deepin-default-settings (2024.11.25) unstable; urgency=medium
 
   * update postinst.
