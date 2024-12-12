@@ -1,3 +1,9 @@
+deepin-default-settings (2024.12.12) unstable; urgency=medium
+
+  * update postinst add _Generate_Icon_manual.
+
+ -- lichenggang <lichenggang@deepin.org>  Thu, 12 Dec 2024 16:30:45 +0800
+
 deepin-default-settings (2024.11.29) unstable; urgency=medium
 
   * Add welcome
