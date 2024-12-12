@@ -97,34 +97,65 @@ do
     fi
 done
 
-case "$ARCH" in
-    x86_64)
-        if [ ! -f /etc/skel/Desktop/org.deepin.browser.desktop ];then
-            if [ -f /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop ];then
-                ln -s /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop /etc/skel/Desktop/org.deepin.browser.desktop || true
+_Generate_Icon_manual () {
+    
+if [ -f /etc/os-version ]; then
+    if [ "$(cat /etc/os-version) | grep -iq "Community" " ]; then
+        if [ ! -f /etc/skel/Desktop/deepin-manual.desktop ];then
+            if [ -f /usr/share/applications/deepin-manual.desktop ];then
+                ln -s /usr/share/applications/deepin-manual.desktop /etc/skel/Desktop/deepin-manual.desktop || true
             fi
         fi
+    fi
+fi
+
+}
+
+_Generate_Icon_deepin_browser () {
+    
+if [ -f /etc/os-version ]; then
+    if [ "$(cat /etc/os-version) | grep -iq "Community" " ]; then
+        if [ ! -f /etc/skel/Desktop/org.deepin.browser.desktop ];then
+            if [ -f /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop ];then
+               ln -s /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop /etc/skel/Desktop/org.deepin.browser.desktop || true
+            fi
+        fi
+    fi
+fi
+
+}
+
+_Generate_Icon_firefox () {
+
+if [ -f /etc/os-version ]; then
+    if [ "$(cat /etc/os-version) | grep -iq "Community" " ]; then
+        if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
+            if [ -f /usr/share/applications/firefox.desktop ];then
+               ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop || true
+            fi
+        fi
+    fi
+fi
+
+}
+
+
+case "$ARCH" in
+    x86_64)
+        _Generate_Icon_deepin_browser
+        _Generate_Icon_manual
         ;;
     loongarch64)
-        if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
-            if [ -f /usr/share/applications/firefox.desktop ];then
-                ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop || true
-            fi  
-        fi
+        _Generate_Icon_firefox
+        _Generate_Icon_manual
         ;;
     riscv64)
-        if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
-            if [ -f /usr/share/applications/firefox.desktop ];then
-                ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop || true 
-            fi   
-        fi
+        _Generate_Icon_firefox
+        _Generate_Icon_manual
         ;;
     aarch64)
-        if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
-            if [ -f /usr/share/applications/firefox.desktop ];then
-                ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop || true 
-            fi  
-        fi
+        _Generate_Icon_firefox
+        _Generate_Icon_manual
         ;;
     *)
         echo "Unknown architecture: $ARCH"
