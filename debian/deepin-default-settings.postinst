@@ -116,9 +116,7 @@ _Generate_Icon_deepin_browser () {
 if [ -f /etc/os-version ]; then
     if [ "$(cat /etc/os-version) | grep -iq "Community" " ]; then
         if [ ! -f /etc/skel/Desktop/org.deepin.browser.desktop ];then
-            if [ -f /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop ];then
-               ln -s /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop /etc/skel/Desktop/org.deepin.browser.desktop || true
-            fi
+            ln -s /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop /etc/skel/Desktop/org.deepin.browser.desktop || true
         fi
     fi
 fi
@@ -140,27 +138,38 @@ fi
 }
 
 
-case "$ARCH" in
-    x86_64)
-        _Generate_Icon_deepin_browser
-        _Generate_Icon_manual
-        ;;
-    loongarch64)
-        _Generate_Icon_firefox
-        _Generate_Icon_manual
-        ;;
-    riscv64)
-        _Generate_Icon_firefox
-        _Generate_Icon_manual
-        ;;
-    aarch64)
-        _Generate_Icon_firefox
-        _Generate_Icon_manual
-        ;;
-    *)
-        echo "Unknown architecture: $ARCH"
-        ;;
-esac
+
+
+
+if [ "$1" = "configure" ] && [ "$2" = "" ]; then
+    case "$ARCH" in
+        x86_64)
+            _Generate_Icon_deepin_browser
+            _Generate_Icon_manual
+            ;;
+        loongarch64)
+            _Generate_Icon_firefox
+            _Generate_Icon_manual
+            ;;
+        riscv64)
+            _Generate_Icon_firefox
+            _Generate_Icon_manual
+            ;;
+        aarch64)
+            _Generate_Icon_firefox
+            _Generate_Icon_manual
+            ;;
+        *)
+            echo "Unknown architecture: $ARCH"
+            ;;
+    esac
+fi
+
+
+
+
+
+
 # Provide convenience for dde components like dock, file-manager.
 # They need to watch this directory while it is not created by default.
 mkdir -p /etc/skel/.local/share/Trash
