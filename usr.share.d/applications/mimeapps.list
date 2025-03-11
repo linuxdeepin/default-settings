@@ -216,3 +216,4 @@ application/powerpoint=wps-office-wpp.desktop
 application/x-mspowerpoint=wps-office-wpp.desktop
 application/wps-office.pptx=wps-office-wpp.desktop
 application/wps-office.potx=wps-office-wpp.desktop
+application/vnd.linyaps.uab=deepin-deb-installer.desktop
