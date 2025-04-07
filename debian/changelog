@@ -1,3 +1,9 @@
+deepin-default-settings (2025.04.07) unstable; urgency=medium
+
+  * increase inotify.max_user_instances to 1024
+
+ -- lichenggang <lichenggang@deepin.org>  Mon, 07 Apr 2025 14:14:04 +0800
+
 deepin-default-settings (2025.03.11) unstable; urgency=medium
 
   * feat: add uab format.
