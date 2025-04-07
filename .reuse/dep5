@@ -9,7 +9,7 @@ Copyright: UnionTech Software Technology Co., Ltd.
 License: CC-BY-4.0
 
 # Project file
-Files: Makefile udev.rules.d/99-deepin.rules etc.d/sudoers.d/01_always_set_sudoers_home
+Files: Makefile udev.rules.d/99-deepin.rules etc.d/sudoers.d/01_always_set_sudoers_home sysctl.d/*
 Copyright: None
 License: CC0-1.0
 
