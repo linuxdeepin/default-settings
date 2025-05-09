@@ -1,3 +1,9 @@
+deepin-default-settings (2025.05.09) unstable; urgency=medium
+
+  * refactor dde-first-run and add fcixt5-theme config.
+
+ -- xiangzelong <xiangzelong@deepin.org>  Fri, 09 May 2025 13:11:26 +0800
+
 deepin-default-settings (2025.04.07) unstable; urgency=medium
 
   * increase inotify.max_user_instances to 1024

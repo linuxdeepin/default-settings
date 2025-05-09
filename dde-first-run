@@ -1,79 +1,161 @@
 #!/usr/bin/env python3
-# vim: set ts=4 sw=4 fileencoding=utf-8:
-# Luomio <nohappiness@gmail.com>
-# Filename: dde-first-run.py
-# Create Date: 27-03, 13
+# -*- coding: utf-8 -*-
+"""
+Deepin Desktop Environment 首次运行配置脚本
 
-from os import path, remove
+功能概述：
+1. 创建介绍视频符号链接
+2. 部署系统桌面图标
+3. 配置Chrome浏览器
+4. 配置Fcitx5主题为deepin风格
+5. 清理自动启动项
+"""
+
 import locale
 import os
+import re
 import shutil
 import getpass
-import re
+import tarfile
 import subprocess
+from pathlib import Path
 from gi.repository import GLib
 
-def querySystemType():
-    f = open("/etc/deepin-version", "r")
-    content = f.read()
 
-    r = re.search(r"^Type=(.*)$", content, re.M)
+def get_system_type() -> str:
+    """获取系统类型
+    Returns:
+        str: 系统类型标识符 (Desktop/Server等)
+    """
+    with open("/etc/deepin-version", "r") as f:
+        return re.search(r"^Type=(.*)$", f.read(), re.M).group(1)
 
-    return r.group(1)
 
-def queryXDGDesktopDir():
-    return GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DESKTOP)
+def create_video_symlink() -> None:
+    """创建介绍视频符号链接
+    1. 删除旧链接（如果存在）
+    2. 创建新符号链接到用户视频目录
+    """
+    src = Path("/usr/share/dde-introduction/demo.mp4")
+    dest = Path.home()/"Videos/dde-introduction.mp4"
+
+    if src.exists():
+        dest.unlink(missing_ok=True)
+        dest.symlink_to(src.resolve())
+
+
+def deploy_desktop_icons(desktop_path: Path) -> None:
+    """部署系统桌面图标
+    Args:
+        desktop_path: 用户桌面目录路径
+    """
+    system_icons = [
+        'dde-computer.desktop',
+        'dde-trash.desktop',
+        'dde-home.desktop'
+    ]
+
+    if not desktop_path.exists():
+        desktop_path.mkdir(parents=True)
+
+    for icon in system_icons:
+        src = Path("/usr/share/applications")/icon
+        dest = desktop_path/icon
+        if src.exists() and not dest.resolve().samefile(src):
+            shutil.copy(src, dest)
+
+
+def configure_chrome() -> None:
+    """配置Chrome浏览器
+    1. 解压预置配置文件
+    2. 更新Flash组件路径中的用户名
+    """
+    config_dir = Path.home()/".config/google-chrome"
+    if config_dir.exists():
+        return
+
+    # 确定配置文件路径
+    base_path = "/usr/share/deepin-default-settings/google-chrome"
+    config_files = [
+        f"{base_path}/override-chrome-config.tar",
+        f"{base_path}/chrome-config-{locale.getdefaultlocale()[0]}.tar",
+        f"{base_path}/chrome-config.tar"
+    ]
+
+    config_file = next((f for f in config_files if Path(f).exists()), None)
+    if not config_file:
+        return
+
+    # 解压配置文件
+    with tarfile.open(config_file) as tar:
+        tar.extractall(config_dir.parent)
+
+    # 更新Flash组件配置
+    flash_config = config_dir/"PepperFlash/latest-component-updated-flash"
+    if flash_config.exists():
+        username = getpass.getuser()
+        flash_config.write_text(
+            flash_config.read_text().replace("deepin", username)
+        )
+
+def modify_fcitx5_theme_config_file() -> None:
+    file_path = "~/.config/fictx5/conf/classicui.conf"
+    # 处理波浪线路径并确认文件存在
+    expanded_path = os.path.expanduser(file_path)
+    if not os.path.exists(expanded_path):
+        print(f"错误：配置文件 {expanded_path} 不存在")
+        return
+
+    # 读取配置文件
+    with open(expanded_path, 'r') as f:
+        lines = f.readlines()
+
+    # 修改目标参数
+    modified = False
+    for i in range(len(lines)):
+        line = lines[i].strip()
+        # 修改浅色主题（跳过注释行）
+        if line.startswith("Theme=") and not lines[i].startswith("#"):
+            lines[i] = 'Theme=deepin-light\n'
+            modified = True
+        # 修改深色主题（跳过注释行）
+        elif line.startswith("DarkTheme=") and not lines[i].startswith("#"):
+            lines[i] = 'DarkTheme=deepin-dark\n'
+            modified = True
+
+    # 写入修改
+    if modified:
+        with open(expanded_path, 'w') as f:
+            f.writelines(lines)
+        print("配置文件更新成功")
+    else:
+        print("未找到需要修改的参数")
+
+def cleanup_autostart() -> None:
+    """清理首次运行自动启动项"""
+    autostart_file = Path.home()/".config/autostart/dde-first-run.desktop"
+    autostart_file.unlink(missing_ok=True)
+
+
+def main():
+    """主执行流程"""
+    # 初始化系统组件
+    if Path("/usr/bin/dde-am").exists():
+        subprocess.Popen(["/usr/bin/dde-am", "dde-introduction"])
+
+    # 执行配置任务
+    create_video_symlink() # 创建视频符号链接
+
+    if get_system_type() != "Desktop":
+        desktop_dir = Path(GLib.get_user_special_dir(
+            GLib.UserDirectory.DIRECTORY_DESKTOP
+        ))
+        deploy_desktop_icons(desktop_dir)
+
+    configure_chrome()  # 配置Chrome浏览器
+    modify_fcitx5_theme_config_file()  # 修改Fcitx5主题配置文件
+    cleanup_autostart() # 清理自动启动项
+
 
 if __name__ == "__main__":
-    lang, charset = locale.getdefaultlocale()
-    sys_type = querySystemType()
-    desktop_path = queryXDGDesktopDir()
-
-    if path.exists("/usr/bin/dde-am"):
-        subprocess.Popen(["/usr/bin/dde-am", "dde-introduction"])
-        
-    # create symlink for introduction video
-    # fix introduction to demo.mp4,different mirror interfaces are consistent,but the content is different
-    introduction_video_path = "/usr/share/dde-introduction/demo.mp4"
-    introduction_video_link_path = "~/Videos/dde-introduction.mp4"
-    if path.exists(introduction_video_path):
-        if path.exists(path.expanduser(introduction_video_link_path)):
-            remove(path.expanduser(introduction_video_link_path))
-        os.symlink(introduction_video_path, path.expanduser('~/Videos/dde-introduction.mp4'))
-
-    if sys_type != "Desktop":
-        desktops = ['dde-computer.desktop', 'dde-trash.desktop' , 'dde-home.desktop']
-        if not path.exists(desktop_path):
-            os.makedirs(desktop_path)
-        for desktop in desktops:
-            desktop_file = path.join("/usr/share/applications", desktop)
-            if path.exists(desktop_file) and os.path.realpath(desktop_file) != os.path.realpath(path.join(desktop_path, desktop)):
-                shutil.copyfile(desktop_file, path.join(desktop_path, desktop))
-    chrome_config = None
-    if not path.exists(path.expanduser('~/.config/google-chrome')):
-        if path.exists('/usr/share/deepin-default-settings/google-chrome/override-chrome-config.tar'):
-            chrome_config = '/usr/share/deepin-default-settings/google-chrome/override-chrome-config.tar'
-        elif path.exists('/usr/share/deepin-default-settings/google-chrome/chrome-config-%s.tar' % lang):
-            chrome_config = '/usr/share/deepin-default-settings/google-chrome/chrome-config-%s.tar' % lang
-        elif path.exists('/usr/share/deepin-default-settings/google-chrome/chrome-config.tar'):
-            chrome_config = '/usr/share/deepin-default-settings/google-chrome/chrome-config.tar'
-        else:
-            chrome_config = None
-
-    if chrome_config is not None:
-        import tarfile
-        tar = tarfile.open(chrome_config)
-        tar.extractall(path.expanduser('~/.config/'))
-        tar.close()
-
-    if path.exists(path.expanduser('~/.config/google-chrome/PepperFlash/latest-component-updated-flash')):
-        user_name=getpass.getuser()
-        pepperflash = path.expanduser('~/.config/google-chrome/PepperFlash/latest-component-updated-flash')
-        with open(pepperflash,"r") as f:
-            lines = f.readlines()
-        with open(pepperflash,"w") as f:
-            for line in lines:
-                f.write(re.sub(r'deepin',user_name,line))
-
-    if path.exists(path.expanduser('~/.config/autostart/dde-first-run.desktop')):
-        remove(path.expanduser('~/.config/autostart/dde-first-run.desktop'))
+    main()
