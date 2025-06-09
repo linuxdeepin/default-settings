@@ -92,14 +92,28 @@ def modify_fcitx5_theme_config_file() -> None:
         print(f"Warning: Fcitx5 Deepin theme not found: {theme_path}")
         return
     
-    file_path = "~/.config/fictx5/conf/classicui.conf"
-    # check file path
+    file_path = "~/.config/fcitx5/conf/classicui.conf"
     expanded_path = os.path.expanduser(file_path)
+    
+    # If config file doesn't exist, create it with default content
     if not os.path.exists(expanded_path):
-        print(f"Error: config file not found: {expanded_path}")
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(expanded_path), exist_ok=True)
+        
+        # Default content for classicui.conf
+        default_content = """
+Theme=deepin-light
+DarkTheme=deepin-dark
+UseDarkTheme=True
+"""
+        
+        with open(expanded_path, 'w') as f:
+            f.write(default_content)
+        print(f"file path: {expanded_path}")
+        print(f"Created new config file: {expanded_path}")
         return
-
-    # read file content
+    
+    # If file exists, read its content
     with open(expanded_path, 'r') as f:
         lines = f.readlines()
 
