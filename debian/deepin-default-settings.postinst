@@ -102,8 +102,8 @@ _Generate_Icon_manual () {
 if [ -f /etc/os-version ]; then
     if [ "$(cat /etc/os-version) | grep -iq "Community" " ]; then
         if [ ! -f /etc/skel/Desktop/deepin-manual.desktop ];then
-            if [ -f /usr/share/applications/deepin-manual.desktop ];then
-                ln -s /usr/share/applications/deepin-manual.desktop /etc/skel/Desktop/deepin-manual.desktop || true
+            if [ -f /var/lib/linglong/entries/share/applications/deepin-manual.desktop ];then
+                ln -s /var/lib/linglong/entries/share/applications/deepin-manual.desktop /etc/skel/Desktop/deepin-manual.desktop || true
             fi
         fi
     fi
