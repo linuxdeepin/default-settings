@@ -1,3 +1,9 @@
+deepin-default-settings (2025.06.11) unstable; urgency=medium
+
+  * deepin-manual deb to linglong.
+
+ -- lichenggang <lichenggang@deepin.org>  Wed, 11 Jun 2025 14:05:27 +0800
+
 deepin-default-settings (2025.05.09) unstable; urgency=medium
 
   * refactor dde-first-run and add fcixt5-theme config.
