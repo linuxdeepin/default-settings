@@ -1,3 +1,9 @@
+deepin-default-settings (2025.06.17) unstable; urgency=medium
+
+  * adjust default shortcuts on desktop.
+
+ -- Wang Zichong <wangzichong@deepin.org>  Tue, 17 Jun 2025 14:21:00 +0800
+
 deepin-default-settings (2025.06.11) unstable; urgency=medium
 
   * deepin-manual deb to linglong.
@@ -139,14 +145,14 @@ deepin-default-settings (2020.12.17-1) unstable; urgency=medium
 deepin-default-settings (2020.12.15-1) unstable; urgency=medium
 
   * update 11n_disable=8 -> 11n_disable=1.
-   
+
 
  -- system-dev <system-dev@uniontech.com>  Tue, 15 Dec 2020 13:45:04 +0800
 
 deepin-default-settings (2020.12.07-1) unstable; urgency=medium
 
   * update 11n_disable=1 -> 11n_disable=8.
-  
+
 
  -- system-dev <system-dev@uniontech.com>  Mon, 07 Dec 2020 11:01:57 +0800
 
@@ -1932,4 +1938,3 @@ deepin-default-settings (1.0.2) maverick; urgency=low
   * Cairo Dock config updated.
 
  -- Leng Ganghua <hiweed@gmail.com>  Wed,  13 Oct 2010 20:45:00 +0800
-
