@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script 
+# postinst script
 # see: dh_installdeb(1)
 #DEBHELPER#
 
@@ -14,7 +14,7 @@ case "$1" in
 
         if [ -f /etc/skel/.bashrc ]; then
             sed -i '/#\ Set\ LS_COLORS\ environment/,+5d' /etc/skel/.bashrc
-            cat >> /etc/skel/.bashrc << EOF 
+            cat >> /etc/skel/.bashrc << EOF
 # Set LS_COLORS environment by Deepin
 if [[ ("\$TERM" = *256color || "\$TERM" = screen* || "\$TERM" = xterm* ) && -f /etc/lscolor-256color ]]; then
     eval \$(dircolors -b /etc/lscolor-256color)
@@ -41,7 +41,7 @@ EOF
 
     ;;
     triggered)
-    
+
     if [ -f /opt/cxoffice/etc/cxoffice.conf ]; then
         sed -i "s#;;\(\"AntiVirusScan\" = \)\"\"#\1\"never\"#" /opt/cxoffice/etc/cxoffice.conf
         date
@@ -98,7 +98,7 @@ do
 done
 
 _Generate_Icon_manual () {
-    
+
 if [ -f /etc/os-version ]; then
     if [ "$(cat /etc/os-version) | grep -iq "Community" " ]; then
         if [ ! -f /etc/skel/Desktop/deepin-manual.desktop ];then
@@ -111,52 +111,21 @@ fi
 
 }
 
-_Generate_Icon_deepin_browser () {
-    
-if [ -f /etc/os-version ]; then
-    if [ "$(cat /etc/os-version) | grep -iq "Community" " ]; then
-        if [ ! -f /etc/skel/Desktop/org.deepin.browser.desktop ];then
-            ln -s /var/lib/linglong/entries/share/applications/org.deepin.browser.desktop /etc/skel/Desktop/org.deepin.browser.desktop || true
-        fi
-    fi
-fi
-
-}
-
-_Generate_Icon_firefox () {
-
-if [ -f /etc/os-version ]; then
-    if [ "$(cat /etc/os-version) | grep -iq "Community" " ]; then
-        if [ ! -f /etc/skel/Desktop/firefox.desktop ];then
-            if [ -f /usr/share/applications/firefox.desktop ];then
-               ln -s /usr/share/applications/firefox.desktop /etc/skel/Desktop/firefox.desktop || true
-            fi
-        fi
-    fi
-fi
-
-}
-
-
 
 
 
 if [ "$1" = "configure" ] && [ "$2" = "" ]; then
     case "$ARCH" in
         x86_64)
-            _Generate_Icon_deepin_browser
             _Generate_Icon_manual
             ;;
         loongarch64)
-            _Generate_Icon_firefox
             _Generate_Icon_manual
             ;;
         riscv64)
-            _Generate_Icon_firefox
             _Generate_Icon_manual
             ;;
         aarch64)
-            _Generate_Icon_firefox
             _Generate_Icon_manual
             ;;
         *)
