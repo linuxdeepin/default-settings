@@ -15,8 +15,7 @@ Depends:
  python3,
  python3-gi,
  ${misc:Depends},
-Pre-Depends: 
- deepin-home (>= 1.6.0),
+Pre-Depends:
  coreutils,
 Suggests:
  binfmt-support,
