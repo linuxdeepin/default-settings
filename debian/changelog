@@ -1,3 +1,9 @@
+deepin-default-settings (2026.10.26) unstable; urgency=medium
+
+  * fix: 使用sudo时默认显示密码
+
+ -- gfc <ffgcc45@qq.com>  Mon, 26 Oct 2026 22:44:00 +0800
+
 deepin-default-settings (2026.10.25) unstable; urgency=medium
 
   * adjust default shortcuts on desktop.
