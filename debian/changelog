@@ -1,3 +1,10 @@
+deepin-default-settings (2026.11.13) unstable; urgency=medium
+
+  * fix: postinst no longer fails when the default wallpaper links
+    already exist in /etc/skel/Pictures/Wallpapers.
+
+ -- lichenggang <lichenggang@uniontech.com>  Fri, 13 Nov 2026 17:00:00 +0800
+
 deepin-default-settings (2026.10.25) unstable; urgency=medium
 
   * adjust default shortcuts on desktop.
