@@ -85,16 +85,22 @@ mkdir -p /etc/skel/.Templates;
 
 # add default pictures
 skel_wallpapers=/etc/skel/Pictures/Wallpapers
-if [ ! -d $skel_wallpapers ]; then
-    mkdir -p $skel_wallpapers
-fi
+mkdir -p "$skel_wallpapers"
 
-for file in `ls /usr/share/wallpapers/deepin/`
-do
-    if [ ! -f $skel_wallpapers/$file ]; then
-        ln -s  /usr/share/wallpapers/deepin/$file $skel_wallpapers/$file
+for file in /usr/share/wallpapers/deepin/*; do
+    # Nothing matched, or the source disappeared between glob and loop.
+    [ -e "$file" ] || [ -L "$file" ] || continue
 
+    link_name=$skel_wallpapers/$(basename "$file")
+    # Never fail when the link target already exists. -e covers regular
+    # files/directories, -L covers dangling symlinks. Checking both also
+    # stops ln from creating the link inside an existing directory
+    # (e.g. Pictures/Wallpapers/platform/platform) and aborting the
+    # whole postinst because of "set -e".
+    if [ -e "$link_name" ] || [ -L "$link_name" ]; then
+        continue
     fi
+    ln -s "$file" "$link_name" || true
 done
 
 _Generate_Icon_manual () {
